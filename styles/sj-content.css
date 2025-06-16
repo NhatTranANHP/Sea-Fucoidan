@@ -1,0 +1,1833 @@
+@charset "UTF-8";
+
+.common {
+	line-height: 1.8;
+}
+
+.sf-section-whats h1,
+.sf-section-safety h1 {
+	margin: 0;
+	font-size: .8em;
+	color: #ccc;
+	padding: 1.5rem 1.5rem .5rem;
+}
+
+.ttlbig {
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: 0;
+}
+
+.whats-fv {
+	text-align: center;
+}
+
+.whats-01 h3,
+.whats-02 h3,
+.whats-03 h3,
+.whats-04 h3,
+.whats-04 h4,
+.whats-07 h4 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.fv-outline {
+	border: 3px solid;
+	text-align: center;
+	padding: 10px;
+	margin-bottom: 30px;
+}
+
+.fv-outline h2 {
+	font-size: 3.2rem;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: 0;
+}
+
+.fv-img {
+	margin: 30px auto 0;
+	text-align: center;
+	font-size: 2rem;
+	letter-spacing: 1px;
+}
+
+.fv-img img {
+	display: block;
+	width: 40%;
+	max-width: 185px;
+	margin: 0 auto 30px;
+}
+
+.fv-img p {
+	font-weight: 700;
+}
+
+.kylin-outline {
+	border-bottom: 4px solid;
+}
+
+.whats-01-img {
+	display: flex;
+}
+
+.whats-01-img .kylin {
+	width: 40%;
+	height: 300px;
+	position: relative;
+}
+
+.whats-01-img .kylin dd:first-child {
+	width: 100px;
+	position: absolute;
+	left: calc(50% - 40px);
+	animation: kylin 1s infinite;
+}
+
+@keyframes kylin {
+	0% {
+		transform: rotate(0);
+		bottom: -7px;
+	}
+
+	30% {
+		transform: rotate(5deg);
+		bottom: 0;
+	}
+
+	60% {
+		transform: rotate(0);
+		bottom: -7px;
+	}
+
+	90% {
+		transform: rotate(-5deg);
+		bottom: 0;
+	}
+
+	to {
+		transform: rotate(0);
+		bottom: -7px;
+	}
+}
+
+.whats-01-img .kylin dd:last-child {
+	position: absolute;
+	left: 10px;
+	top: 0;
+	animation: pin 1s infinite;
+}
+
+@keyframes pin {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.whats-01-img .kylin-2 {
+	width: 60%;
+	height: 300px;
+	position: relative;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/whats-kylin-03.gif?v=127837593835259431681694839430") no-repeat bottom left / cover;
+}
+
+.whats-01-img .kylin-2 dd:first-child {
+	position: absolute;
+	left: 8%;
+	top: 93px;
+	z-index: 1;
+}
+
+.kylin-2 dd:first-child::after {
+	content: "";
+	display: block;
+	width: 27px;
+	height: 35px;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/whats-kylin-05.jpg?v=22180930682037698411694839441") no-repeat bottom left / cover;
+	position: absolute;
+	left: 14%;
+	top: -27px;
+	z-index: -1;
+	animation: yuge 2s ease-in-out infinite;
+}
+
+@keyframes yuge {
+	0% {
+		top: 10px;
+		opacity: 1;
+	}
+
+	to {
+		top: -48px;
+		opacity: 0;
+	}
+}
+
+.whats-01-img .kylin-2 dd:last-child {
+	position: absolute;
+	left: 105px;
+	top: 94px;
+	animation: liquid 1s ease-in-out infinite;
+	transform-origin: center;
+	z-index: -1;
+}
+
+@keyframes liquid {
+	0% {
+		transform: scale(.8);
+	}
+
+	33% {
+		transform: scale(1);
+	}
+
+	66% {
+		transform: scale(1.2);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+.whats-02 img,
+.whats-anime {
+	margin-top: 30px;
+}
+
+.whats-anime {
+	position: relative;
+}
+
+.whats-anime img:first-child {
+	width: 45%;
+	max-width: 250px;
+	max-width: 288px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+
+.whats-03 .whats-anime img:last-child {
+	position: absolute;
+	width: 20%;
+	max-width: 117px;
+	margin: auto;
+	top: 0;
+	right: 30%;
+	z-index: 1;
+	animation: virus 5s ease-in-out infinite;
+}
+
+@keyframes virus {
+	0% {
+		left: 10%;
+		top: 17%;
+	}
+
+	5% {
+		left: 8%;
+		top: 15%;
+	}
+
+	15% {
+		left: 8%;
+		top: 10%;
+	}
+
+	35% {
+		left: 15%;
+		top: 20%;
+		transform: scale(.9);
+	}
+
+	50% {
+		left: 20%;
+		top: 10%;
+	}
+
+	to {
+		left: 8%;
+		top: 15%;
+	}
+}
+
+.whats-04 .whats-anime {
+	margin-bottom: 30px;
+}
+
+.whats-04 h4 {
+	margin-top: 30px;
+}
+
+dl.whats-anime-2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-weight: 700;
+	font-size: .8em;
+}
+
+dl.whats-anime-2 dd:not(:nth-of-type(2)) {
+	width: 45%;
+}
+
+dl.whats-anime-2 dd:nth-of-type(2) {
+	width: 10%;
+	text-align: center;
+}
+
+.mol-bunkai {
+	position: relative;
+}
+
+.mol-bunkai li:not(:first-child) {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.mol-bunkai li:first-child {
+	position: relative;
+	z-index: 3;
+	animation: mol-1 6s linear infinite;
+}
+
+@keyframes mol-1 {
+	0% {
+		opacity: 1;
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	40% {
+		opacity: 0;
+	}
+
+	60% {
+		opacity: 0;
+	}
+
+	80% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.mol-bunkai li:nth-of-type(2) {
+	z-index: 2;
+	animation: mol-2 6s linear infinite;
+}
+
+@keyframes mol-2 {
+	0% {
+		opacity: 1;
+	}
+
+	20% {
+		opacity: 1;
+	}
+
+	40% {
+		opacity: 1;
+	}
+
+	60% {
+		opacity: 1;
+	}
+
+	80% {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.mol-bunkai li:last-child {
+	z-index: 1;
+}
+
+.whats-04 dl:nth-of-type(2) {
+	margin-bottom: 30px;
+}
+
+.whats-05-copy h2,
+.whats-06-copy h2 {
+	margin-bottom: 30px;
+}
+
+.whats-05-copy h2 .sub,
+.whats-06-copy h2 .sub {
+	display: block;
+	font-size: 2.6rem;
+	font-weight: 700;
+	color: #b7b7b7;
+}
+
+.whats-05 img.sp-only {
+	display: block;
+	width: 40%;
+	max-width: 175px;
+	margin: 0 auto 30px;
+}
+
+.whats-05-outline div:last-child {
+	font-size: .8em;
+	font-weight: 700;
+	letter-spacing: 2px;
+	margin-top: 20px;
+	text-align: right;
+}
+
+.whats-06-outline {
+	margin-top: 30px;
+}
+
+.whats-06-content .double {
+	display: block;
+	font-size: 2.6rem;
+	font-weight: 700;
+	color: #b7b7b7;
+}
+
+.double-fucoidan {
+	font-size: 3rem;
+	line-height: 1.5;
+}
+
+.double-fucoidan dd {
+	display: inline-block;
+}
+
+.double-fucoidan dd:nth-of-type(2) {
+	width: 2.8rem;
+	height: 4px;
+	background: #898989;
+	border-radius: 15px;
+	transform: rotate(45deg);
+	position: relative;
+	margin-left: 1rem;
+	vertical-align: middle;
+}
+
+.double-fucoidan dd:nth-of-type(2) span {
+	display: block;
+	width: 2.8rem;
+	height: 4px;
+	background: #898989;
+	border-radius: 15px;
+	transform: rotate(-90deg);
+	position: absolute;
+}
+
+.whats-06-content img.logo {
+	width: 55%;
+	max-width: 280px;
+}
+
+.whats-06-img {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/whats-splash.jpg?v=65658587515316686621694839470") no-repeat center / 10%;
+	transition: all .8s cubic-bezier(.25, .1, .31, 1.4);
+}
+
+.whats-06-img.slash {
+	background-size: 100%;
+}
+
+.whats-06-img img {
+	display: block;
+	width: 40%;
+	margin: 0 auto 30px;
+	max-width: 175px;
+}
+
+.whats-link {
+	margin-top: 30px;
+}
+
+.whats-link a {
+	display: block;
+	max-width: 600px;
+	margin: 0 auto;
+	background: #22a2db;
+	color: #fff;
+	text-align: center;
+	padding: 13px 20px;
+	border-radius: 50px;
+	line-height: 1.4;
+	font-weight: 700;
+}
+
+.whats-link a .renner {
+	margin-right: 5px;
+	font-size: 2.2rem;
+}
+
+.whats-07 {
+	position: relative;
+	overflow: hidden;
+}
+
+.whats-07-in {
+	position: relative;
+	z-index: 2;
+}
+
+.whats-07 h4 {
+	margin-top: 30px;
+}
+
+.whats-07-background {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 600px;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/whats-safety-01.jpg?v=155610554348142601361694839452") no-repeat left 20px bottom 0 / 250px;
+}
+
+.human {
+	width: 150px;
+	position: absolute;
+	left: 163px;
+	bottom: 30%;
+	animation: human 2s ease-in-out infinite alternate;
+}
+
+@keyframes human {
+	0% {
+		transform: translatey(-5px);
+	}
+
+	50% {
+		transform: translatey(0);
+	}
+
+	to {
+		transform: translatey(5px);
+	}
+}
+
+.sea {
+	height: 550px;
+	position: relative;
+}
+
+.sea li {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/whats-safety-03.gif?v=26241072790462365281694839463") no-repeat center / cover;
+	max-width: 215px;
+	max-height: 91px;
+	width: 107.5px;
+	height: 45.5px;
+	margin-bottom: 20%;
+}
+
+.sea li:nth-of-type(1),
+.sea li:nth-of-type(3),
+.sea li:nth-of-type(5) {
+	animation: fish-to-left 20s ease-in-out infinite;
+}
+
+@keyframes fish-to-left {
+	0% {
+		transform: translate(100vw);
+	}
+
+	to {
+		transform: translate(-100vw);
+	}
+}
+
+.sea li:nth-of-type(3) {
+	animation-duration: 50s;
+	width: 215px;
+	height: 91px;
+	margin-top: -10px;
+	opacity: .4;
+}
+
+.sea li:nth-of-type(5) {
+	animation-duration: 30s;
+	width: 71.66px;
+	height: 30.33px;
+}
+
+.sea li:nth-of-type(2),
+.sea li:nth-of-type(4) {
+	animation: fish-to-right 20s ease-in-out infinite;
+}
+
+@keyframes fish-to-right {
+	0% {
+		transform: translate(-100vw) scalex(-1);
+	}
+
+	to {
+		transform: translate(100vw) scalex(-1);
+	}
+}
+
+.sea li:nth-of-type(4) {
+	animation-duration: 30s;
+}
+
+.whats-07-more {
+	margin: 30px auto;
+}
+
+.whats-07-more a {
+	display: block;
+	background: #969393;
+	width: 280px;
+	border-radius: 25px;
+	color: #fff;
+	letter-spacing: 2px;
+	text-align: center;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+	.ttlbig {
+		font-size: 5.6rem;
+	}
+
+	.whats-01 h3,
+	.whats-02 h3,
+	.whats-03 h3,
+	.whats-04 h3,
+	.whats-04 h4,
+	.whats-07 h4,
+	.whats-05-copy h2,
+	.whats-06-copy h2 {
+		margin-bottom: 60px;
+	}
+
+	.whats-04 h4,
+	.whats-04 dl:nth-of-type(2),
+	.whats-06-outline,
+	.whats-link,
+	.whats-07 h4,
+	.whats-02 img {
+		margin-top: 60px;
+	}
+
+	.fv-outline {
+		padding: 20px;
+		max-width: 800px;
+		margin: 0 auto 30px;
+	}
+
+	.fv-outline h2 {
+		font-size: 4.6rem;
+	}
+
+	.fv-img p {
+		font-size: 5rem;
+	}
+
+	.whats-01-img {
+		max-width: 650px;
+		margin: 0 auto;
+	}
+
+	.whats-01-img .kylin {
+		width: 200px;
+		height: 270px;
+	}
+
+	.whats-01-img .kylin-2 {
+		width: 450px;
+		height: 270px;
+	}
+
+	.whats-01-img .kylin-2 dd:first-child {
+		top: 78px;
+		left: 20px;
+	}
+
+	.whats-01-img .kylin-2 dd:last-child {
+		top: 70px;
+		left: 94px;
+	}
+
+	.whats-02 img {
+		display: block;
+		max-width: 500px;
+		margin: 30px auto 0;
+	}
+
+	dl.whats-anime-2 {
+		justify-content: space-evenly;
+	}
+
+	.whats-04 dl:nth-of-type(1) dd:not(:nth-of-type(2)) {
+		width: 100px;
+	}
+
+	.whats-05-copy h2 .sub,
+	.whats-06-copy h2 .sub,
+	.whats-06-content .double {
+		font-size: 4rem;
+	}
+
+	.double-fucoidan {
+		font-size: 4.4rem;
+	}
+
+	.whats-link a .renner {
+		font-size: 3.4rem;
+	}
+
+	.whats-07-more {
+		margin: 60px auto;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.whats-fv,
+	.whats-01,
+	.whats-02,
+	.whats-03,
+	.whats-04,
+	.whats-05,
+	.whats-06,
+	.whats-07 {
+		margin-bottom: 200px;
+	}
+
+	.whats-05 img.sp-only {
+		display: none;
+	}
+
+	.kylin-outline {
+		margin-bottom: 60px;
+	}
+
+	.whats-05-outline,
+	.whats-06-outline {
+		display: flex;
+		align-items: center;
+	}
+
+	.whats-05-outline div.whats-05-content:nth-of-type(1),
+	.whats-06-outline div.whats-06-content:nth-of-type(1) {
+		width: 70%;
+	}
+
+	.whats-05-outline div.whats-05-content:nth-of-type(2) {
+		width: 30%;
+		font-size: .6em;
+		text-align: center;
+		margin-top: 0;
+	}
+
+	.whats-05-content img {
+		width: 175px;
+		margin: 0 auto 20px;
+	}
+
+	.whats-06-outline div.whats-06-content:nth-of-type(2) {
+		width: 30%;
+		text-align: center;
+		position: relative;
+		z-index: 2;
+	}
+
+	.whats-06-outline div.whats-06-content:nth-of-type(2) img {
+		width: 180px;
+	}
+}
+
+.safety-01-copy h2,
+.safety-02-in span.ttl,
+.safety-02-in h2,
+.safety-03-in span.ttl,
+.safety-03-in h3,
+.safety-04-copy h2 {
+	text-align: center;
+}
+
+.safety-02-in span.ttl,
+.safety-03-in span.ttl {
+	display: block;
+}
+
+.safety-fv {
+	position: relative;
+	overflow: hidden;
+	height: 60vh;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/safety-eartth.jpg?v=130960254245975318081694929228") no-repeat center / cover;
+}
+
+iframe.earth {
+	width: 900px;
+	height: 505.25px;
+	position: absolute;
+	top: calc(50% - 253.125px);
+	left: calc(50% - 450px);
+}
+
+.safety-fv-copy {
+	color: #fff;
+	text-align: center;
+	position: absolute;
+	margin: auto;
+	right: 0;
+	left: 0;
+	bottom: 5vh;
+}
+
+.safety-fv-copy h2 {
+	color: #fff;
+}
+
+.safety-fv-copy p {
+	text-align: right;
+	padding-right: 10%;
+}
+
+.safety-section-01 img {
+	width: 12vw;
+	max-width: 100px;
+	display: block;
+	margin: 0 auto 30px;
+}
+
+.safety-01-copy h2 {
+	margin-bottom: 30px;
+}
+
+.safety-section-02 {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/safety-sea.jpg?v=29956451794428935071694929256") no-repeat center / cover;
+	position: relative;
+}
+
+.safety-section-03 {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/safety-rainbow.jpg?v=59408010318844948441694929251") no-repeat center / cover;
+	position: relative;
+}
+
+.safety-section-03::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #1b233a33;
+}
+
+.safety-02-in,
+.safety-03-in {
+	position: relative;
+}
+
+.safety-02-in,
+.safety-03-in,
+.safety-02-in h2,
+.safety-03-in h3 {
+	color: #fff;
+}
+
+.ttl {
+	font-size: 2.2rem;
+	letter-spacing: 1.5px;
+}
+
+.safety-02-in img,
+.safety-03-in img {
+	width: 12vw;
+	max-width: 60px;
+	max-width: 90px;
+	display: block;
+	margin: 30px auto 60px;
+}
+
+.safety-section-04 {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/safety-factory.jpg?v=55906234320100459021694929234") no-repeat bottom left 77% / cover;
+	color: #fff;
+}
+
+.safety-04-copy {
+	margin-bottom: 30px;
+}
+
+.safety-04-copy h2 {
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.safety-04-in dl dd:nth-child(odd) {
+	background: #2a2a2a80;
+	margin-bottom: 10px;
+	padding: 20px 10px;
+	text-align: center;
+}
+
+.safety-04-in dl dd:nth-child(odd):last-child {
+	margin-bottom: 0;
+}
+
+.safety-04-in dl dd:nth-child(2n) {
+	text-align: center;
+	color: #838383;
+	margin-bottom: 10px;
+}
+
+.safety-section-05 ul li {
+	margin-bottom: 60px;
+}
+
+.sf-section-safety .question {
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.safety-section-05 ul li i {
+	font-size: 4rem;
+	color: #3e92ff;
+	padding-right: 10px;
+}
+
+.safety-section-05 ul li h4 {
+	font-size: 2.4rem;
+}
+
+.sf-section-safety .answer {
+	background: #e3e3e3;
+	padding: 20px;
+	border-radius: 15px;
+	transition: all 2s cubic-bezier(.25, .1, .31, 1.4);
+	opacity: 0;
+	transform: translatey(50px);
+}
+
+.safety-section-05 li.slash .answer {
+	opacity: 1;
+	transform: translatey(0);
+}
+
+.safety-04-in dl dd {
+	transition: opacity 1.3s linear, transform 1s cubic-bezier(.215, .61, .355, 1);
+	opacity: 0;
+	transform: translatey(-100%);
+}
+
+.safety-04-in dl.slash dd {
+	opacity: 1;
+	transform: translate(0);
+}
+
+.safety-04-in dl dd:nth-of-type(2) {
+	transition-delay: .3s;
+}
+
+.safety-04-in dl dd:nth-of-type(3) {
+	transition-delay: .6s;
+}
+
+.safety-04-in dl dd:nth-of-type(4) {
+	transition-delay: .9s;
+}
+
+.safety-04-in dl dd:nth-of-type(5) {
+	transition-delay: 1.2s;
+}
+
+.safety-04-in dl dd:nth-of-type(6) {
+	transition-delay: 1.5s;
+}
+
+.safety-04-in dl dd:nth-of-type(7) {
+	transition-delay: 1.8s;
+}
+
+.safety-04-in dl dd:nth-of-type(8) {
+	transition-delay: 2.1s;
+}
+
+.safety-04-in dl dd:nth-of-type(9) {
+	transition-delay: 2.4s;
+}
+
+@media screen and (min-width: 768px) {
+	.safety-01-copy h2,
+	.safety-04-copy {
+		margin-bottom: 60px;
+	}
+
+	.safety-fv {
+		height: 75vh;
+	}
+
+	iframe.earth {
+		width: 1365.33px;
+		height: 768px;
+		top: calc(50% - 384px);
+		left: calc(50% - 682.665px);
+	}
+
+	.safety-fv-copy {
+		bottom: 10vh;
+	}
+
+	.safety-fv-copy h1 {
+		font-size: 5rem;
+	}
+
+	.ttl {
+		font-size: 4rem;
+	}
+
+	.safety-02-in img,
+	.safety-03-in img {
+		margin: 60px auto 90px;
+	}
+
+	.safety-04-in dl dd:nth-child(odd) {
+		font-size: 3rem;
+		margin-bottom: 20px;
+	}
+
+	.safety-section-05 ul li {
+		margin-bottom: 90px;
+	}
+
+	.safety-section-05 ul li h4 {
+		font-size: 3.4rem;
+	}
+
+	.sf-section-safety .question {
+		margin-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.safety-04-in dl {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.safety-04-in dl dd:nth-child(odd) {
+		background: #2a2a2ab3;
+		width: calc(80% / 3);
+		height: 150px;
+		line-height: 1.3;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+	}
+
+	.safety-04-in dl dd:nth-child(odd):last-child {
+		margin-bottom: 20px;
+	}
+
+	.safety-04-in dl dd:nth-child(2n) {
+		width: 5%;
+		margin: 0;
+	}
+
+	.safety-04-in dl dd:nth-child(2n) i {
+		transform: rotate(-90deg);
+		color: #fff;
+	}
+
+	.safety-04-in dl dd {
+		transform: translate(-50px);
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.sf-section-safety .sphone-padding {
+		padding: 200px 0;
+	}
+
+	.sf-section-safety .safety-section-01 .sphone-padding {
+		padding: 0;
+	}
+
+	.safety-fv,
+	.safety-section-01,
+	.safety-section-02,
+	.safety-section-03,
+	.safety-section-04,
+	.safety-section-05 {
+		margin-bottom: 200px;
+	}
+
+	.safety-fv {
+		height: 90vh;
+	}
+
+	iframe.earth {
+		width: 2000px;
+		height: 1125px;
+		top: calc(50% - 562.5px);
+		left: calc(50% - 1000px);
+	}
+
+	.safety-fv-copy {
+		bottom: 20vh;
+		left: initial;
+		right: 10%;
+	}
+
+	.safety-fv-copy h2 {
+		letter-spacing: 2px;
+	}
+
+	.safety-fv-copy p {
+		padding-right: 5%;
+	}
+
+	.safety-section-04 {
+		background-position: center;
+	}
+
+	.safety-04-copy {
+		background: #2a2a2a80;
+		padding: 30px;
+		margin-bottom: 60px;
+		text-align: center;
+	}
+
+	.safety-04-in ul li {
+		float: left;
+		width: 160px;
+		height: 180px;
+		margin: 0 40px 0 0;
+		font-size: 2rem;
+		position: relative;
+		background: #2a2a2acc;
+	}
+
+	.safety-04-in ul li:last-child {
+		margin-right: 0;
+	}
+
+	.safety-04-in ul li div {
+		position: absolute;
+		width: 150px;
+		height: 84px;
+		margin: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.safety-04-in ul li:nth-of-type(2) div {
+		height: 60px;
+	}
+
+	.safety-04-in ul li:nth-of-type(3) div {
+		height: 110px;
+	}
+
+	.safety-04-in ul li:nth-of-type(4) div {
+		height: 145px;
+	}
+
+	.safety-04-in ul li:nth-of-type(5) div {
+		height: 30px;
+	}
+
+	.safety-04-in ul li i {
+		bottom: calc(50% - 10px);
+		right: -30px;
+		transform: rotate(-90deg);
+	}
+}
+
+#section-1,
+#section-2 {
+	width: 100%;
+	min-height: 100vh;
+	margin: 0 auto;
+	position: relative;
+}
+
+#section-1 div.inner {
+	text-align: center;
+	line-height: 2;
+	height: 200px;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
+
+#section-1 {
+	margin-bottom: 0;
+}
+
+#section-1 h1 {
+	font-size: 8vw;
+}
+
+.history-content {
+	min-height: 50vh;
+	border: 1px solid #b7b7b7;
+	border-radius: 20px;
+	padding: 20px 10px;
+	overflow: hidden;
+}
+
+#section-2.history {
+	margin-bottom: 100px;
+}
+
+#section-2 .history-content:nth-of-type(1) {
+	width: 90%;
+	margin-bottom: 10%;
+}
+
+#section-2 .history-content:nth-of-type(2) {
+	width: 90%;
+	margin-left: 10%;
+}
+
+.year {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.year p.big {
+	font-size: 5rem;
+	margin-bottom: 10px;
+}
+
+.year p.small {
+	font-size: 3rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+	line-height: 1.4;
+}
+
+#section-3 .max-767 {
+	width: 20%;
+	height: 250px;
+	margin: 0 auto 20px;
+	overflow: hidden;
+}
+
+#section-4 .max-767,
+#section-5 .max-767,
+#section-7 .max-767,
+#section-8 .max-767,
+#section-9 .max-767 {
+	width: 60%;
+	margin: 0 auto 20px;
+	overflow: hidden;
+}
+
+.small-span {
+	font-size: 2rem;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.event-small {
+	max-width: 80%;
+	margin: 40px auto 0;
+	text-align: center;
+	font-size: 1.6rem;
+}
+
+.event-small img {
+	max-width: 120px;
+	margin-top: 10px;
+}
+
+.video {
+	height: 180px;
+	overflow: hidden;
+}
+
+.video iframe {
+	width: 280px;
+	height: 157.5px;
+	border: 10px solid #333;
+	border-radius: 10px;
+	display: block;
+	margin: 0 auto 20px;
+}
+
+#section-last {
+	text-align: center;
+	position: relative;
+}
+
+.blue {
+	font-size: 5rem;
+	color: #2eb4e9;
+}
+
+#section-1.inview {
+	transition: all .5s ease-in-out;
+	filter: blur(10px);
+}
+
+#section-1.inview.slash {
+	filter: blur(0);
+}
+
+/* .history-content.inview {
+	transition: all 1s cubic-bezier(.215, .61, .355, 1);
+	opacity: 0;
+	transform: translatey(150px);
+}
+
+.history-content .max-767 img,
+.history-content.inview .video iframe {
+	transition: all 1s cubic-bezier(.215, .61, .355, 1);
+	opacity: 0;
+	transform: translatey(150%);
+	transition-delay: 1s;
+} */
+
+.history-content.slash,
+.history-content.slash .max-767 img,
+.history-content.slash .video iframe,
+.history-content.slash .year,
+.history-content.slash .event {
+	transform: translate(0);
+	opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+	.history-outline {
+		position: relative;
+	}
+
+	.history-outline::before {
+		content: "";
+		width: 1px;
+		height: calc(100% - 100vh);
+		background: #b7b7b7;
+		position: absolute;
+		top: 100vh;
+		left: calc(50% - .5px);
+	}
+
+	.sf-section-history .sphone-padding {
+		padding: 150px 5%;
+	}
+
+	.history-inner {
+		display: flex;
+	}
+
+	.history-content {
+		border: none;
+		border-radius: initial;
+		padding: 0 5%;
+		min-height: initial;
+		width: 50%;
+	}
+
+	.history-content:nth-of-type(2) {
+		transition-delay: .5s;
+	}
+
+	#section-2.history {
+		margin-bottom: 0;
+		min-height: 50vh;
+	}
+
+	#section-2 .history-content:nth-of-type(1),
+	#section-2 .history-content:nth-of-type(2) {
+		margin: 0;
+	}
+
+	.history {
+		min-height: 50vh;
+	}
+
+	.history .history-content:nth-of-type(2),
+	#section-2 .history-content:nth-of-type(2) {
+		margin-top: 20%;
+	}
+
+	#section-3 .image img {
+		width: auto;
+		height: 380px;
+		display: block;
+		margin: 0 auto;
+	}
+
+	#section-6 .history-inner div:nth-of-type(2) {
+		padding-right: 0;
+	}
+
+	.video {
+		height: 200px;
+	}
+
+	.video iframe {
+		width: 311px;
+		height: auto;
+		aspect-ratio: 280 / 157.5;
+	}
+
+	#section-last {
+		background: #fff;
+	}
+
+	#section-last .history-inner {
+		display: initial;
+	}
+
+	#section-last img {
+		width: 80%;
+		display: block;
+		margin: 0 auto 150px;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.video {
+		height: 230px;
+	}
+
+	.video iframe {
+		width: 400px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.sf-section-history .sphone-padding {
+		padding: 150px 0;
+	}
+
+	.history-content {
+		padding: 0 20px;
+	}
+
+	#section-1 h1 {
+		font-size: 7rem;
+	}
+
+	.event {
+		font-size: 2.4rem;
+	}
+}
+
+.report-content-img {
+	width: 100%;
+	height: calc(100vw / 3 * 2);
+}
+
+.report-section-01 .report-content-img {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/report-bg-1sp.jpg?v=161349808255556709101695018672") no-repeat top 42% center / cover;
+}
+
+.report-section-02 .report-content-img {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/report-bg-2sp.jpg?v=50373608279890575761695018685") no-repeat center / cover;
+}
+
+.report-content-text {
+	padding: 50px 20px;
+}
+
+.report-in,
+.report-interview {
+	margin-bottom: 60px;
+}
+
+.report-fv-copy {
+	border-top: 1px solid #b7b7b7;
+	border-bottom: 1px solid #b7b7b7;
+	padding: 20px 0;
+}
+
+.report-fv-copy h1 .sub {
+	display: block;
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #a1a1a1;
+	margin-bottom: 10px;
+}
+
+.sf-section-report .name {
+	letter-spacing: 2px;
+	margin-top: 10px;
+}
+
+.sf-section-report .question {
+	font-size: 2.3rem;
+	font-weight: 700;
+	line-height: 1.6;
+	margin-bottom: 30px;
+}
+
+.report-close h3 {
+	font-size: 2.2rem;
+	font-weight: 700;
+	line-height: 1.4;
+}
+
+.report-profile {
+	font-size: 14px;
+}
+
+.sf-section-report .profile-1 {
+	padding-top: 50px;
+}
+
+.sf-section-report .profile-1 h3 {
+	font-size: 2rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.sf-section-report .profile-img {
+	width: 100px;
+	max-width: 300px;
+	height: 100px;
+	display: block !important;
+	margin: 0 auto 10px;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/report-takamoku.png?v=4476295400186949741695018692") no-repeat center / cover;
+}
+
+.sf-section-report .profile-2 {
+	margin: 10px auto 20px;
+	text-align: center;
+}
+
+.sf-section-report .profile-name {
+	font-size: 1.1em;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+.sf-section-report .profile-2 dl {
+	font-weight: 700;
+	display: flex;
+	justify-content: center;
+	color: #a1a1a1;
+	letter-spacing: 2px;
+}
+
+.sf-section-report .profile-2 dl dt {
+	padding-right: 20px;
+}
+
+@media screen and (min-width: 768px) {
+	.sf-section-report {
+		position: relative;
+		display: flex;
+	}
+
+	.report-pc-half {
+		width: 50%;
+	}
+
+	.sf-section-report .min-768 {
+		height: 100vh;
+		position: sticky;
+		position: -webkit-sticky;
+		top: 0;
+	}
+
+	.sf-section-report .inview li {
+		height: 100vh;
+		background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/report-bg-1sp.jpg?v=161349808255556709101695018672") no-repeat left 20% center / cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.sf-section-report .min-768 ul li:nth-of-type(2) {
+		background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/report-bg-2sp.jpg?v=50373608279890575761695018685") no-repeat bottom center / cover;
+		transition: all .5s ease-in-out;
+		opacity: 0;
+	}
+
+	.sf-section-report .min-768 ul.slash li:nth-of-type(2) {
+		opacity: 1;
+	}
+
+	.sf-section-report .question {
+		font-size: 3.2rem;
+		line-height: 1.4;
+		letter-spacing: 1.4px;
+		margin-bottom: 40px;
+	}
+
+	.sf-section-report .answer {
+		font-size: 2.4rem;
+	}
+
+	.report-in,
+	.report-interview {
+		margin-bottom: 100px;
+	}
+
+	.report-close {
+		font-size: 3rem;
+		line-height: 1.1;
+	}
+
+	.report-profile {
+		font-size: 18px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.report-content-text {
+		padding: 50px 10%;
+	}
+}
+
+.sf-section-compare .big {
+	font-size: 3.2rem;
+	font-weight: 700;
+	line-height: 1.3;
+}
+
+.compare-fv {
+	height: 60vh;
+	position: relative;
+}
+
+.compare-fv .inner {
+	position: absolute;
+	height: 320px;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.compare-fv h1 {
+	text-align: center;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+.compare-outline {
+	position: relative;
+}
+
+.compare-product {
+	position: sticky;
+	top: 75px;
+	transition: all .5s;
+	background: #fff;
+	padding: 0 10px 20px;
+	box-shadow: 0 10px 10px -5px #00000080;
+	margin-bottom: 50vh;
+}
+
+.compare-outline .sphone-padding {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+.compare-copy {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.sf-product-in,
+.sf-section-compare .slashpoint .compare-content .compare-content-in ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.sf-product-in li,
+.sf-section-compare .slashpoint .compare-content .compare-content-in ul li {
+	width: 50%;
+	padding: 10px;
+	text-align: center;
+}
+
+.compare-product .sf-product-in li {
+	padding: 0;
+}
+
+.sf-section-compare .product-name {
+	padding: 10px 0;
+}
+
+.sf-section-compare .product-name h2 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	letter-spacing: 0;
+}
+
+.sf-section-compare .product-type {
+	font-size: .8em;
+	letter-spacing: 2px;
+}
+
+.sf-section-compare .product-link a {
+	display: block;
+	width: 80%;
+	background: #124f57;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	padding: 5px 10px;
+	margin: 10px auto;
+}
+
+.sf-section-compare .slash .product-img,
+.sf-section-compare .slash .product-type {
+	display: none;
+}
+
+.sf-section-compare .slashpoint {
+	padding: 0 0 150px;
+	text-align: center;
+}
+
+.sf-section-compare .slashpoint div.compare-content:not(:last-child) {
+	margin-bottom: 60px;
+}
+
+.sf-section-compare .slashpoint .compare-content .compare-content-ttl {
+	margin-bottom: 10px;
+}
+
+.sf-section-compare ul.flex-start {
+	align-items: flex-start !important;
+}
+
+.compare-content-in .type {
+	text-align: left;
+	margin-bottom: 40px;
+}
+
+.compare-content-in .type .border {
+	border: 1px solid;
+	border-radius: 15px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.compare-content-in .table {
+	display: flex;
+	border-bottom: 1px solid #b7b7b7;
+	flex-wrap: wrap;
+	padding: 20px 0;
+	line-height: 1.3;
+}
+
+.compare-content-in .table dt {
+	width: 60%;
+}
+
+.compare-content-in .table dd {
+	width: 40%;
+}
+
+.compare-content-in .table .hosoku {
+	width: 100%;
+	font-size: .8em;
+	color: #999;
+	margin-top: 10px;
+}
+
+.compare-content-in .per {
+	font-weight: 700;
+	font-size: 1.2em;
+}
+
+@media screen and (min-width: 768px) {
+	.sf-section-compare .big {
+		font-size: 5.6rem;
+	}
+
+	.compare-fv {
+		height: 80vh;
+	}
+
+	.compare-fv .inner {
+		height: 430px;
+		padding: 0 10%;
+	}
+
+	.compare-product {
+		padding: 60px 20px 40px;
+	}
+
+	.compare-product .product-img {
+		text-align: center;
+	}
+
+	.compare-product .product-img img {
+		width: 80%;
+		max-width: 200px;
+	}
+
+	.sf-section-compare .product-name h2 {
+		font-size: 2.4rem;
+	}
+
+	.sf-section-compare .slashpoint div.compare-content:not(:last-child) {
+		margin-bottom: 150px;
+	}
+
+	.sf-section-compare .slashpoint .compare-content .compare-content-ttl {
+		margin-bottom: 40px;
+	}
+
+	.compare-content-in .type p {
+		padding: 0 15px;
+	}
+
+	.compare-content-in .table {
+		padding: 40px 15px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.compare-fv {
+		margin-bottom: 150px;
+	}
+
+	.compare-fv .inner {
+		padding: 0;
+		max-width: 1000px;
+		height: 500px;
+	}
+}
+/*# sourceMappingURL=/cdn/shop/t/1/assets/sj-contents.css.map?v=55104598376274779101697173063%3Fv%3D55104598376274779101697173063 */

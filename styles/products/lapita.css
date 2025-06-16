@@ -1,0 +1,6208 @@
+#shopify-buyer-consent {
+	margin-top: 1em;
+	display: inline-block;
+	width: 100%;
+}
+
+#shopify-buyer-consent.hidden {
+	display: none;
+}
+
+#shopify-subscription-policy-button {
+	background: none;
+	border: none;
+	padding: 0;
+	text-decoration: underline;
+	font-size: inherit;
+	cursor: pointer;
+}
+
+#shopify-subscription-policy-button::before {
+	box-shadow: none;
+}
+
+@font-face {
+	font-family: Assistant;
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url("//sea-fucoidan.com/cdn/fonts/assistant/assistant_n4.bcd3d09dcb631dec5544b8fb7b154ff234a44630.woff2?h1=c2VhLWZ1Y29pZGFuLW9mZmljaWFsLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=c2VhLWZ1Y29pZGFuLmNvbQ&h3=YWNjb3VudC5zZWEtZnVjb2lkYW4uY29t&hmac=4f8e5857f036b050d7ed7ffcc9f8f8e4fcf634eab8219713bd203d566e3e1f1b") format("woff2"), url("//sea-fucoidan.com/cdn/fonts/assistant/assistant_n4.a2d012304becc2a26f1ded1acc136fcab85c9afd.woff?h1=c2VhLWZ1Y29pZGFuLW9mZmljaWFsLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=c2VhLWZ1Y29pZGFuLmNvbQ&h3=YWNjb3VudC5zZWEtZnVjb2lkYW4uY29t&hmac=1c4989010911322610970f5c00d6032ba1d2bfb676cfbc54de75c7377a6fbc04") format("woff");
+}
+
+@font-face {
+	font-family: Assistant;
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	src: url("//sea-fucoidan.com/cdn/fonts/assistant/assistant_n7.3335c7bdaddf2501ddab87cdbd9be98f3870e10d.woff2?h1=c2VhLWZ1Y29pZGFuLW9mZmljaWFsLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=c2VhLWZ1Y29pZGFuLmNvbQ&h3=YWNjb3VudC5zZWEtZnVjb2lkYW4uY29t&hmac=18e8734e2e53b847ad28053da386f2417f3432c96375c68072e95b7084d439bd") format("woff2"), url("//sea-fucoidan.com/cdn/fonts/assistant/assistant_n7.7c85f5c5cc1555de92cc7ef2790ee3cffe5237f5.woff?h1=c2VhLWZ1Y29pZGFuLW9mZmljaWFsLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=c2VhLWZ1Y29pZGFuLmNvbQ&h3=YWNjb3VudC5zZWEtZnVjb2lkYW4uY29t&hmac=43663dd2d68780a8e18b3b0da73373d72c0c97cc87d95bc2fb73e019899886fe") format("woff");
+}
+
+@font-face {
+	font-family: Assistant;
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	src: url("//sea-fucoidan.com/cdn/fonts/assistant/assistant_n4.bcd3d09dcb631dec5544b8fb7b154ff234a44630.woff2?h1=c2VhLWZ1Y29pZGFuLW9mZmljaWFsLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=c2VhLWZ1Y29pZGFuLmNvbQ&h3=YWNjb3VudC5zZWEtZnVjb2lkYW4uY29t&hmac=4f8e5857f036b050d7ed7ffcc9f8f8e4fcf634eab8219713bd203d566e3e1f1b") format("woff2"), url("//sea-fucoidan.com/cdn/fonts/assistant/assistant_n4.a2d012304becc2a26f1ded1acc136fcab85c9afd.woff?h1=c2VhLWZ1Y29pZGFuLW9mZmljaWFsLmFjY291bnQubXlzaG9waWZ5LmNvbQ&h2=c2VhLWZ1Y29pZGFuLmNvbQ&h3=YWNjb3VudC5zZWEtZnVjb2lkYW4uY29t&hmac=1c4989010911322610970f5c00d6032ba1d2bfb676cfbc54de75c7377a6fbc04") format("woff");
+}
+
+:root,
+.color-background-1 {
+	--color-background: 255, 255, 255;
+	--gradient-background: #ffffff;
+	--color-foreground: 18, 18, 18;
+	--color-shadow: 18, 18, 18;
+	--color-button: 0, 0, 0;
+	--color-button-text: 255, 255, 255;
+	--color-secondary-button: 255, 255, 255;
+	--color-secondary-button-text: 0, 0, 0;
+	--color-link: 0, 0, 0;
+	--color-badge-foreground: 18, 18, 18;
+	--color-badge-background: 255, 255, 255;
+	--color-badge-border: 18, 18, 18;
+	--payment-terms-background-color: rgb(255 255 255);
+}
+
+.color-background-2 {
+	--color-background: 243, 243, 243;
+	--gradient-background: #f3f3f3;
+	--color-foreground: 18, 18, 18;
+	--color-shadow: 18, 18, 18;
+	--color-button: 18, 18, 18;
+	--color-button-text: 243, 243, 243;
+	--color-secondary-button: 243, 243, 243;
+	--color-secondary-button-text: 18, 18, 18;
+	--color-link: 18, 18, 18;
+	--color-badge-foreground: 18, 18, 18;
+	--color-badge-background: 243, 243, 243;
+	--color-badge-border: 18, 18, 18;
+	--payment-terms-background-color: rgb(243 243 243);
+}
+
+.color-inverse {
+	--color-background: 36, 40, 51;
+	--gradient-background: #242833;
+	--color-foreground: 255, 255, 255;
+	--color-shadow: 18, 18, 18;
+	--color-button: 255, 255, 255;
+	--color-button-text: 0, 0, 0;
+	--color-secondary-button: 36, 40, 51;
+	--color-secondary-button-text: 255, 255, 255;
+	--color-link: 255, 255, 255;
+	--color-badge-foreground: 255, 255, 255;
+	--color-badge-background: 36, 40, 51;
+	--color-badge-border: 255, 255, 255;
+	--payment-terms-background-color: rgb(36 40 51);
+}
+
+.color-accent-1 {
+	--color-background: 18, 18, 18;
+	--gradient-background: #121212;
+	--color-foreground: 255, 255, 255;
+	--color-shadow: 18, 18, 18;
+	--color-button: 255, 255, 255;
+	--color-button-text: 18, 18, 18;
+	--color-secondary-button: 18, 18, 18;
+	--color-secondary-button-text: 255, 255, 255;
+	--color-link: 255, 255, 255;
+	--color-badge-foreground: 255, 255, 255;
+	--color-badge-background: 18, 18, 18;
+	--color-badge-border: 255, 255, 255;
+	--payment-terms-background-color: rgb(18 18 18);
+}
+
+.color-accent-2 {
+	--color-background: 255, 255, 255;
+	--gradient-background: #ffffff;
+	--color-foreground: 255, 255, 255;
+	--color-shadow: 18, 18, 18;
+	--color-button: 255, 255, 255;
+	--color-button-text: 51, 79, 180;
+	--color-secondary-button: 255, 255, 255;
+	--color-secondary-button-text: 255, 255, 255;
+	--color-link: 255, 255, 255;
+	--color-badge-foreground: 255, 255, 255;
+	--color-badge-background: 255, 255, 255;
+	--color-badge-border: 255, 255, 255;
+	--payment-terms-background-color: rgb(255 255 255);
+}
+
+body,
+.color-background-1,
+.color-background-2,
+.color-inverse,
+.color-accent-1,
+.color-accent-2 {
+	color: rgba(var(--color-foreground), 0.75);
+	background-color: rgb(var(--color-background));
+}
+
+:root {
+	--font-body-family: Assistant, sans-serif;
+	--font-body-style: normal;
+	--font-body-weight: 400;
+	--font-body-weight-bold: 700;
+	--font-heading-family: Assistant, sans-serif;
+	--font-heading-style: normal;
+	--font-heading-weight: 400;
+	--font-body-scale: 1.0;
+	--font-heading-scale: 1.0;
+	--media-padding: px;
+	--media-border-opacity: 0.05;
+	--media-border-width: 1px;
+	--media-radius: 0px;
+	--media-shadow-opacity: 0.0;
+	--media-shadow-horizontal-offset: 0px;
+	--media-shadow-vertical-offset: 4px;
+	--media-shadow-blur-radius: 5px;
+	--media-shadow-visible: 0;
+	--page-width: 120rem;
+	--page-width-margin: 0rem;
+	--product-card-image-padding: 0.0rem;
+	--product-card-corner-radius: 0.0rem;
+	--product-card-text-alignment: left;
+	--product-card-border-width: 0.0rem;
+	--product-card-border-opacity: 0.1;
+	--product-card-shadow-opacity: 0.0;
+	--product-card-shadow-visible: 0;
+	--product-card-shadow-horizontal-offset: 0.0rem;
+	--product-card-shadow-vertical-offset: 0.4rem;
+	--product-card-shadow-blur-radius: 0.5rem;
+	--collection-card-image-padding: 0.0rem;
+	--collection-card-corner-radius: 0.0rem;
+	--collection-card-text-alignment: left;
+	--collection-card-border-width: 0.0rem;
+	--collection-card-border-opacity: 0.1;
+	--collection-card-shadow-opacity: 0.0;
+	--collection-card-shadow-visible: 0;
+	--collection-card-shadow-horizontal-offset: 0.0rem;
+	--collection-card-shadow-vertical-offset: 0.4rem;
+	--collection-card-shadow-blur-radius: 0.5rem;
+	--blog-card-image-padding: 0.0rem;
+	--blog-card-corner-radius: 0.0rem;
+	--blog-card-text-alignment: left;
+	--blog-card-border-width: 0.0rem;
+	--blog-card-border-opacity: 0.1;
+	--blog-card-shadow-opacity: 0.0;
+	--blog-card-shadow-visible: 0;
+	--blog-card-shadow-horizontal-offset: 0.0rem;
+	--blog-card-shadow-vertical-offset: 0.4rem;
+	--blog-card-shadow-blur-radius: 0.5rem;
+	--badge-corner-radius: 4.0rem;
+	--popup-border-width: 1px;
+	--popup-border-opacity: 0.1;
+	--popup-corner-radius: 0px;
+	--popup-shadow-opacity: 0.05;
+	--popup-shadow-horizontal-offset: 0px;
+	--popup-shadow-vertical-offset: 4px;
+	--popup-shadow-blur-radius: 5px;
+	--drawer-border-width: 1px;
+	--drawer-border-opacity: 0.1;
+	--drawer-shadow-opacity: 0.0;
+	--drawer-shadow-horizontal-offset: 0px;
+	--drawer-shadow-vertical-offset: 4px;
+	--drawer-shadow-blur-radius: 5px;
+	--spacing-sections-desktop: 0px;
+	--spacing-sections-mobile: 0px;
+	--grid-desktop-vertical-spacing: 8px;
+	--grid-desktop-horizontal-spacing: 8px;
+	--grid-mobile-vertical-spacing: 4px;
+	--grid-mobile-horizontal-spacing: 4px;
+	--text-boxes-border-opacity: 0.1;
+	--text-boxes-border-width: 0px;
+	--text-boxes-radius: 0px;
+	--text-boxes-shadow-opacity: 0.0;
+	--text-boxes-shadow-visible: 0;
+	--text-boxes-shadow-horizontal-offset: 0px;
+	--text-boxes-shadow-vertical-offset: 4px;
+	--text-boxes-shadow-blur-radius: 5px;
+	--buttons-radius: 0px;
+	--buttons-radius-outset: 0px;
+	--buttons-border-width: 1px;
+	--buttons-border-opacity: 1.0;
+	--buttons-shadow-opacity: 0.0;
+	--buttons-shadow-visible: 0;
+	--buttons-shadow-horizontal-offset: 0px;
+	--buttons-shadow-vertical-offset: 4px;
+	--buttons-shadow-blur-radius: 5px;
+	--buttons-border-offset: 0px;
+	--inputs-radius: 0px;
+	--inputs-border-width: 1px;
+	--inputs-border-opacity: 0.55;
+	--inputs-shadow-opacity: 0.0;
+	--inputs-shadow-horizontal-offset: 0px;
+	--inputs-margin-offset: 0px;
+	--inputs-shadow-vertical-offset: 4px;
+	--inputs-shadow-blur-radius: 5px;
+	--inputs-radius-outset: 0px;
+	--variant-pills-radius: 40px;
+	--variant-pills-border-width: 1px;
+	--variant-pills-border-opacity: 0.55;
+	--variant-pills-shadow-opacity: 0.0;
+	--variant-pills-shadow-horizontal-offset: 0px;
+	--variant-pills-shadow-vertical-offset: 4px;
+	--variant-pills-shadow-blur-radius: 5px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: calc(var(--font-body-scale) * 62.5%);
+	height: 100%;
+}
+
+body {
+	display: grid;
+	grid-template-rows: auto auto 1fr auto;
+	grid-template-columns: 100%;
+	min-height: 100%;
+	margin: 0;
+	font-size: 1.5rem;
+	letter-spacing: 0.06rem;
+	line-height: calc(1 + 0.8 / var(--font-body-scale));
+	font-family: var(--font-body-family);
+	font-style: var(--font-body-style);
+	font-weight: var(--font-body-weight);
+}
+
+@media screen and (min-width: 750px) {
+	body {
+		font-size: 1.6rem;
+	}
+}
+
+header-drawer {
+	justify-self: start;
+	margin-left: -1.2rem;
+}
+
+.menu-drawer-container {
+	display: flex;
+}
+
+.list-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.list-menu--inline {
+	display: inline-flex;
+	flex-wrap: wrap;
+}
+
+summary.list-menu__item {
+	padding-right: 2.7rem;
+}
+
+.list-menu__item {
+	display: flex;
+	align-items: center;
+	line-height: calc(1 + 0.3 / var(--font-body-scale));
+}
+
+.list-menu__item--link {
+	text-decoration: none;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	line-height: calc(1 + 0.8 / var(--font-body-scale));
+}
+
+@media screen and (min-width: 750px) {
+	.list-menu__item--link {
+		padding-bottom: 0.5rem;
+		padding-top: 0.5rem;
+	}
+}
+
+.header {
+	padding: 10px 3rem 10px 3rem;
+}
+
+.section-header {
+	position: sticky;
+	/* This is for fixing a Safari z-index issue. PR #2147 */
+	margin-bottom: 0px;
+}
+
+@media screen and (min-width: 750px) {
+	.section-header {
+		margin-bottom: 0px;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.header {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+}
+
+.cart-notification {
+	display: none;
+}
+
+.section-sections--20903564181789__7903573d-fc3a-42a5-b058-ea2af2f5a549-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-sections--20903564181789__7903573d-fc3a-42a5-b058-ea2af2f5a549-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.section-template--20903563362589__52566b8c-dfd0-40c3-9d1d-3d6ebf8bfd88-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__52566b8c-dfd0-40c3-9d1d-3d6ebf8bfd88-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.product-nav-wrapper {
+	position: sticky;
+	top: 75px;
+	background: #ffffffb8;
+	backdrop-filter: saturate(180%) blur(20px);
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	width: 100%;
+	height: 48px;
+	border-bottom: 1px solid #dfdfdf;
+	z-index: 10;
+}
+
+.product-nav-in {
+	padding: 0 16px;
+	max-width: 980px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.product-nav-name {
+	width: 100%;
+	height: 100%;
+	padding-right: 20px;
+}
+
+.product-nav-name a {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+.product-nav-name h1 {
+	font-size: 1.7rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+.product-nav-buy a {
+	display: block;
+	width: 80px;
+	padding: 5px 20px;
+	background: #0071e3;
+	border-radius: 25px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 24px;
+	text-align: center;
+}
+
+.big {
+	font-size: 3.2rem;
+	font-weight: 700;
+	line-height: 1.3;
+	letter-spacing: 0;
+}
+
+#buy {
+	height: 100px;
+}
+
+.product__title h1 {
+	font-size: 22px;
+	font-weight: 700;
+	padding: 1em 0 0;
+}
+
+.price__regular {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+	.product-nav-wrapper {
+		top: 64px;
+	}
+
+	.product-nav-name h1 {
+		font-size: 3rem;
+	}
+
+	.product-nav-buy a {
+		font-size: 2rem;
+		letter-spacing: 2px;
+		width: 120px;
+	}
+}
+
+.dx-fv {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/dxfv.jpg?v=119169157149889752571695106231") no-repeat center / cover;
+	color: #fff;
+	text-align: center;
+	position: relative;
+}
+
+.dx-fv-in {
+	padding-bottom: 100px;
+}
+
+.dx-fv-in img {
+	width: 280px;
+}
+
+.copy-2 {
+	margin: 20px auto 40px;
+}
+
+.copy-3 {
+	font-size: 2rem;
+	line-height: 1.6;
+	font-weight: 700;
+	letter-spacing: 1.6px;
+	transition: all 1s;
+	opacity: 0;
+	transform: translatey(100px);
+}
+
+.copy-3.slash {
+	opacity: 1;
+	transform: translate(0);
+}
+
+.dx-section-01 {
+	position: relative;
+	background: #fff;
+	overflow: hidden;
+}
+
+.dx-section-01,
+.dx-section-01 .dx-movie iframe {
+	height: 250px;
+}
+
+.dx-section-01 .dx-movie iframe {
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: -87px;
+	width: auto;
+	aspect-ratio: 45 / 25;
+	z-index: 1;
+}
+
+.dx-01-in {
+	width: 60%;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 20px;
+	padding: 50px 20px 50px 0;
+	text-align: center;
+	z-index: 2;
+}
+
+.dx-section-logo {
+	margin-top: 20px;
+	font-size: 14px;
+}
+
+.dx-section-02 {
+	text-align: center;
+	line-height: 1.8;
+}
+
+.dx-section-03 {
+	color: #fff;
+	position: relative;
+}
+
+#particles-js {
+	position: absolute;
+	background: linear-gradient(to bottom, #0e7d73, #024c0f, #609004);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+}
+
+.dx-03-in {
+	position: relative;
+}
+
+.dx-03-copy {
+	text-align: center;
+}
+
+.dx-03-copy img {
+	width: 100px;
+}
+
+.dx-section-03 h2.big {
+	color: #fff;
+	margin-bottom: 30px;
+}
+
+.dx-03-content-copy {
+	margin: 80px auto 50px;
+}
+
+.dx-03-content-copy p.big {
+	margin-bottom: 10px;
+}
+
+.mol-in {
+	margin-bottom: 50px;
+	line-height: 1.3;
+}
+
+.mol-name {
+	margin: 20px auto;
+	font-size: 7.4vw;
+	font-weight: 700;
+}
+
+.mol-name span {
+	font-size: initial;
+	display: block;
+	color: #b7b7b7;
+}
+
+.dx-mol-capa p:nth-of-type(1) {
+	color: #b7b7b7;
+}
+
+.mol-number {
+	font-size: 10vw;
+	font-weight: 700;
+}
+
+.mol-number span {
+	margin: 0 10px;
+}
+
+.dx-03-horiuchi {
+	margin-bottom: 40px;
+}
+
+.dx-03-horiuchi p.big,
+.dx-kombu-in p.big {
+	margin-bottom: 20px;
+}
+
+.dx-03-horiuchi p.big span,
+.dx-kombu-in p.big span {
+	display: block;
+	font-size: 7vw;
+	color: #b3ff6d;
+	line-height: 1;
+	margin: 15px auto;
+}
+
+.dx-kombu-in img {
+	display: block;
+	margin: 20px auto;
+	width: 80%;
+	max-width: 250px;
+}
+
+.dx-section-04 {
+	background: linear-gradient(to bottom, #0d8fd1, #67b3c1);
+	overflow: hidden;
+	color: #fff;
+	position: relative;
+}
+
+.dx-section-04 .dx-move-02 {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.dx-section-04 .dx-move-02 iframe {
+	position: absolute;
+	z-index: 1;
+	width: auto;
+	height: 100%;
+	aspect-ratio: 16 / 9;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: -144%;
+}
+
+.dx-move-02::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #0006;
+	z-index: 1;
+}
+
+.dx-04-in {
+	position: relative;
+	z-index: 2;
+}
+
+.dx-04-copy {
+	text-align: center;
+}
+
+.dx-04-copy h2.big {
+	color: #fff;
+	margin-top: 10px;
+}
+
+.dx-04-content-in {
+	margin-top: 40px;
+}
+
+.dx-04-content-in p.big {
+	font-size: 7vw;
+}
+
+.dx-04-content-in span {
+	display: block;
+	margin-bottom: 10px;
+	font-weight: 700;
+	color: #b7b7b7;
+}
+
+.dx-video-start {
+	display: block;
+	width: 200px;
+	height: 150px;
+	border: 1px solid;
+	margin: 20px auto 0;
+	position: relative;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/safety-human.jpg?v=163136696709194663331694929246") no-repeat center / cover;
+}
+
+.dx-video-start::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: #fff3;
+	z-index: 1;
+}
+
+.dx-video-start span {
+	display: block;
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	color: transparent;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.dx-video-start span::after {
+	content: "";
+	display: block;
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: calc(50% - 35px);
+	left: calc(50% - 35px);
+	cursor: pointer;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/top-movie-start.png?v=123322881051189234701694679815") no-repeat center / cover;
+	z-index: 3;
+}
+
+.video-screen {
+	display: none;
+	position: fixed;
+	z-index: 1000;
+	width: 100vw;
+	height: 100vh;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #000;
+}
+
+.video-screen.open {
+	display: block;
+}
+
+ul.video-nav {
+	width: 100%;
+	height: 60px;
+	color: #fff;
+	padding: 100px 0 0 10px;
+}
+
+#video-close,
+#video-volume-on,
+#video-volume-off {
+	width: 60px;
+	height: 60px;
+	position: relative;
+	z-index: 2000;
+	display: inline-block;
+}
+
+#video-close::before,
+#video-close::after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 1px;
+	background: #fff;
+	position: absolute;
+	bottom: 30px;
+}
+
+#video-close::before {
+	transform: rotate(45deg);
+}
+
+#video-close::after {
+	transform: rotate(-45deg);
+}
+
+#mute {
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 18px;
+	text-align: center;
+	width: calc(100% - 70px);
+}
+
+.video-screen-in iframe {
+	width: 100%;
+	max-width: 1300px;
+	height: 100%;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.dx-05-copy {
+	overflow: hidden;
+}
+
+.dx-05-copy h3.big {
+	margin-bottom: 20px;
+}
+
+table.mol-table {
+	width: 100%;
+	max-width: 645px;
+	height: 580px;
+	margin: 40px auto 20px;
+}
+
+td.mol-text {
+	vertical-align: top;
+	width: 85%;
+	padding: 20px 20px 60px 0;
+	position: relative;
+}
+
+td.mol-text p.big {
+	font-size: 18px;
+	padding-right: 58px;
+	line-height: 1.3;
+}
+
+td.mol-text p:nth-of-type(2) {
+	color: #b7b7b7;
+	font-weight: 700;
+}
+
+td.mol-text p.mol-text-number {
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+td.mol-text p.mol-text-number span {
+	font-size: 4rem;
+	display: inline-block;
+}
+
+td.mol-img {
+	position: relative;
+}
+
+td.mol-img img {
+	position: absolute;
+	top: 0;
+	width: 158px;
+	right: -10px;
+}
+
+.mol-bar {
+	display: block;
+	width: 100%;
+	height: 10px;
+	position: relative;
+	transition: all 1s cubic-bezier(.86, 0, .07, 1);
+	z-index: 2;
+}
+
+.mol-bar::before {
+	content: "";
+	display: block;
+	width: 1px;
+	height: 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transition: all 1s cubic-bezier(.86, 0, .07, 1);
+	background: linear-gradient(to right, #eab11c, #fff);
+}
+
+.mol-bar.slash::before {
+	width: 100%;
+}
+
+table tr:nth-of-type(2) td .mol-bar::before {
+	background: linear-gradient(to right, #1541cb, #fff);
+	transition-delay: .3s;
+}
+
+.mol-bar.slash {
+	width: 100%;
+}
+
+.mol-bar::after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 50%;
+	position: absolute;
+	right: -15px;
+	top: -10px;
+}
+
+.mol-graph {
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.mol-graph-in {
+	position: relative;
+	height: 200px;
+	margin-bottom: 20px;
+}
+
+canvas#graph {
+	position: absolute;
+	margin-right: auto;
+	margin-left: auto;
+	width: 45vw;
+	height: 45vw;
+	background: conic-gradient(#eab11c 0% 18%, #1c2952 18% 98%, #fff 98% 100%);
+	border-radius: 50%;
+	left: -10px;
+	top: 20px;
+	transition: all 1s cubic-bezier(.86, 0, .07, 1);
+}
+
+.graph-name li {
+	margin-bottom: 5px;
+}
+
+.graph-name li:last-child {
+	margin-bottom: 0;
+	font-size: 14px;
+}
+
+.graph-name li::before {
+	content: "";
+	width: 1.7rem;
+	height: 1.7rem;
+	display: inline-block;
+	border-radius: 50%;
+	margin-right: 5px;
+	vertical-align: middle;
+	background: linear-gradient(to right, #1541cb, #fff);
+}
+
+.graph-name li:nth-of-type(2)::before {
+	background: linear-gradient(to right, #eab11c, #fff);
+}
+
+.graph-name li:last-child::before {
+	display: none;
+}
+
+.dx-06-copy {
+	text-align: center;
+}
+
+.dx-06-copy p:nth-of-type(1) {
+	color: #b7b7b7;
+}
+
+.dx-06-copy h3 {
+	margin-bottom: 10px;
+}
+
+.dx-06-link {
+	margin: 20px auto 60px;
+}
+
+.dx-06-link a {
+	border: 1px solid;
+	padding: 8px 10px;
+	border-radius: 5px;
+	color: #0071e3;
+	display: block;
+	text-align: center;
+	line-height: 1.1;
+	max-width: 335px;
+	margin: 0 auto;
+}
+
+.bar-graph-01 {
+	margin-bottom: 60px;
+}
+
+.bar-graph-name {
+	margin: 10px auto 20px;
+	line-height: 1;
+}
+
+.bar-graph-name p:nth-of-type(1) {
+	color: #b7b7b7;
+	font-weight: 700;
+}
+
+.bar-graph-name p:nth-of-type(2) {
+	font-weight: 700;
+	font-size: 2.4rem;
+}
+
+.bar-graph-name p:nth-of-type(2) span {
+	color: #0071e3;
+	font-size: 6rem;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+ul.dx-bar li {
+	margin-bottom: 10px;
+}
+
+ul.dx-bar li span.bar {
+	display: block;
+	width: 100%;
+	height: 15px;
+	background: #eaeaea;
+	position: relative;
+}
+
+ul.dx-bar li span.bar::after {
+	content: "";
+	display: block;
+	height: 100%;
+	transition: all 2s cubic-bezier(.86, 0, .07, 1);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+ul.dx-bar li:nth-of-type(1) span.bar::after {
+	width: 1px;
+	background: linear-gradient(to right, #5a77f8, #0f5);
+}
+
+ul.dx-bar li:nth-of-type(1) span.bar.slash::after {
+	width: 100%;
+}
+
+ul.dx-bar li:nth-of-type(2) span.bar::after {
+	width: 1px;
+	background: linear-gradient(to right, #ccc, #9b9b9b, #545454);
+}
+
+ul.dx-bar li:nth-of-type(2) span.bar.slash::after {
+	width: 55%;
+}
+
+.bar-graph-02 ul.dx-bar li:nth-of-type(2) span.bar.slash::after {
+	width: 48%;
+}
+
+.dx-07-content {
+	margin-top: 40px;
+	font-size: 2.4rem;
+	line-height: 1.2;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/dx-color.png?v=20950626220666217301695106207") no-repeat bottom center / cover;
+}
+
+.dx-section-08 {
+	padding: 50px 0;
+	text-align: center;
+}
+
+.dx-08-copy p:nth-of-type(1) {
+	color: #b7b7b7;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+.dx-08-copy img {
+	width: 100px;
+	display: block;
+	margin: 20px auto 30px;
+}
+
+.dx-08-copy h4 {
+	margin-bottom: 40px;
+}
+
+ul.dx-08 {
+	margin-top: 30px;
+	color: #626262;
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+ul.dx-08 li {
+	margin-bottom: 20px;
+}
+
+ul.dx-08 li img {
+	width: 200px;
+	margin: 20px auto 0;
+}
+
+.dx-section-09 {
+	color: #fff;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/dx-tonga.jpg?v=16741553251615530811695106287") no-repeat bottom center / cover;
+}
+
+.dx-09-copy p span.ttl {
+	font-size: 2.6rem;
+	font-weight: 700;
+	display: block;
+}
+
+.dx-09-copy p.big {
+	margin: 30px auto 20px;
+}
+
+.dx-09-link {
+	margin: 40px auto 20px;
+}
+
+.dx-09-link a {
+	color: #fff;
+	border: 1px solid;
+	border-radius: 5px;
+	padding: 10px 20px;
+	display: block;
+	width: 250px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.dx-section-10 h3 {
+	margin-bottom: 40px;
+}
+
+.dx-section-10 h3 span {
+	display: block;
+}
+
+#dxlineup li {
+	overflow: hidden;
+}
+
+#dxlineup .dx-10-outline:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+#dxlineup .dx-10-outline h4 {
+	background: #336290;
+	color: #fff;
+	padding: 10px 60px 10px 10px;
+	border-radius: 25px;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: 2px;
+	position: relative;
+	z-index: 2;
+}
+
+#dxlineup .dx-10-outline.active h4 {
+	border-radius: 25px 25px 0 0;
+}
+
+#dxlineup .dx-10-outline h4::after {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f0ab";
+	position: absolute;
+	right: 20px;
+	transition: all .5s cubic-bezier(.86, 0, .07, 1);
+}
+
+#dxlineup .dx-10-outline.active h4::after {
+	transform: rotate(180deg);
+}
+
+.dx-10-outline .dxlineup-in {
+	background: #f1f1f1;
+	padding: 0;
+	border-radius: 0 0 25px 25px;
+	transition: all .5s cubic-bezier(.86, 0, .07, 1);
+	opacity: 0;
+	transform: translatey(-100%);
+	height: 0px;
+}
+
+.dx-10-outline.active .dxlineup-in {
+	opacity: 1;
+	transform: translate(0);
+	padding: 40px 5%;
+	height: auto;
+}
+
+.dxlineup-in .img,
+.dxlineup-in .name,
+.dxlineup-in .price,
+.dxlineup-in .icon {
+	margin-bottom: 20px;
+}
+
+.dxlineup-in .img {
+	width: 60%;
+	margin: 0 auto;
+}
+
+.dxlineup-in .name {
+	text-align: center;
+	font-weight: 700;
+	font-size: 2rem;
+	line-height: 1.3;
+}
+
+.dxlineup-in .name .sub {
+	font-size: .8em;
+	letter-spacing: 2px;
+}
+
+.dxlineup-in .price {
+	text-align: center;
+}
+
+.dxlineup-in .icon dl {
+	width: 70%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.dxlineup-in .icon dl dd {
+	padding: 0 10px 10px;
+}
+
+.dxlineup-in .icon img {
+	opacity: .6;
+}
+
+.dxlineup-in .caution li {
+	position: relative;
+	padding-left: 2rem;
+	margin-bottom: 1rem;
+}
+
+.dxlineup-in .caution li::before {
+	content: "\25cf";
+	font-size: 2rem;
+	position: absolute;
+	left: 0;
+}
+
+.dxlineup-in .link-btn {
+	margin-top: 20px;
+}
+
+.dxlineup-in .link-btn a {
+	display: block;
+	background: #336290;
+	color: #fff;
+	margin: 0 auto;
+	width: 250px;
+	padding: 15px 20px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 25px;
+}
+
+@media screen and (min-width: 768px) {
+	.big {
+		font-size: 5.6rem;
+	}
+
+	.pc-only {
+		display: block;
+	}
+
+	.sp-only {
+		display: none;
+	}
+
+	.sphone-padding {
+		padding: 150px 60px;
+	}
+
+	.copy-3 {
+		font-size: inherit;
+	}
+
+	.dx-section-01,
+	.dx-movie iframe {
+		height: 400px;
+	}
+
+	.dx-section-01 {
+		max-width: 800px;
+		margin: 100px auto 0;
+	}
+
+	.dx-section-01 .dx-movie iframe {
+		width: 711.11px;
+		height: 400px;
+	}
+
+	.dx-01-in {
+		height: 354px;
+	}
+
+	.dx-section-logo {
+		font-size: 2rem;
+	}
+
+	.dx-section-logo img {
+		max-width: 400px;
+	}
+
+	.mol-name {
+		font-size: 5.3rem;
+	}
+
+	.mol-name span {
+		font-size: 2.8rem;
+		font-weight: 300;
+	}
+
+	.kombu-img {
+		float: right;
+	}
+
+	.dx-section-04 .dx-move-02 iframe {
+		left: -95vw;
+	}
+
+	.dx-video-start {
+		width: 300px;
+		height: 225px;
+		margin-top: 40px;
+	}
+
+	.dx-video-start span::after {
+		width: 100px;
+		height: 100px;
+		top: calc(50% - 50px);
+		left: calc(50% - 50px);
+	}
+
+	td.mol-text p.big {
+		font-size: 3rem;
+		padding-right: 30px;
+	}
+
+	.mol-bar {
+		width: 108%;
+	}
+
+	td.mol-text p.mol-text-number span {
+		font-size: 6rem;
+	}
+
+	.mol-graph-in,
+	canvas#graph {
+		width: 300px;
+		height: 300px;
+		top: 0;
+		left: 0;
+	}
+
+	.graph-name li:last-child {
+		font-size: 2rem;
+	}
+
+	.dx-07-content {
+		height: 100px;
+		position: relative;
+	}
+
+	.dx-07-content p {
+		position: absolute;
+		width: 648px;
+		height: 47px;
+		margin: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		font-size: 3.8rem;
+	}
+
+	ul.dx-08 {
+		margin-top: 60px;
+		display: flex;
+	}
+
+	ul.dx-08 li {
+		width: 50%;
+		margin-bottom: 0;
+	}
+
+	ul.dx-08 li img {
+		margin-top: 40px;
+		width: 185px;
+	}
+
+	ul.dx-08 li:last-child img {
+		width: 300px;
+	}
+
+	.dx-09-copy p span.ttl {
+		font-size: 5.6rem;
+		color: #b7b7b7;
+	}
+
+	.dx-09-link a {
+		width: 300px;
+		border: 2px solid;
+	}
+
+	#dxlineup {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	#dxlineup .dx-10-outline {
+		width: 50%;
+		padding: 10px;
+	}
+
+	#dxlineup .dx-10-outline h4 {
+		padding: 10px;
+		border-radius: 25px 25px 0 0;
+		font-size: 3rem;
+	}
+
+	#dxlineup .dx-10-outline h4::after {
+		display: none;
+	}
+
+	.dx-10-outline .dxlineup-in {
+		transition: all 0s;
+		opacity: 1;
+		transform: translatey(0);
+		height: auto;
+		padding: 40px 20px;
+	}
+
+	.dxlineup-in .name {
+		font-size: 3rem;
+	}
+
+	.dxlineup-in .price {
+		font-size: 2rem;
+	}
+
+	#dxlineup li:nth-child(1n + 3) .dxlineup-in {
+		height: 880px;
+	}
+
+	.dxlineup-in .link-btn a {
+		font-size: 2.4rem;
+	}
+
+	.dxlineup-in .icon dl {
+		width: 80%;
+	}
+
+	.dxlineup-in .caution {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.dx-03-content-copy {
+		width: 600px;
+	}
+
+	.dx-section-03 dl {
+		display: flex;
+	}
+
+	.dx-section-03 dl dd {
+		width: 50%;
+		padding: 0 30px;
+	}
+
+	.mol-in,
+	.dx-04-content-in {
+		margin-bottom: 0;
+	}
+
+	.mol-copy {
+		height: 180px;
+	}
+
+	.mol-name,
+	.dx-04-content-in p.big {
+		font-size: 3.6rem;
+	}
+
+	.dx-mol-capa p:nth-of-type(1) {
+		margin-bottom: 40px;
+	}
+
+	.mol-number {
+		font-size: 9rem;
+		line-height: 1;
+	}
+
+	.dx-section-03 dl dd:last-child .mol-number {
+		line-height: .5em;
+	}
+
+	.mol-number span {
+		display: block;
+		margin: 20px 0 30px 11rem;
+	}
+
+	.dx-03-horiuchi {
+		margin: 150px auto;
+	}
+
+	.dx-03-horiuchi p.big span,
+	.dx-kombu-in p.big span {
+		font-size: 5.6rem;
+		margin: initial;
+	}
+
+	#video-close {
+		cursor: pointer;
+	}
+
+	.dx-section-10 h3 span {
+		display: inline-block;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.sphone-padding {
+		padding: 150px 20px;
+	}
+
+	.dx-fv {
+		height: 90vh;
+	}
+
+	.dx-fv-in {
+		width: 1000px;
+		margin: auto;
+		position: absolute;
+		top: 10vh;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		padding: 0 20px;
+	}
+
+	.copy-3 {
+		font-size: 2.2rem;
+	}
+
+	.dx-section-01,
+	.dx-movie iframe {
+		height: 600px;
+	}
+
+	.dx-section-01 {
+		max-width: 1000px;
+	}
+
+	.dx-movie iframe {
+		width: 100%;
+	}
+
+	.dx-section-01 .dx-movie iframe {
+		height: 600px;
+		width: 100%;
+	}
+
+	.dx-section-04 .dx-move-02 iframe {
+		left: 0;
+	}
+
+	.dx-video-start span:hover::after {
+		width: 120px;
+		height: 120px;
+		top: calc(50% - 60px);
+		left: calc(50% - 60px);
+		transition: all .3s;
+	}
+
+	.dx-section-10 h3 {
+		text-align: center;
+	}
+
+	#dxlineup .dx-10-outline {
+		width: 25%;
+	}
+
+	#dxlineup .dx-10-outline h4 {
+		font-size: 2.4rem;
+	}
+
+	.dxlineup-in .name {
+		font-size: 2.2rem;
+		height: 60px;
+	}
+
+	.dxlineup-in .price,
+	.dxlineup-in .caution {
+		font-size: 1.6rem;
+	}
+
+	.dxlineup-in .icon dl {
+		width: 100%;
+	}
+
+	#dxlineup .dxlineup-in {
+		height: 800px !important;
+	}
+
+	.dxlineup-in .link-btn a {
+		width: 180px;
+		font-size: 1.8rem;
+	}
+}
+
+.trial-fv {
+	height: 500px;
+	position: relative;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/trial-fv-sp.jpg?v=3680831076722275041695354217") no-repeat center / cover;
+}
+
+.trial-fv-in {
+	width: 240px;
+	height: 125px;
+	position: absolute;
+	left: 20px;
+	bottom: 40px;
+}
+
+.trial-logo-1 dl {
+	display: flex;
+	align-items: center;
+}
+
+.trial-logo-1 dl dt {
+	width: 30px;
+	margin-right: 10px;
+}
+
+.trial-logo-1 dl dd {
+	font-size: 1.4rem;
+	letter-spacing: 2px;
+	font-weight: 700;
+	color: #135057;
+}
+
+.trial-logo-2 {
+	width: 180px;
+	margin-left: 20px;
+}
+
+.trial-logo-3 h2 {
+	color: #fff;
+	letter-spacing: 2px;
+}
+
+.trial-01-copy {
+	padding: 80px 20px 60px;
+	text-align: center;
+	color: #333;
+	letter-spacing: 2px;
+}
+
+.trial-01-in {
+	position: relative;
+	padding: 0 20px;
+}
+
+.trial-01-in::before {
+	content: "";
+	display: block;
+	background: #000;
+	width: 100%;
+	height: 40vw;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 12vw;
+	z-index: 1;
+}
+
+.trial-01-in img {
+	max-width: 600px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+
+.trial-01-concept {
+	background: #f9fafa;
+	padding-top: 5vw;
+}
+
+.trial-02 .trial-spec-content {
+	text-align: center;
+}
+
+.trial-02 .trial-spec-content.t-spec-1 img {
+	display: block;
+	width: 20%;
+	margin: 20px auto 40px;
+}
+
+.trial-02 .trial-spec-content.t-spec-2 {
+	display: flex;
+}
+
+.trial-02 .trial-spec-content.t-spec-2 .trial-spec-in {
+	width: 50%;
+	padding: 10px;
+	color: #9a9a9a;
+	text-align: center;
+}
+
+.trial-02 .trial-spec-content.t-spec-2 .type {
+	margin-bottom: 30px;
+}
+
+.trial-02 .trial-spec-content.t-spec-2 .type dt {
+	font-weight: 700;
+	font-size: 2rem;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+}
+
+.trial-02 .trial-spec-content.t-spec-2 ul {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.trial-02 .trial-spec-content.t-spec-2 ul li {
+	opacity: .6;
+	padding: 0 10px;
+	width: calc(100% / 3);
+}
+
+.trial-02 .trial-energy {
+	margin-top: 30px;
+}
+
+.trial-02 .trial-energy dl dd.sec {
+	margin-bottom: 10px;
+}
+
+.trial-02 .trial-energy dl dd dl {
+	display: flex;
+	font-size: 16px;
+	text-align: left;
+}
+
+.trial-02 .trial-energy dl dd dl dt {
+	width: 60%;
+}
+
+.trial-02 .trial-energy dl dd dl dd {
+	width: 40%;
+}
+
+.trial-02 .trial-energy dl dd p {
+	font-size: .8em;
+}
+
+.trial-section-03 {
+	background: #f9fafa;
+	text-align: center;
+}
+
+.trial-section-03 dl {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+
+.trial-section-03 dl dd {
+	width: 50%;
+	padding: 10px;
+}
+
+.trial-section-03 dl dd img {
+	width: 80%;
+	max-width: 200px;
+}
+
+.trial-section-03 dl .trial-pack {
+	margin-top: 10px;
+	font-size: 16px;
+	height: 80px;
+}
+
+.trial-section-03 dl .trial-pack p:first-child {
+	letter-spacing: 0;
+	font-weight: 700;
+}
+
+.trial-section-03 dl .trial-pack p span {
+	display: inline-block;
+	font-size: .8em;
+}
+
+.trial-section-04 {
+	text-align: center;
+}
+
+.trial-04-1 {
+	margin: 20px auto 30px;
+}
+
+.trial-04-2 {
+	margin-bottom: 30px;
+}
+
+.trial-04-2 .trial-product {
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-size: 2rem;
+}
+
+.trial-04-3 {
+	background: #f9fafa;
+	padding: 20px;
+	font-weight: 700;
+	font-size: .8em;
+}
+
+.trial-04-3 p:first-child {
+	color: red;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+.trial-05-before {
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.trial-section-05 {
+	background: #f9fafa;
+	overflow: hidden;
+}
+
+.trial-section-05 .inner {
+	display: flex;
+}
+
+.trial-section-05 .trial-05-text {
+	padding: 0 20px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	width: 60%;
+}
+
+.trial-section-05 .trial-05-text h2 {
+	font-size: 2.2rem;
+}
+
+.trial-section-05 .trial-05-text a {
+	display: block;
+	background: #7f7f7f;
+	color: #fff;
+	text-align: center;
+	padding: 10px 30px;
+	border-radius: 50px;
+	margin: 20px auto 0;
+}
+
+.trial-section-05 .trial-05-img {
+	width: 40%;
+}
+
+@media screen and (min-width: 768px) {
+	.trial-fv {
+		height: 700px;
+	}
+
+	.trial-fv-in {
+		width: 430px;
+		height: 240px;
+		bottom: 55px;
+		line-height: 1;
+	}
+
+	.trial-logo-1 dl dt {
+		width: 60px;
+	}
+
+	.trial-logo-1 dl dd {
+		font-size: 3rem;
+	}
+
+	.trial-logo-2 {
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	.trial-01-concept {
+		padding-top: 10vw;
+	}
+
+	.trial-02 .trial-spec-content.t-spec-2 .type dt {
+		font-size: 3rem;
+	}
+
+	.trial-02 .trial-spec-content.t-spec-2 .type dd {
+		font-size: .8em;
+	}
+
+	.trial-02 .trial-spec-content.t-spec-2 ul {
+		width: 100%;
+	}
+
+	.trial-02 .trial-spec-content.t-spec-2 ul li {
+		width: calc(100% / 6);
+	}
+
+	.trial-02 .trial-energy dl dd dl {
+		font-size: inherit;
+	}
+
+	.trial-02 .trial-energy dl dd p {
+		text-align: left;
+		margin-bottom: 20px;
+	}
+
+	.trial-section-03 dl .trial-pack {
+		font-size: inherit;
+	}
+
+	.trial-section-03 dl .trial-pack p:last-child {
+		line-height: 1.3;
+	}
+
+	.trial-04-2 .trial-product {
+		font-size: 3.2rem;
+	}
+
+	.trial-04-3 {
+		padding: 40px;
+	}
+
+	.trial-section-05 .trial-05-text h2 {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+	.trial-section-05 .trial-05-text a {
+		padding: 15px 60px;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.trial-fv {
+		height: 600px;
+		background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/trial-fv-pc.jpg?v=116769331171314162021695354211") no-repeat center / cover;
+	}
+
+	.trial-fv-in {
+		left: 15vw;
+	}
+
+	.trial-01-copy {
+		padding: 150px 60px 100px;
+	}
+
+	.trial-01-in::before {
+		top: 8vw;
+		height: 30vw;
+	}
+
+	.trial-02 {
+		display: flex;
+	}
+
+	.trial-02 .t-spec-1 {
+		width: 30%;
+	}
+
+	.trial-02 .trial-spec-content.t-spec-1 img {
+		width: 180px;
+	}
+
+	.trial-02 .t-spec-2 {
+		width: 70%;
+	}
+
+	.trial-02 .trial-spec-content.t-spec-2 .trial-spec-in {
+		padding: 0 20px;
+	}
+
+	.trial-section-04 .flex {
+		display: flex;
+		flex-flow: row-reverse;
+		margin-bottom: 40px;
+	}
+
+	.trial-section-04 .flex .trial-04-in:last-child {
+		margin-right: 10%;
+	}
+
+	.trial-05-before {
+		margin-bottom: 40px;
+	}
+
+	.trial-section-05 .inner {
+		max-width: 800px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.trial-fv {
+		height: 800px;
+	}
+
+	.trial-fv-in {
+		bottom: 30%;
+		left: 20%;
+	}
+
+	.trial-01-in::before {
+		height: 300px;
+		top: 80px;
+	}
+
+	.trial-01-concept {
+		padding-top: 110px;
+	}
+}
+
+.normal-fv-in {
+	padding-bottom: 20px;
+}
+
+.normal-fv-copy {
+	text-align: center;
+}
+
+.sf-section-normal .fv-img-2 {
+	width: 60%;
+	max-width: 190px;
+	margin: 20px auto 0;
+}
+
+.sf-section-normal .since {
+	text-align: right;
+	font-size: 3.4rem;
+}
+
+.normal-fv-copy p {
+	opacity: 0;
+	transition: all .8s ease-in-out;
+}
+
+.normal-fv-copy p:nth-of-type(2) {
+	transition-delay: .5s;
+}
+
+.normal-fv-copy p:nth-of-type(3) {
+	transition-delay: .8s;
+}
+
+.normal-fv-copy.slash p {
+	opacity: 1;
+}
+
+.normal-fv-img {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
+.normal-fv-img img {
+	position: absolute;
+	width: 150px;
+	height: 548px;
+	margin: auto;
+	right: 0;
+	left: 0;
+	top: -205px;
+	transition: all 3s ease-in-out;
+	transform: translatey(100%);
+	opacity: 0;
+}
+
+.normal-fv-img.slash img {
+	transform: translate(0);
+	opacity: 1;
+}
+
+.normal-01-copy h2,
+.normal-02-in h2 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.normal-01-link {
+	display: block;
+	max-width: 300px;
+	background: #1a923a;
+	border-radius: 50px;
+	text-align: center;
+	padding: 15px 10px;
+	margin: 30px auto 0;
+}
+
+.normal-01-link a {
+	color: #fff;
+}
+
+.normal-02-in img {
+	width: 100px;
+	display: block;
+	margin: 0 auto 30px;
+	background: linear-gradient(45deg, #0d8349, #01108f);
+	transition: all 3s ease-in-out;
+	background-size: 110% 110%;
+	animation: mol 5s ease-in-out infinite;
+}
+
+@keyframes mol {
+	0% {
+		background-position: 0% 50%;
+		transform: translatey(10px);
+	}
+
+	50% {
+		background-position: 110% 110%;
+		transform: translatey(0);
+	}
+
+	to {
+		background-position: 0% 50%;
+		transform: translatey(10px);
+	}
+}
+
+.normal-section-03 {
+	background: linear-gradient(to right, #fff, #ccc3 45%, #fff);
+}
+
+.normal-03-copy {
+	text-align: center;
+}
+
+.normal-03-copy img {
+	display: block;
+	width: 100px;
+	margin: 30px auto;
+}
+
+.normal-03-content {
+	margin-bottom: 60px;
+}
+
+.normal-03-content h3 {
+	margin-bottom: 20px;
+}
+
+.normal-03-in {
+	margin-bottom: 30px;
+}
+
+.normal-03-in span.bar-01 {
+	display: block;
+	width: 0%;
+	height: 6px;
+	margin-bottom: 20px;
+	background: linear-gradient(to right, #006f9d, #008f43);
+	transition: all 1s cubic-bezier(.86, 0, .07, 1);
+}
+
+.normal-03-in span.bar-02 {
+	display: block;
+	width: 0%;
+	height: 3px;
+	margin: 20px auto;
+	background: linear-gradient(to right, #3c1968, #c28a12);
+	transition: all 1s cubic-bezier(.86, 0, .07, 1);
+}
+
+.normal-03-in.slash span {
+	width: 100%;
+}
+
+.normal-03-in.slash span.blue {
+	color: #34a4dd;
+	width: inherit;
+	display: inline-block;
+}
+
+.dx-section-07 {
+	background: linear-gradient(to right, #7f4a71, #1c2862 45%, #1b2850);
+	color: #fff;
+	text-align: center;
+	padding: 50px 0;
+}
+
+.dx-07-in img {
+	width: 100px;
+	margin-bottom: 30px;
+}
+
+.normal-section-05 {
+	max-width: 1000px;
+	height: 600px;
+	position: relative;
+	margin: 50px auto 0;
+}
+
+.normal-05-img {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/normal-dx.jpg?v=182167148772761309621695358194") no-repeat center / 310px;
+	background-attachment: fixed;
+	height: 100%;
+	transition: all .5s ease-in-out;
+}
+
+.normal-05-img.slash {
+	filter: blur(10px);
+}
+
+.normal-05-img-2 {
+	display: none;
+}
+
+.normal-05 {
+	position: absolute;
+	height: 350px;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	text-align: center;
+	color: #fff;
+}
+
+.normal-05 .tw,
+.normal-05 .ko {
+	text-shadow: 1px 1px 1px #333;
+}
+
+.normal-05 p.big {
+	margin: 10px auto 30px;
+}
+
+.link-to-dx {
+	margin: 30px auto 0;
+}
+
+.link-to-dx a {
+	display: block;
+	background: #1068b2;
+	border-radius: 50px;
+	padding: 15px 10px;
+	max-width: 300px;
+	color: #fff;
+}
+
+.sf-section-normal .dx-10-outline {
+	background: #f4f4f4;
+	border-radius: 15px;
+	padding: 40px 20px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+img.dx-product-img {
+	width: 200px;
+}
+
+.sf-section-normal .lineup-name {
+	font-size: 2.4rem;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+
+.sf-section-normal .lineup-spec ul:first-child {
+	font-size: 1.5rem;
+}
+
+.sf-section-normal .lineup-spec ul:first-child li:first-child {
+	font-size: 2rem;
+}
+
+.sf-section-normal .lineup-spec ul:last-child li::before {
+	content: "";
+	display: inline-block;
+	width: 1rem;
+	height: 1rem;
+	background: #333;
+	border-radius: 50%;
+	vertical-align: middle;
+	margin-right: 5px;
+}
+
+.sf-section-normal .lineup-spec ul:last-child li {
+	margin-bottom: 1.7rem;
+	text-align: left;
+}
+
+.sf-section-normal .dx-spec-dot {
+	margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+	.normal-fv {
+		display: flex;
+		flex-flow: row-reverse;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.normal-fv-in {
+		width: 65%;
+		padding: 0 20px;
+		display: flex;
+	}
+
+	.normal-fv-copy {
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+		text-align: left;
+	}
+
+	.sf-section-normal .fv-img-2 {
+		max-width: 300px;
+		margin: 20px 0 0;
+	}
+
+	.normal-fv-img {
+		width: 35%;
+		height: 700px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 5% auto;
+	}
+
+	.normal-fv-img img {
+		position: relative;
+		width: auto;
+		height: 100%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		transform: translate(100%);
+	}
+
+	.normal-01-link {
+		max-width: 600px;
+		margin-top: 60px;
+	}
+
+	.normal-section-05 {
+		height: auto;
+		display: flex;
+	}
+
+	.normal-05-img.slash {
+		display: none;
+	}
+
+	.normal-05-img-2 {
+		display: block;
+		width: 40%;
+		padding: 0 20px;
+	}
+
+	.normal-05 {
+		position: relative;
+		width: 60%;
+		height: auto;
+		color: #333;
+		padding: 0 20px;
+	}
+
+	.normal-05 p.big {
+		font-size: 4rem;
+	}
+
+	.sf-section-normal .link-to-dx a {
+		max-width: 500px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.normal-fv-in {
+		padding: 0 40px 0 0;
+	}
+
+	.normal-03-outline {
+		display: flex;
+		margin-top: 100px;
+	}
+
+	.normal-03-content {
+		width: 50%;
+		padding: 0 20px;
+	}
+
+	.normal-03-content .normal-03-in:nth-of-type(1) {
+		height: 510px;
+	}
+
+	.normal-03-content .normal-03-in:nth-of-type(2) {
+		height: 320px;
+	}
+
+	.normal-03-content .normal-03-in:nth-of-type(3) {
+		height: 200px;
+	}
+
+	.normal-03-in .big {
+		font-size: 4.4rem;
+	}
+}
+
+.sf-section-fucoxanthinex .fv {
+	text-align: center;
+}
+
+.sf-section-fucoxanthinex .fv-copy.copy-1 {
+	margin-bottom: 20px;
+}
+
+.sf-section-fucoxanthinex .fv-copy.copy-1 p.big {
+	background: linear-gradient(to right, #0057ca 0, #3c77e8, #ed672a, #3c77e8, #0057ca);
+	text-align: center;
+	margin-bottom: 10px;
+	animation: fucoxanthin 3s ease;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: #fff;
+}
+
+.sf-section-fucoxanthinex .fv-copy.copy-1 p:last-child {
+	line-height: 1.1;
+}
+
+.sf-section-fucoxanthinex .fv-copy .copy-in:first-child {
+	max-width: 500px;
+	margin: 0 auto 30px;
+}
+
+.sf-section-fucoxanthinex .fv-copy .copy-in:last-child {
+	line-height: 1;
+}
+
+.sf-section-fucoxanthinex .fv-copy .copy-in:last-child p:nth-of-type(1) {
+	letter-spacing: 5px;
+}
+
+.sf-section-fucoxanthinex .fv-copy .copy-in:last-child p:nth-of-type(2) {
+	margin: 10px auto;
+}
+
+.fuco-01 p.big {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.fuco-01-back {
+	text-align: right;
+}
+
+.fuco-01-back img {
+	max-width: 1280px;
+}
+
+.fuco-02 h2.big,
+.fuco-02-form p:nth-of-type(1) {
+	text-align: center;
+}
+
+.fuco-02 img {
+	display: block;
+	max-width: 890px;
+	margin: 10px auto 30px;
+}
+
+.fuco-02-form p:nth-of-type(1) {
+	margin-top: 10px;
+}
+
+.fuco-02-form p:nth-of-type(1) span {
+	font-size: 2.4rem;
+	font-weight: 700;
+	margin-left: 10px;
+}
+
+.fuco-02-form p:nth-of-type(1) span sub {
+	font-size: 1.6rem;
+	padding-top: 5px;
+	vertical-align: bottom;
+}
+
+.fuco-02-line {
+	margin-top: 30px;
+}
+
+.fuco-02-line ul li {
+	margin-bottom: 15px;
+	color: #fff;
+	padding: 20px 10px;
+	position: relative;
+}
+
+.fuco-02-line ul li::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1%;
+	height: 100%;
+	transition: all 1.5s cubic-bezier(.86, 0, .07, 1);
+}
+
+.fuco-02-line ul li.slash::before {
+	width: 100%;
+	background: linear-gradient(to right, #ea3118, #ed672a 80%);
+}
+
+.fuco-02-line ul li p {
+	font-size: 2rem;
+	letter-spacing: 1px;
+	text-align: center;
+	position: relative;
+}
+
+.fuco-02-line ul li p span.tanni-capa {
+	font-size: 2.6rem;
+}
+
+.fuco-section-03 {
+	text-align: center;
+}
+
+.fuco-03 img {
+	width: 50%;
+	max-width: 250px;
+	display: block;
+	margin: 0 auto 30px;
+}
+
+.fuco-03 h3 {
+	margin-bottom: 30px;
+}
+
+.sf-section-fucoxanthinex .quote {
+	position: relative;
+	padding: 40px 10px;
+	background: #f3f3f3;
+	margin-bottom: 10px;
+}
+
+.sf-section-fucoxanthinex .quote i {
+	color: #b7b7b7;
+	position: absolute;
+}
+
+.sf-section-fucoxanthinex .quote i:nth-of-type(1) {
+	left: -5px;
+	top: -5px;
+}
+
+.sf-section-fucoxanthinex .quote i:nth-of-type(2) {
+	right: -5px;
+	bottom: -5px;
+}
+
+.fuco-section-05 {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/fuco-back.jpg?v=79484984503128549591695366659") no-repeat bottom left 44% / cover;
+	background-attachment: fixed;
+}
+
+.fuco-05 h3 {
+	color: #e84618;
+	margin-bottom: 20px;
+	font-weight: 300;
+}
+
+.fuco-05 h4 {
+	color: #003958;
+	margin: 40px auto;
+	line-height: 1.2;
+}
+
+.fuco05-p {
+	font-size: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+	.fuco-02-line {
+		margin-top: 60px;
+	}
+
+	.fuco-02-line ul li p {
+		font-size: 4rem;
+	}
+
+	.fuco-02-line ul li p span.tanni-capa {
+		font-size: 6rem;
+	}
+
+	.sf-section-fucoxanthinex .quote {
+		padding: 60px 40px;
+		margin-top: 40px;
+	}
+
+	.sf-section-fucoxanthinex .quote i {
+		font-size: 4rem;
+	}
+
+	.fuco-05 h4 {
+		margin-bottom: 100px;
+	}
+
+	.fuco05-p {
+		font-size: 4.4rem;
+	}
+}
+
+.nk-fv-ttl {
+	text-align: center;
+	line-height: 1.1;
+}
+
+.nk-fv-ttl p.big {
+	margin-bottom: 10px;
+}
+
+.nk-fv-icon {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	width: 45px;
+	height: 45px;
+	background: linear-gradient(45deg, #223a7c, #6387eb);
+	margin: 10px auto 20px;
+}
+
+.nk-fv-icon span {
+	font-weight: 700;
+	font-size: 2.2rem;
+	color: #fff;
+}
+
+.nk-fv-img ul {
+	position: relative;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.nk-fv-img ul li {
+	text-align: center;
+}
+
+.nk-fv-img ul li img {
+	transition: all 2s cubic-bezier(.86, 0, .07, 1);
+	opacity: 0;
+}
+
+.nk-fv-img ul.slash li img {
+	max-width: 220px;
+	transform: translate(0);
+	opacity: 1;
+}
+
+.nk-fv-copy {
+	margin-top: 30px;
+}
+
+.sf-section-nk .blueback {
+	background: #223a7c;
+	padding: 10px 20px;
+	margin-bottom: 20px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	text-align: center;
+	line-height: 1.1;
+	color: #fff;
+}
+
+.nk-02 .nk-02-in p.big {
+	margin-bottom: 20px;
+	font-size: 3rem;
+}
+
+.nk-02 .nk-02-in:nth-of-type(1) p:nth-of-type(2) {
+	font-weight: 700;
+	margin-bottom: 30px;
+	text-align: center;
+	font-size: 2rem;
+}
+
+.nk-02 .nk-02-in:nth-of-type(2) {
+	margin-top: 40px;
+	text-align: center;
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.nk-02 .nk-02-in img {
+	margin: 10px auto;
+}
+
+.nk-03 h2,
+.with-nk3-h2 {
+	font-weight: 700;
+	margin-bottom: 30px;
+	font-size: 2.4rem;
+	line-height: 1.1;
+}
+
+.sf-section-nk ul.kakeru {
+	text-align: center;
+	margin: 30px auto;
+}
+
+.sf-section-nk ul.kakeru li:nth-of-type(1) p {
+	font-size: 7vw;
+}
+
+.sf-section-nk ul.kakeru li:nth-of-type(3) p {
+	font-size: 9.2vw;
+}
+
+.nk-04-copy ul.kakeru li:nth-of-type(3) p {
+	font-size: 7.4vw;
+}
+
+.sf-section-nk ul.kakeru li span {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.sf-section-nk ul.kakeru li span::before,
+ul.kakeru li span::after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 4px;
+	border-radius: 25px;
+	background: linear-gradient(45deg, #223a7c, #6387eb);
+	position: absolute;
+	left: 0;
+	bottom: 13px;
+	transform-origin: center;
+	transition: all 2s cubic-bezier(.86, 0, .07, 1);
+}
+
+.sf-section-nk ul.kakeru li span::before {
+	transform: rotate(45deg) scale(3);
+	opacity: 0;
+}
+
+.sf-section-nk ul.kakeru li span::after {
+	transform: rotate(-45deg) scale(3);
+	opacity: 0;
+}
+
+.sf-section-nk ul.kakeru.slash li span::before {
+	transform: rotate(45deg) scale(1);
+	opacity: 1;
+}
+
+.sf-section-nk ul.kakeru.slash li span::after {
+	transform: rotate(-45deg) scale(1);
+	opacity: 1;
+}
+
+.sf-section-nk .kyudai.sp-only {
+	margin-bottom: 20px;
+}
+
+.nk-section-06 {
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	font-size: 2rem;
+	position: relative;
+}
+
+.nk-06,
+.nk-06-blue {
+	position: relative;
+	z-index: 2;
+}
+
+.nk-06 h3 {
+	text-align: center;
+}
+
+.nk-06 img {
+	width: 100px;
+	display: block;
+	margin: 30px auto;
+}
+
+.nk-06 p {
+	text-align: center;
+}
+
+.nk-06-blue {
+	background: #223a7c;
+	color: #b7b7b7;
+	padding: 20px 20px 40px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 2.4rem;
+}
+
+.nk-06-blue-in p:nth-of-type(1) {
+	font-size: 10vw;
+}
+
+.nk-section-07-1 {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/nk-chili.jpg?v=140285955331981822201695371095") no-repeat bottom center / cover;
+	background-attachment: fixed;
+	height: 80vh;
+}
+
+.nk-section-07-1 .nk-07-inner {
+	padding: 80px 20px;
+	margin: 100px auto 0;
+	position: relative;
+	z-index: 2;
+}
+
+.nk-section-07-1 h3 {
+	line-height: 1.6;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+.nk-section-07-2 .nk-07-inner {
+	padding: 0 20px 50px;
+}
+
+.nk-07-copy ul.kakeru li:nth-of-type(1) p {
+	line-height: 2;
+}
+
+.nk-07-copy ul.kakeru li:nth-of-type(3) {
+	line-height: 1;
+	margin-top: 15px;
+}
+
+.nk-07-copy ul.kakeru li:nth-of-type(3) p:nth-of-type(1) {
+	font-size: 6vw;
+	color: #b7b7b7;
+	font-weight: 700;
+}
+
+.nk-07-copy ul.kakeru li:nth-of-type(3) p:nth-of-type(2) {
+	font-size: 7vw;
+}
+
+.nk-fucoidan-logo {
+	max-width: 500px;
+	margin: 0 auto 30px;
+	display: block;
+}
+
+.nk-08-in .nk-08-content:nth-of-type(1) img {
+	width: 50%;
+	max-width: 220px;
+	display: block;
+	margin: 20px auto 30px;
+}
+
+.nk-08 table,
+.nk-08 table tr,
+.nk-08 table td {
+	border: none;
+	box-shadow: none;
+	padding: 0;
+	font-size: initial;
+	vertical-align: middle;
+}
+
+.nk-08 table {
+	width: 100%;
+}
+
+.nk-08 table div.nk-icon {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	width: 45px;
+	height: 45px;
+	border-radius: 5px;
+	position: relative;
+	background: #134402;
+}
+
+.nk-08 table tr:nth-of-type(2) div.nk-icon {
+	background: #4f4f4f;
+}
+
+.nk-08 table tr:nth-of-type(3) div.nk-icon {
+	background: #0098ff;
+}
+
+.nk-08 table tr:nth-of-type(4) div.nk-icon {
+	background: #08c146;
+}
+
+.nk-08 table div.nk-icon img {
+	width: 45px;
+	height: 45px;
+}
+
+.nk-08 table tr td:nth-of-type(1) {
+	width: 45px;
+}
+
+.nk-08 table tr td:nth-of-type(2) {
+	padding: 10px 15px;
+	font-size: 2rem;
+}
+
+.nk-08 table tr td:nth-of-type(3) {
+	width: 80px;
+	text-align: center;
+	font-weight: 700;
+	font-size: 2.3rem;
+	line-height: 1;
+}
+
+.sf-section-nk .tanni {
+	font-size: .8em;
+	display: inline-block;
+}
+
+.nk-08 table tr td ul li:nth-of-type(1) {
+	font-weight: 700;
+	color: #b7b7b7;
+}
+
+.nk-08 table tr td ul li:nth-of-type(2) {
+	font-weight: 700;
+	line-height: 1.1;
+}
+
+.nk-section-09 {
+	background: linear-gradient(to right, #d2e070, #48b687);
+}
+
+.nk-09 {
+	font-size: 2rem;
+	font-weight: 700;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/nk-hpmc.gif?v=129533749560631177231695371101") no-repeat center / 70%;
+}
+
+.nk-section-09 h3 {
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.nk-10 .nk-10-in:nth-of-type(1) img {
+	width: 150px;
+	display: block;
+	margin: 30px auto;
+}
+
+.nk-10 .nk-10-in:nth-of-type(2) img {
+	width: 80%;
+	max-width: 315px;
+	display: block;
+	margin: 30px auto 0;
+}
+
+.nk-11-ttl {
+	border: 4px solid;
+	padding: 20px 10px;
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 30px;
+}
+
+.nk-11-ttl p {
+	color: #2a3d82;
+	line-height: 1.1;
+}
+
+.nk-11-ttl h4 {
+	font-size: 8vw;
+	line-height: 1.1;
+	margin-top: 10px;
+	font-weight: 700;
+}
+
+.nk-11-content ul li {
+	border: 1px solid;
+	position: relative;
+	padding: 40px 20px;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.sf-section-nk .number {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	background: #2a3d82;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+	top: -10px;
+	left: -10px;
+}
+
+.sf-section-nk .number span {
+	color: #fff;
+	font-size: 2.4rem;
+	font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+	.nk-02 .nk-02-in:nth-of-type(1) p:nth-of-type(2) {
+		font-size: 3.2rem;
+	}
+
+	.nk-02 .nk-02-in:nth-of-type(2) {
+		margin-top: 100px;
+	}
+
+	.nk-03 h2,
+	.with-nk3-h2 {
+		font-size: 3.2rem;
+		line-height: 1.3;
+		letter-spacing: 2px;
+	}
+
+	.sf-section-nk ul.kakeru li span {
+		width: 60px;
+		height: 60px;
+	}
+
+	.sf-section-nk ul.kakeru li span::before,
+	ul.kakeru li span::after {
+		width: 60px;
+		bottom: 27px;
+	}
+
+	.nk-section-03 .nk-03-in:last-child {
+		margin-top: 60px;
+	}
+
+	.nk-section-06,
+	.nk-06-blue {
+		font-size: 3.2rem;
+	}
+
+	.nk-06-blue-in p:nth-of-type(1) {
+		font-size: 5.2rem;
+	}
+
+	.nk-section-07-1 .nk-07-inner,
+	.nk-section-07-2 .nk-07-inner {
+		padding: 150px 60px;
+	}
+
+	.sf-section-nk ul.kakeru {
+		margin-bottom: 60px;
+	}
+
+	.nk-07-copy ul.kakeru li:nth-of-type(3) {
+		line-height: 1.3;
+	}
+
+	.nk-08 table {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.nk-08 table tr td:nth-of-type(1) {
+		width: 80px;
+	}
+
+	.nk-08 table div.nk-icon,
+	.nk-08 table div.nk-icon img {
+		width: 80px;
+		height: 80px;
+	}
+
+	.nk-08 table tr td:nth-of-type(2) {
+		font-size: 3rem;
+		padding-left: 30px;
+	}
+
+	.nk-08 table tr td:nth-of-type(3) {
+		width: 220px;
+		font-size: 5rem;
+	}
+
+	.nk-09 {
+		font-size: 3.2rem;
+	}
+
+	.nk-10 .nk-10-in:nth-of-type(2) img {
+		margin-top: 60px;
+	}
+
+	.sf-section-nk .number {
+		width: 50px;
+		height: 50px;
+	}
+
+	.sf-section-nk .number span {
+		font-size: 3rem;
+	}
+
+	.nk-11-content ul li {
+		padding-top: 60px;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.nk-fv-icon {
+		width: 60px;
+		height: 60px;
+	}
+
+	.nk-fv-icon span {
+		font-size: 3rem;
+	}
+
+	.nk-02 {
+		display: flex;
+	}
+
+	.nk-02 .nk-02-in {
+		width: 50%;
+	}
+
+	.nk-02 .nk-02-in:first-child p:last-child {
+		font-size: 2.4rem;
+	}
+
+	.nk-02 .nk-02-in:last-child {
+		padding-left: 40px;
+		margin-top: 60px;
+		font-size: 2rem;
+	}
+
+	.nk-02 .nk-02-in:last-child p:first-child {
+		font-size: 2.4rem;
+		line-height: 1.3;
+	}
+
+	.nk-03 h2 {
+		text-align: center;
+		margin-bottom: 60px;
+		letter-spacing: 6px;
+	}
+
+	.nk-03 .flex {
+		display: flex;
+	}
+
+	.nk-03 .flex .nk-03-in:first-child {
+		width: 55%;
+	}
+
+	.sf-section-nk ul.kakeru li:nth-of-type(1) p {
+		font-size: 3.4rem;
+	}
+
+	.sf-section-nk ul.kakeru li:nth-of-type(3) p {
+		font-size: 6rem;
+		letter-spacing: 2rem;
+	}
+
+	.nk-03-text {
+		font-size: 2.4rem;
+	}
+
+	.nk-03 .flex .nk-03-in:last-child {
+		width: 45%;
+		padding-left: 40px;
+		margin-top: 0;
+	}
+
+	.nk-section-07-1 {
+		height: 120vh;
+	}
+
+	.sf-section-nk .blueback {
+		margin-bottom: 60px;
+	}
+
+	.nk-07-copy ul.kakeru li:nth-of-type(3) p:nth-of-type(1) {
+		font-size: 4rem;
+	}
+
+	.nk-07-copy ul.kakeru li:nth-of-type(3) p:nth-of-type(2) {
+		font-size: 5rem;
+		letter-spacing: 1rem;
+	}
+
+	.nk-10 {
+		display: flex;
+	}
+
+	.nk-10 .nk-10-in:first-child {
+		width: 60%;
+	}
+
+	.nk-10 .nk-10-in:last-child {
+		width: 40%;
+	}
+
+	.nk-11-ttl h4 {
+		font-size: 5.6rem;
+	}
+
+	.nk-11 {
+		max-width: 900px;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.nk-07-inner,
+	.nk-07-in-ttl {
+		max-width: 1000px;
+		margin: 100px auto 0;
+	}
+}
+
+.nkp-fv {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/nkp-fv-1.jpg?v=97174274744128595341695378784") no-repeat center / cover;
+	position: relative;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+}
+
+.nkp-fv::before {
+	content: "";
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/nkp-fv-2.gif?v=95574421694715536721695378790") no-repeat center / cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: .3;
+	animation: 3s linear infinite background;
+}
+
+@keyframes background {
+	0% {
+		transform: scale(1);
+	}
+
+	to {
+		transform: scale(2);
+	}
+}
+
+.nkp-fv-copy,
+.nkp-fv-img {
+	position: relative;
+}
+
+.nkp-fv-copy p:nth-of-type(2) {
+	margin: 20px auto 40px;
+}
+
+.nkp-fv-img {
+	width: 60%;
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.nkp-01-img {
+	max-width: 300px;
+	width: 50%;
+	margin: 0 auto 40px;
+	position: relative;
+}
+
+.nkp-01-img::after {
+	content: "";
+	width: 65%;
+	height: 65%;
+	border-radius: 50%;
+	display: block;
+	background: radial-gradient(circle farthest-side, #01010180, #fffc);
+	position: absolute;
+	bottom: 0%;
+	right: 3%;
+	z-index: -1;
+}
+
+.nkp-01-copy h2 {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.nkp-01-sign {
+	max-width: 170px;
+	margin: 30px auto 0;
+	font-size: 14px;
+	text-align: center;
+}
+
+.nkp-01-sign span {
+	font-size: 80%;
+	letter-spacing: 1px;
+	display: block;
+	margin-top: 10px;
+}
+
+.nkp-section-02 {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/nkp-story.jpg?v=46290062702734097881695378825") no-repeat center / cover;
+	color: #fff;
+	font-size: 2rem;
+	position: relative;
+}
+
+.nkp-section-02::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	opacity: .6;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.nkp-02 {
+	position: relative;
+}
+
+.nkp-02-in h2 {
+	color: #fff;
+	line-height: 1.1;
+	letter-spacing: 1px;
+	margin-bottom: 30px;
+}
+
+.nkp-02-in h2 span {
+	display: block;
+}
+
+.sf-section-nk-p .story-open {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #fff;
+	width: 200px;
+	height: 53px;
+	text-align: center;
+	margin: 30px 0 0 calc(100% - 200px);
+	position: relative;
+}
+
+.sf-section-nk-p .story-open span {
+	color: #fff;
+}
+
+.nkp-03 p:nth-of-type(1) {
+	line-height: 1.2;
+	text-align: center;
+}
+
+.nkp-03 p:nth-of-type(2) {
+	font-size: 2.4rem;
+	margin: 30px auto;
+	text-align: center;
+}
+
+.nkp-03 .sup {
+	font-size: 14px;
+	display: block;
+	text-align: center;
+}
+
+.nkp-section-04 {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/nkp-kyudai.jpg?v=82190444906039051831695378814") no-repeat center / cover;
+	color: #fff;
+	position: relative;
+}
+
+.nkp-section-04::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: #333;
+	opacity: .6;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.nkp-04 {
+	position: relative;
+}
+
+.nkp-04 p.big,
+.nkp-05 p.big {
+	font-size: 2.8rem;
+}
+
+.nkp-04 p.big span.color {
+	color: #cfbda3;
+	display: inline-block;
+	margin-bottom: .5em;
+}
+
+.sf-section-nk-p .sinsei {
+	display: block;
+	border: 2px solid;
+	padding: 10px 15px;
+	margin-top: 30px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.nkp-section-06 {
+	background: linear-gradient(25deg, #172319, #305235);
+	color: #fff;
+}
+
+.nkp-06 h3.big {
+	color: #fff;
+	margin-bottom: 30px;
+}
+
+.nkp-06 img.sp-only {
+	max-width: 360px;
+	width: 60%;
+	display: block;
+	margin: 30px auto;
+}
+
+.nkp-06-in dl {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-top: 20px;
+}
+
+.nkp-06-in dt {
+	width: 70%;
+	font-size: 2.4rem;
+	font-weight: 700;
+	line-height: 1.1;
+	vertical-align: middle;
+}
+
+.nkp-06-in dt span {
+	display: block;
+	font-size: 2rem;
+	font-weight: 300;
+	margin-top: 5px;
+}
+
+.nkp-06-in dt span sub {
+	font-size: 12px;
+	vertical-align: bottom;
+}
+
+.nkp-06-in dd {
+	width: 30%;
+	color: red;
+	font-weight: 700;
+	font-size: 3rem;
+	vertical-align: middle;
+}
+
+.sf-section-nk-p .tanni {
+	font-size: 1.8rem;
+	margin-left: 3px;
+}
+
+.nkp-section-07 {
+	background: #e8e8e8 url("//sea-fucoidan.com/cdn/shop/t/1/assets/nkp-hand-1.png?v=145303732515941600031695378796") no-repeat bottom right / 60%;
+	padding-bottom: 150px;
+}
+
+.nkp-07 h3 {
+	margin-bottom: 30px;
+}
+
+.nkp-07 h3 span {
+	display: block;
+	color: #b7b7b7;
+}
+
+.nkp-08-copy {
+	font-weight: 700;
+	margin-bottom: 60px;
+}
+
+.nkp-08-copy p:nth-of-type(1) {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.nkp-08-content {
+	margin-bottom: 60px;
+}
+
+.nkp-08-content p {
+	font-size: 2.4rem;
+	text-decoration: underline;
+}
+
+.nkp-08-content dl {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	max-width: 500px;
+	margin: 30px auto 0;
+}
+
+.nkp-08-content dt {
+	width: 20%;
+	letter-spacing: 2px;
+}
+
+.nkp-08-content dd {
+	width: 80%;
+}
+
+.nkp-08-result p.bold {
+	font-weight: 700;
+	text-align: center;
+}
+
+.sf-section-nk-p ul.result-in {
+	margin: 40px auto 30px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 700;
+	display: flex;
+	justify-content: space-between;
+}
+
+.sf-section-nk-p ul.result-in li {
+	width: calc(100% / 3);
+}
+
+.sf-section-nk-p ul.result-in li p span {
+	display: block;
+}
+
+.sf-section-nk-p .graph {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	display: block;
+	margin: 10px auto 0;
+}
+
+.sf-section-nk-p .ume .graph {
+	background: conic-gradient(#ed1c22 0 8%, #fec907 8% 38%, #7cbb15 38% 68%, #92d0ff 68% 88%, #30ade5 88% 89%, #c6c6c6 89% 100%);
+}
+
+.sf-section-nk-p .yuzu .graph {
+	background: conic-gradient(#ed1c22 0 2%, #fec907 2% 36%, #7cbb15 36% 66%, #92d0ff 66% 86%, #30ade5 86% 92%, #c6c6c6 92% 100%);
+}
+
+.sf-section-nk-p .mint .graph {
+	background: conic-gradient(#ed1c22 0 4%, #fec907 4% 26%, #7cbb15 26% 56%, #92d0ff 56% 80%, #30ade5 80% 96%, #c6c6c6 96% 100%);
+}
+
+.sf-section-nk-p ul.hosoku {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.sf-section-nk-p ul.hosoku li {
+	width: 50%;
+	line-height: 1;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+
+.sf-section-nk-p ul.hosoku li span {
+	width: 1.7rem;
+	height: 1.7rem;
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.sf-section-nk-p ul.hosoku li:nth-of-type(1) span {
+	background: #ed1c22;
+}
+
+.sf-section-nk-p ul.hosoku li:nth-of-type(2) span {
+	background: #fec907;
+}
+
+.sf-section-nk-p ul.hosoku li:nth-of-type(3) span {
+	background: #7cbb15;
+}
+
+.sf-section-nk-p ul.hosoku li:nth-of-type(4) span {
+	background: #92d0ff;
+}
+
+.sf-section-nk-p ul.hosoku li:nth-of-type(5) span {
+	background: #30ade5;
+}
+
+.sf-section-nk-p ul.hosoku li:nth-of-type(6) span {
+	background: #c6c6c6;
+}
+
+.nkp-08-finish {
+	margin: 60px auto 150px;
+}
+
+.nkp-08-finish p {
+	letter-spacing: 2px;
+}
+
+.nkp-08-finish p span:first-child {
+	display: block;
+	color: #b7b7b7;
+	margin-bottom: 15px;
+}
+
+.nkp-08-finish p span:last-child {
+	font-size: .8em;
+	color: #959595;
+	letter-spacing: 1px;
+}
+
+body.ivent-body {
+	position: relative;
+}
+
+.ivent-body {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	margin-top: 0;
+}
+
+.story {
+	display: none;
+}
+
+.story.story-ivent {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	background: #fff;
+	z-index: 10000;
+	padding-bottom: 5rem;
+	min-height: 3200px;
+}
+
+.story-close.story-ivent {
+	display: block;
+	background: #424242cc;
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	right: 10px;
+	top: 20px;
+	border-radius: 50%;
+	z-index: 10001;
+}
+
+.story-close.story-ivent span {
+	display: block;
+	width: 30px;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: rotate(45deg);
+}
+
+.story-close.story-ivent span::after {
+	content: "";
+	display: block;
+	width: 30px;
+	height: 2px;
+	background: #fff;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	transform: rotate(90deg);
+}
+
+.story-inner {
+	padding: 50px 20px;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.story-fv {
+	text-align: center;
+	padding-top: 130px;
+}
+
+story-fv .nkp-01-sign img {
+	width: 100px;
+}
+
+.story-01 h4,
+.story-02 h4,
+.story-03 p.big {
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.story-02 h5 {
+	font-size: 2rem;
+	font-weight: 700;
+	line-height: 1.2;
+	letter-spacing: 0;
+	margin: 30px auto;
+}
+
+.story-01 ul,
+.story-02 ul {
+	margin-top: 30px;
+}
+
+.story-01 ul li,
+.story-02 ul li,
+.story-03 ul li {
+	margin-bottom: 20px;
+}
+
+.story-02 ul li:last-child,
+.story-03 ul li:last-child {
+	margin-bottom: 0;
+}
+
+.story-01 ul li:last-child {
+	margin-bottom: 30px;
+}
+
+.story-01 ul li span,
+.story-02 ul li span,
+.story-03 ul li span {
+	display: inline-block;
+	font-size: 2.4rem;
+}
+
+.story-03 img {
+	width: 80%;
+	max-width: 320px;
+	display: block;
+	margin: 50px auto 0;
+}
+
+@media screen and (min-width: 768px) {
+	.nkp-03 p:nth-of-type(2) {
+		font-size: 3rem;
+	}
+
+	.nkp-03 .sup {
+		font-size: 2rem;
+	}
+
+	.nkp-04 p.big,
+	.nkp-05 p.big {
+		font-size: 4rem;
+	}
+
+	.nkp-06 img.sp-only {
+		margin-bottom: 60px;
+	}
+
+	.nkp-06-in dt {
+		font-size: 4rem;
+	}
+
+	.nkp-06-in dt span {
+		font-size: 3.2rem;
+	}
+
+	.nkp-06-in dd {
+		font-size: 5rem;
+	}
+
+	.nkp-08-content p {
+		font-size: 3.4rem;
+	}
+
+	.sf-section-nk-p ul.result-in {
+		font-size: 2rem;
+		letter-spacing: 2px;
+		margin: 60px auto 40px;
+	}
+
+	.sf-section-nk-p .graph {
+		width: 200px;
+		height: 200px;
+	}
+
+	.sf-section-nk-p ul.hosoku li {
+		font-size: 2rem;
+		line-height: 1.6;
+	}
+
+	.nkp-08-finish {
+		margin-top: 100px;
+	}
+
+	.story-inner {
+		padding: 100px 40px;
+	}
+
+	.story-02 h5 {
+		font-size: 3.2rem;
+		margin: 80px auto;
+	}
+
+	.story-01 ul li span,
+	.story-02 ul li span,
+	.story-03 ul li span {
+		font-size: 3.6rem;
+		margin-right: .5em;
+	}
+
+	.story-03 img {
+		margin: 150px auto;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.sf-section-nk-p .sinsei {
+		width: 600px;
+		margin-left: calc(100% - 600px);
+	}
+
+	.nkp-06 img.sp-only {
+		display: none;
+	}
+
+	.nkp-06 h3.big,
+	.nkp-06 p:not(.per) {
+		text-align: center;
+	}
+
+	.nkp-float {
+		display: flex;
+		margin-top: 60px;
+		align-items: center;
+	}
+
+	.nkp-float .nkp-06-in:first-child {
+		width: 60%;
+		padding-right: 40px;
+	}
+
+	.nkp-float .nkp-06-in:last-child {
+		width: 40%;
+	}
+
+	.nkp-07 {
+		padding-bottom: 250px;
+	}
+
+	.nkp-08 .text {
+		text-align: center;
+	}
+
+	.nkp-08-content {
+		max-width: 700px;
+		margin: 0 auto 100px;
+	}
+
+	.nkp-08-content dl {
+		max-width: 100%;
+	}
+
+	.nkp-08-finish {
+		margin-top: 150px;
+	}
+}
+
+.cap-fv-in {
+	position: relative;
+	text-align: center;
+}
+
+.cap-fv-content {
+	margin-bottom: 30px;
+}
+
+.capsule-section-01 {
+	padding-bottom: 20vw;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/capsule-back.jpg?v=178693502114526985611695451988") no-repeat bottom right / contain;
+}
+
+.cap-01 h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.cap-02 h2 {
+	text-align: center;
+}
+
+.cap-hpmc {
+	margin: 40px auto;
+	color: #2cac37;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+.cap-hpmc img {
+	width: 30%;
+	max-width: 150px;
+	display: block;
+	margin: 0 auto 30px;
+}
+
+.normal-section-03 h3.dxcapsule {
+	margin-bottom: 40px;
+	font-size: 1.2em;
+	font-weight: 700;
+	color: #999;
+	letter-spacing: 1px;
+}
+
+@media screen and (min-width: 990px) {
+	.cap-fv-in {
+		display: flex;
+		align-items: center;
+		text-align: left;
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.cap-fv-content {
+		margin-bottom: 0;
+		width: 50%;
+	}
+
+	.cap-fv-in .cap-fv-content:last-child {
+		padding-left: 30px;
+	}
+
+	.cap-fv-content-in.big {
+		font-size: 4rem;
+	}
+
+	.capsule-section-01 {
+		background-size: 80%;
+	}
+
+	.cap-02 {
+		text-align: center;
+	}
+}
+
+.sf-lapita-fv,
+.sf-lapita-01 .inner,
+.sf-lapita-02 .inner,
+.sf-lapita-03 .inner {
+	padding: 60px 5%;
+}
+
+.sf-lapita-fv {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/lapita_01.jpg?v=173346703344206869791697690219") no-repeat bottom left / cover;
+}
+
+.sf-lapita .fv-01 h2 {
+	text-align: center;
+	font-size: 8vw;
+	line-height: 1.6;
+}
+
+.sf-lapita .fv-02 {
+	margin-top: 6rem;
+}
+
+.sf-lapita .fv-02 .fv-flex {
+	display: flex;
+	justify-content: center;
+}
+
+.sf-lapita .fv-02 .fv-flex dd:first-child {
+	width: 40%;
+}
+
+.sf-lapita .fv-02 .fv-flex dd:first-child .inview {
+	opacity: 0;
+	transition: all 2s;
+}
+
+.sf-lapita .fv-02 .fv-flex dd:first-child .inview.slash {
+	opacity: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sf-lapita .fv-02 .fv-flex dd:last-child {
+	padding-left: 5%;
+	width: 60%;
+}
+
+.sf-lapita .fv-02 .lapita-logo {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	height: 100%;
+}
+
+.sf-lapita .fv-02 .lapita-logo dd {
+	width: 100% !important;
+}
+
+.sf-lapita .fv-02 .lapita-logo dd:last-child {
+	margin-top: 2rem;
+}
+
+.sf-lapita .fv-02 .lapita-logo .lapita-logo-in {
+	border: 1px solid;
+	padding: 20px;
+	text-align: center;
+}
+
+.sf-lapita .fv-02 .lapita-logo .lapita-logo-in img {
+	width: 50%;
+	margin-bottom: 10px;
+    justify-self: center;
+}
+
+.sf-lapita-01 .inner {
+	text-align: center;
+}
+
+.sf-lapita-01 .ttl {
+	font-size: 6vw;
+	margin-bottom: 3rem;
+}
+
+.sf-lapita-01 .seibun {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 3rem;
+}
+
+.sf-lapita-01 .seibun dd {
+	width: 50%;
+	overflow: hidden;
+}
+
+.sf-lapita-01 .seibun dd .point {
+	margin: 10px;
+	border: 1px solid;
+	border-radius: 50%;
+	aspect-ratio: 1 / 1;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.sf-lapita-01 .inview dd .point {
+	transition: all 1.6s;
+	transform: translatey(100%);
+	opacity: 0;
+	filter: blur(16px);
+}
+
+.sf-lapita-01 .inview.slash dd .point {
+	transform: translatey(0);
+	opacity: 1;
+	filter: blur(0px);
+}
+
+.sf-lapita-01 .inview dd:nth-of-type(2) .point {
+	transition-delay: .3s;
+}
+
+.sf-lapita-01 .inview dd:nth-of-type(3) .point {
+	transition-delay: .6s;
+}
+
+.sf-lapita-01 .inview dd:nth-of-type(4) .point {
+	transition-delay: .9s;
+}
+
+.sf-lapita-01 .concept {
+	line-height: 2;
+	letter-spacing: 2px;
+    font-size: 3rem;
+}
+
+.sf-lapita-02 {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/lapita_02.jpg?v=171102408803627975221697690224") no-repeat top center / cover;
+}
+
+.sf-lapita-02 .ttl,
+.sf-lapita-03 .ttl {
+	font-family: Times New Roman, Symbol;
+	color: #fff;
+	text-align: center;
+	font-size: 10vw;
+	letter-spacing: 2px;
+	margin-bottom: 20%;
+}
+
+.lapita-02-in,
+.lapita-03-in {
+	text-align: center;
+	line-height: 1.6;
+	letter-spacing: 1.6px;
+}
+
+.lapita-02-in .img {
+	margin-bottom: 6rem;
+	font-size: .8em;
+	letter-spacing: 2px;
+}
+
+.lapita-02-in .img img {
+	width: 60%;
+	display: block;
+	margin: 0 auto 10px;
+}
+
+.lapita-02-in .text h3,
+.lapita-03-in .text h3 {
+	font-size: 6vw;
+	border-bottom: 1px solid;
+	padding-bottom: 10px;
+	margin-bottom: 3rem;
+	letter-spacing: 2px;
+}
+
+.sf-lapita-03 {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/lapita_03.jpg?v=36889388811828888401697690230") no-repeat top center / contain;
+}
+
+.lapita-03-in .inview {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 6rem;
+}
+
+.lapita-03-in .inview dd {
+	width: 50%;
+}
+
+.lapita-03-in .inview dd .img {
+	text-align: center;
+	padding: 5px;
+	font-size: .8em;
+	letter-spacing: 2px;
+	transition: all 1.6s;
+	opacity: 0;
+	filter: blur(16px);
+}
+
+.lapita-03-in .inview.slash dd .img {
+	opacity: 1;
+	filter: blur(0px);
+}
+
+.lapita-03-in .inview dd:nth-of-type(2) .img {
+	transition-delay: .3s;
+}
+
+.lapita-03-in .inview dd:nth-of-type(3) .img {
+	transition-delay: .6s;
+}
+
+.lapita-03-in .inview dd:nth-of-type(4) .img {
+	transition-delay: .9s;
+}
+
+.lapita-03-in .inview dd:nth-of-type(5) .img {
+	transition-delay: 1.2s;
+}
+
+.lapita-03-in .inview dd:nth-of-type(6) .img {
+	transition-delay: 1.5s;
+}
+
+.sf-lapita-04 {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/lapita_04.jpg?v=30997665929159720051697690236") no-repeat top left 45% / cover;
+}
+
+.sf-lapita-04 .inner {
+	padding: 100px 5%;
+	width: 60%;
+	margin-left: 40%;
+	text-align: center;
+	font-size: 2.4rem;
+	line-height: 1.6;
+	letter-spacing: 2.6px;
+}
+
+.sf-lapita-04 .inner img {
+	margin: 3rem auto 1rem;
+	max-width: 385px;
+}
+
+.sf-lapita-04 .inner .hosoku {
+	font-size: .6em;
+	letter-spacing: 1px;
+	line-height: 1.5;
+}
+
+@media screen and (min-width: 768px) {
+	.sf-lapita-fv,
+	.sf-lapita-01 .inner,
+	.sf-lapita-02 .inner,
+	.sf-lapita-03 .inner {
+		padding: 150px 5%;
+	}
+
+	.sf-lapita .fv-01 h2 {
+		font-size: 5.2rem;
+	}
+
+	.sf-lapita .fv-02 .fv-flex dd:first-child {
+		width: 30%;
+	}
+
+	.sf-lapita .fv-02 .fv-flex dd:last-child {
+		width: 70%;
+		padding: 0 10%;
+	}
+
+	.lapita-02-in .text h3,
+	.lapita-03-in .text h3 {
+		margin-bottom: 6rem;
+	}
+
+	.sf-lapita-01 .seibun dd {
+		width: 25%;
+	}
+
+	.sf-lapita-01 .seibun {
+		margin-bottom: 6rem;
+	}
+
+	.lapita-03-in .inview dd {
+		width: calc(100% / 3);
+	}
+
+	.sf-lapita-04 .inner {
+		padding: 150px 5% 250px;
+		font-size: 3.6rem;
+		letter-spacing: 4px;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.sf-lapita .fv-02 {
+		max-width: 600px;
+		margin: 6rem auto 0;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.sf-lapita-fv {
+		background-size: cover;
+	}
+
+	.lapita-fv-inner {
+		max-width: 1000px;
+		margin: 0 auto;
+	}
+
+	.sf-lapita-01 .ttl {
+		font-size: 5.2rem;
+		margin-bottom: 6rem;
+	}
+
+	.sf-lapita-02 .ttl,
+	.sf-lapita-03 .ttl {
+		font-size: 10rem;
+	}
+
+	.lapita-02-in .img,
+	.lapita-03-in .inview {
+		margin-bottom: 15rem;
+	}
+
+	.lapita-02-in .text h3,
+	.lapita-03-in .text h3 {
+		font-size: 5rem;
+		letter-spacing: 3px;
+		margin-bottom: 10rem;
+	}
+
+	.lapita-02-in .text p,
+	.lapita-03-in .text p {
+		line-height: 2;
+	}
+
+	.sf-lapita-04 {
+		background-position: center left;
+		background-size: contain;
+	}
+
+	.sf-lapita-04 .inner {
+		width: 100%;
+		max-width: 1000px;
+		margin: 0 auto;
+		padding-left: 350px;
+	}
+}
+
+.sf-section-tfucoidan {
+	margin-top: -5rem;
+	position: relative;
+	border-bottom: 1px solid #dfdfdf;
+	margin-bottom: 5rem;
+}
+
+.tf-yellow {
+	color: #ffff15;
+	font-weight: 700;
+}
+
+.tf-white {
+	color: #fff;
+	font-weight: 700;
+}
+
+.tf-green {
+	color: #06d600;
+	font-weight: 700;
+}
+
+.tf-blue {
+	color: #0fb7b7;
+	font-weight: 700;
+}
+
+.tf-red {
+	color: red;
+	font-weight: 700;
+}
+
+.tf-fv {
+	position: relative;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/tf_top-background_sp.jpg?v=152333023317742767721709366535") no-repeat center / cover;
+	color: #fff;
+}
+
+.tf-fv-line {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	overflow: hidden;
+}
+
+.tf-fv-line span {
+	width: 100%;
+	height: 60vw;
+	min-width: 300vw;
+	min-height: 300vw;
+	display: block;
+	position: absolute;
+	left: 50%;
+	animation-name: tfline;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.tf-line-1 {
+	bottom: 55vw;
+	border-radius: 47%;
+	border: 30px solid #62b527;
+	filter: blur(16px);
+	animation-duration: 30s;
+}
+
+.tf-line-2 {
+	bottom: 59vw;
+	border-radius: 45%;
+	border: 2px solid #c1c1c1;
+	filter: blur(5px);
+	animation-duration: 40s;
+}
+
+.tf-line-3 {
+	bottom: 53vw;
+	border-radius: 45%;
+	border: 2px solid #57bf22;
+	animation-duration: 25s;
+}
+
+.tf-line-4 {
+	bottom: 63vw;
+	border-radius: 45%;
+	border: 5px solid #e7e7e7;
+	filter: blur(2px);
+	animation-duration: 45s;
+}
+
+.tf-line-5 {
+	bottom: 40vw;
+	border-radius: 47%;
+	border: 20px solid #538133;
+	filter: blur(16px);
+	animation-duration: 25s;
+}
+
+.tf-line-6 {
+	bottom: 50vw;
+	border-radius: 40%;
+	border: 40px solid #fff;
+	filter: blur(15px);
+	opacity: .4;
+	animation-duration: 15s;
+}
+
+@keyframes tfline {
+	0% {
+		transform: translate(-50%) rotate(0);
+	}
+
+	50% {
+		transform: translate(-50%, -2%) rotate(180deg);
+	}
+
+	to {
+		transform: translate(-50%) rotate(360deg);
+	}
+}
+
+.tf-fv .inner {
+	position: relative;
+}
+
+.tf-logo {
+	width: 65%;
+	margin: 0 auto 20px;
+}
+
+.tf-fv .tf-catch {
+	text-align: center;
+	width: 80%;
+	margin: 0 auto;
+	font-size: 7vw;
+	font-weight: 700;
+	line-height: 1.5;
+	letter-spacing: .2px;
+}
+
+.tf-fv .tf-bottle {
+	background: radial-gradient(rgb(78 157 89 / 60%) 0%, transparent 66%);
+	text-align: center;
+}
+
+.tf-bottle.inview {
+	opacity: 0;
+	transition: all 1s ease-in-out;
+}
+
+.tf-bottle.slash {
+	opacity: 1;
+}
+
+.tf-fv p:last-child {
+	max-width: 320px;
+	margin: -14% auto 0;
+}
+
+.tf-01 {
+	background: linear-gradient(to bottom, #0f1f02, #0f1f02);
+	color: #fff;
+}
+
+.tf-01 .tf-catch {
+	text-align: center;
+	font-weight: 700;
+	margin: 40px auto;
+}
+
+.tf-01 .tf-catch h2 {
+	font-size: 7vw;
+	line-height: 1.5;
+	letter-spacing: .2px;
+}
+
+.tf-01 .tf-text p:first-child {
+	width: 90%;
+	margin: 0 auto 40px;
+}
+
+.tf-01 .tf-catch h2.inview,
+.tf-01 .tf-text p.inview {
+	opacity: 0;
+	transform: translatey(100px);
+	transition: opacity 1.3s linear, transform 1s cubic-bezier(.215, .61, .355, 1);
+}
+
+.tf-01 .tf-catch h2.slash,
+.tf-01 .tf-text p.slash {
+	opacity: 1;
+	transform: translatey(0);
+}
+
+.tf-02 {
+	background: linear-gradient(to bottom, #0f1f02, #5d00aa 85%);
+	color: #fff;
+}
+
+.tf-02 .tf-catch {
+	text-align: center;
+	font-weight: 700;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+
+.tf-02 .tf-catch h2 .overthetop {
+	transition: all 1.2s cubic-bezier(.86, 0, .07, 1);
+	transition-delay: .8s;
+	display: block;
+	opacity: 0;
+}
+
+.tf-02 .tf-catch h2 {
+	font-size: 8vw;
+}
+
+.tf-02 .tf-catch h2.slash .overthetop {
+	transform: scale(1.5);
+	opacity: 1;
+}
+
+.tf-02 .tf-capsule100 {
+	width: 45%;
+	max-width: 253px;
+	margin: 0 auto 30px;
+}
+
+.tf-02 .tf-text {
+	margin-bottom: 40px;
+}
+
+.tf-02 .tf-catch-2 {
+	text-align: center;
+	font-weight: 700;
+	font-size: 7vw;
+	line-height: 1.3;
+}
+
+.tf-02 .tf-catch-2 p:first-child {
+	margin-bottom: 1em;
+}
+
+.tf-03 {
+	background: linear-gradient(to bottom, #04040400, #040404 8%);
+	color: #fff;
+	position: relative;
+}
+
+.tf-03::before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	background: linear-gradient(to bottom, #5d00aa 0%, transparent 45%);
+	z-index: -1;
+}
+
+.tf-03 .inner {
+	position: relative;
+}
+
+.tf-03 .tf-catch {
+	text-align: center;
+	margin: 40px auto;
+}
+
+.tf-03 .tf-catch h2 {
+	font-size: 7vw;
+}
+
+.tf-03 .tf-factor {
+	margin: 40px auto;
+}
+
+.tf-03 .tf-factor dl {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.tf-03 .tf-factor dl dd {
+	width: 50%;
+}
+
+.tf-03 .tf-factor-in {
+	text-align: center;
+	font-size: .8em;
+	letter-spacing: 1px;
+}
+
+.tf-factor-img-efe.slash {
+	position: relative;
+}
+
+.tf-factor-img-efe.slash::before {
+	content: "";
+	display: block;
+	width: 80%;
+	aspect-ratio: 1 / 1;
+	position: absolute;
+	margin: auto;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #57bf2266;
+	filter: blur(16px);
+	animation: imgefe 3s 1 cubic-bezier(.86, 0, .07, 1);
+	animation-delay: .5s;
+}
+
+@keyframes imgefe {
+	0% {
+		transform: scale(1);
+	}
+
+	30% {
+		transform: scale(1.2);
+	}
+
+	80% {
+		transform: scale(1);
+	}
+}
+
+.tf-factor-img-efe img {
+	transition: all .3s cubic-bezier(.86, 0, .07, 1);
+	transition-delay: .5s;
+	transform: scale(.9);
+}
+
+.tf-factor-img-efe.slash img {
+	transform: scale(1);
+}
+
+.tf-03 .tf-factor-in .tf-factor-img {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.tf-03 .tf-factor-per p {
+	font-size: 3em;
+	font-weight: 700;
+}
+
+.tf-03 .tf-factor-per p span:nth-of-type(1) {
+	font-size: .5em;
+}
+
+.tf-03 .tf-factor-per p span:nth-of-type(2) {
+	font-size: .35em;
+	margin-left: .5em;
+	letter-spacing: 0;
+}
+
+.tf-03 .tf-factor-text {
+	text-align: center;
+}
+
+.tf-04 {
+	padding: 40px 20px;
+}
+
+.tf-04 .tf-04-inline {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/tf_bottle-cr.png?v=137803211432716133651694677741") no-repeat left / cover;
+	color: #fff;
+}
+
+.tf-04 .tf-04-inner {
+	background: #0000009e;
+	padding: 60px 20px;
+}
+
+.tf-04 .tf-04-concept {
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.tf-04 .tf-04-copy {
+	display: flex;
+	flex-flow: column-reverse;
+	text-align: center;
+	margin-top: 20px;
+}
+
+.tf-04 .tf-04-copy-img {
+	width: 60px;
+	margin: 20px auto;
+}
+
+.tf-04 .tf-catch h3 {
+	font-size: 6.6vw;
+}
+
+.tf-04 .tf-text p:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+.tf-05 .inner {
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/dx-tonga.jpg?v=16741553251615530811695106287") no-repeat center / cover;
+	color: #fff;
+}
+
+.tf-05 .tf-catch {
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.tf-05 .tf-catch h3 {
+	font-size: 7vw;
+}
+
+.tf-05 .tf-link-area {
+	margin: 40px auto 20px;
+}
+
+.tf-05 .tf-link {
+	position: relative;
+	padding: 15px 10px;
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+}
+
+.tf-05 .tf-link::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 50px;
+	border: 3px solid transparent;
+	background: linear-gradient(to right, #06d600, #fff) border-box border-box;
+	-webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0) border-box;
+	-webkit-mask-composite: destination-out;
+	mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0) border-box;
+	mask-composite: exclude;
+}
+
+.tf-06 .inner {
+	background: #888983;
+	color: #fff;
+}
+
+.tf-06 .tf-06-concept {
+	text-align: center;
+	margin-bottom: 40px;
+	font-size: 1.2em;
+}
+
+.tf-06 .tf-06-copy {
+	font-weight: 700;
+	font-size: 8vw;
+	line-height: 1.3;
+	letter-spacing: 0;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.tf-06 .tf-06-copy p {
+	text-shadow: 2px 2px 16px #e9e9e9, -2px 2px 16px #e9e9e9, 2px -2px 16px #e9e9e9, -2px -2px 16px #e9e9e9;
+	color: #fff;
+	margin-bottom: .5em;
+}
+
+.tf-06 .tf-06-copy p::after {
+	content: "";
+	display: inline-block;
+	width: 6rem;
+	aspect-ratio: 142 / 61;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/tf_icon-capsule.png?v=45889644482048297741694677819") no-repeat center / cover;
+	margin-left: 10px;
+}
+
+.tf-06 .tf-06-copy h3 {
+	font-size: .7em;
+}
+
+.tf-06 .tf-06-img {
+	display: block;
+	width: 60%;
+	aspect-ratio: 677 / 698;
+	background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/tf_capsule.png?v=26934663120765441171694677749") no-repeat center / cover;
+	margin: 0 auto;
+}
+
+.tf-06 .tf-06-fucoidan {
+	margin: 40px auto 0;
+}
+
+.tf-06 .tf-06-fucoidan dl {
+	display: flex;
+	justify-content: space-between;
+}
+
+.tf-06 .tf-06-fucoidan dl dd {
+	width: 48%;
+	text-align: center;
+}
+
+.tf-06 .tf-06-fucoidan dl dd p {
+	line-height: 1.2;
+	font-size: .8em;
+	letter-spacing: 1px;
+	margin-top: 5px;
+}
+
+.tf-07 {
+	padding: 40px 20px;
+}
+
+.tf-07 .inner {
+	background: #ededed;
+	font-weight: 700;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.tf-07 .tf-07-img {
+	width: 25%;
+	max-width: 168px;
+	margin: 0 auto 10px;
+}
+
+.tf-07 .tf-07-copy {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.tf-07 .tf-07-copy .tf-blue {
+	font-size: 10vw;
+	letter-spacing: .2em;
+	margin-top: 10px;
+}
+
+.tf-07 .wave-efe span {
+	position: relative;
+	animation: wave-anim 2s linear infinite;
+}
+
+@keyframes wave-anim {
+	0% {
+		top: 0;
+	}
+
+	30% {
+		top: 6px;
+	}
+
+	70% {
+		top: -6px;
+	}
+
+	to {
+		top: 0;
+	}
+}
+
+.tf-07 .wave-efe span:nth-child(9n + 1) {
+	animation-delay: .5s;
+}
+
+.tf-07 .wave-efe span:nth-child(9n + 2) {
+	animation-delay: 1s;
+}
+
+.tf-07 .wave-efe span:nth-child(9n + 3) {
+	animation-delay: 1.5s;
+}
+
+.tf-07 .wave-efe span:nth-child(9n + 4) {
+	animation-delay: 2s;
+}
+
+.tf-07 .wave-efe span:nth-child(9n + 5) {
+	animation-delay: 2.5s;
+}
+
+.tf-07 .wave-efe span:nth-child(9n + 6) {
+	animation-delay: 3s;
+}
+
+.tf-07 .wave-efe span:nth-child(9n + 7) {
+	animation-delay: 3.5s;
+}
+
+.tf-07 .wave-efe span:nth-child(9n + 8) {
+	animation-delay: 4s;
+}
+
+.tf-07 .wave-efe span:nth-child(9n + 9) {
+	animation-delay: 4.5s;
+}
+
+.tf-08 .inner {
+	background: #ededed;
+	font-weight: 700;
+}
+
+.tf-08 .tf-08-copy {
+	text-align: center;
+}
+
+.tf-08 .tf-08-copy dl {
+	display: flex;
+	justify-content: space-around;
+	font-size: 7vw;
+	letter-spacing: 7px;
+}
+
+.tf-08 .tf-08-copy p {
+	line-height: 1.2;
+	margin: 10px auto 20px;
+}
+
+.tf-08 .tf-08-icon {
+	width: 58px;
+	margin: 0 auto 40px;
+}
+
+.tf-08 .tf-08-content-list dl {
+	position: relative;
+}
+
+.tf-08 .tf-08-content-list dl:not(:last-child) {
+	margin-bottom: 60px;
+}
+
+.tf-08 dd.tf-08-content {
+	width: 60%;
+	position: relative;
+	z-index: 2;
+	padding-top: 20px;
+}
+
+.tf-08 dd.tf-08-content .tf-08-ttl {
+	font-size: 1.6em;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+.tf-08 .tf-08-content-list dl:last-child h4 {
+	font-size: .8em;
+	font-weight: 700;
+}
+
+.tf-08 .tf-08-content-list dl:last-child h4 span {
+	font-size: 2.6em;
+	display: block;
+}
+
+.tf-08 dd.tf-08-content p {
+	letter-spacing: 1.5px;
+	line-height: 1.6;
+}
+
+.tf-08 dd.tf-08-content p .sub {
+	font-size: .7em;
+	letter-spacing: 0;
+}
+
+.tf-08 dd.tf-08-img {
+	width: 50%;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.tf-08 dd.tf-08-img::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #ededed99;
+}
+
+.tf-08 .tf-08-content-list dl:nth-of-type(1n + 2) dd.tf-08-img::before {
+	background: none;
+}
+
+.tf-08 .jfrl-list {
+	margin-top: 20px;
+}
+
+.tf-08 .jfrl-list p {
+	letter-spacing: 0;
+	line-height: 1.3;
+	opacity: .6;
+}
+
+.tf-08 .jfrl-list p::before {
+	content: "\226a";
+	margin-right: .5rem;
+}
+
+.tf-08 .jfrl-list p::after {
+	content: "\226b";
+	margin-left: .5rem;
+}
+
+.tf-08 .jfrl-list ul {
+	margin-top: 20px;
+	padding-left: 20px;
+}
+
+.tf-08 .jfrl-list ul li {
+	list-style: disc;
+}
+
+.tf-08 .jfrl-list ul li:first-child {
+	margin-bottom: 1em;
+}
+
+.tf-09 {
+	padding-top: 40px;
+}
+
+.tf-09 .spec-img-text {
+	display: flex;
+	flex-flow: column;
+}
+
+.tf-09 .spec-img {
+	width: 60%;
+	max-width: 462px;
+	margin: 0 auto;
+}
+
+.tf-09 .spec-text {
+	text-align: center;
+}
+
+.tf-09 .spec-text .name {
+	width: 50%;
+	max-width: 315px;
+	margin: 40px auto 20px;
+}
+
+.tf-09 .spec-text p.copy {
+	font-weight: 700;
+	font-size: 1.4em;
+	line-height: 1.2;
+}
+
+.tf-09 .spec-text p.copy-1 {
+	margin-bottom: 20px;
+}
+
+.tf-09 .spec-text p.copy-1 span {
+	font-size: .8em;
+	display: block;
+	opacity: .6;
+}
+
+.tf-09 .spec-icon {
+	width: 80%;
+	margin: 60px auto 0;
+}
+
+.tf-09 .spec-icon dd {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.tf-09 .spec-icon .spec-icon-img {
+	width: 20%;
+	max-width: 83px;
+}
+
+.tf-09 .spec-icon .spec-icon-text {
+	width: 80%;
+	padding-left: 10px;
+	font-size: 1.05em;
+	font-weight: 700;
+}
+
+.tf-09 .spec-icon-text .copy span {
+	display: block;
+	opacity: .6;
+	font-size: .8em;
+}
+
+@media screen and (min-width: 768px) {
+	.tf-fv p:last-child {
+		max-width: 500px;
+	}
+
+	.tf-04 .tf-04-inner {
+		background: #0006;
+	}
+
+	.tf-05 .tf-link {
+		width: 500px;
+		margin: 0 auto;
+	}
+
+	.tf-06 .tf-06-copy p::after {
+		width: 8rem;
+	}
+
+	.tf-08 .tf-08-icon {
+		width: 80px;
+		margin: 40px auto;
+	}
+
+	.tf-09 .spec-text .name {
+		margin-bottom: 60px;
+	}
+
+	.tf-09 .spec-icon {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.tf-09 .spec-icon dd {
+		width: 48%;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.tf-line-1 {
+		bottom: 35vw;
+	}
+
+	.tf-line-2 {
+		bottom: 39vw;
+	}
+
+	.tf-line-3,
+	.tf-line-4 {
+		bottom: 33vw;
+	}
+
+	.tf-line-5 {
+		bottom: 20vw;
+	}
+
+	.tf-line-6 {
+		bottom: 30vw;
+		animation-duration: 35s;
+	}
+
+	.tf-fv {
+		background: url("//sea-fucoidan.com/cdn/shop/t/1/assets/tf_top-background.jpg?v=183915930190587798821694677908") no-repeat center / cover;
+	}
+
+	.tf-fv .inner {
+		width: 800px;
+		padding: 100px 60px;
+	}
+
+	.tf-logo {
+		width: 340px;
+	}
+
+	.tf-fv .tf-catch {
+		font-size: 3.2rem;
+	}
+
+	.tf-fv .tf-bottle {
+		width: 400px;
+		margin: -40px auto 0;
+	}
+
+	.tf-fv p:last-child {
+		font-size: .8em;
+		width: 400px;
+		margin-top: -60px;
+	}
+
+	.tf-01 .tf-catch {
+		margin-bottom: 60px;
+	}
+
+	.tf-01 .tf-catch h2 {
+		font-size: 5.6rem;
+	}
+
+	.tf-02 .tf-catch {
+		margin-bottom: 60px;
+	}
+
+	.tf-02 .tf-catch h2 {
+		font-size: 6rem;
+	}
+
+	.tf-02 .tf-catch .sub {
+		margin-top: 20px;
+	}
+
+	.tf-02 .tf-catch-2 {
+		font-size: 4.2rem;
+		margin-top: 60px;
+	}
+
+	.tf-03 .tf-catch {
+		margin-top: 60px;
+	}
+
+	.tf-03 .tf-catch h2 {
+		font-size: 5.6rem;
+	}
+
+	.tf-03 .tf-factor-in .tf-factor-img {
+		width: 296px;
+	}
+
+	.tf-03 .tf-factor-text {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
+	.tf-factor-img-efe.slash::before {
+		border-radius: 55px;
+		width: 70%;
+	}
+
+	.tf-04 {
+		padding: 100px 20px 50px;
+	}
+
+	.tf-04 .tf-04-inner {
+		background: none;
+		width: 60%;
+		margin-left: 40%;
+	}
+
+	.tf-04 .tf-04-copy {
+		flex-flow: inherit;
+		align-items: center;
+		margin: 40px auto;
+	}
+
+	.tf-04 .tf-04-copy-img {
+		width: 80px;
+	}
+
+	.tf-04 .tf-catch {
+		text-align: left;
+		line-height: 1.2;
+		width: calc(100% - 80px);
+		padding-left: 30px;
+	}
+
+	.tf-04 .tf-catch h3 {
+		font-size: 3.4rem;
+	}
+
+	.tf-05,
+	.tf-06,
+	.tf-07,
+	.tf-08 {
+		padding: 50px 20px;
+	}
+
+	.tf-05 .tf-catch {
+		margin-bottom: 60px;
+	}
+
+	.tf-05 .tf-catch h3 {
+		font-size: 5.2rem;
+	}
+
+	.tf-05 .tf-link-area {
+		margin: 60px auto 0;
+	}
+
+	.tf-05 .tf-link {
+		width: 800px;
+		margin: 0 auto;
+	}
+
+	.tf-06 .inner {
+		overflow: hidden;
+	}
+
+	.tf-06 .tf-06-concept {
+		font-size: 4rem;
+		text-align: left;
+		margin-bottom: 60px;
+	}
+
+	.tf-06 .tf-06-copy {
+		font-size: 6rem;
+		width: 560px;
+		margin: 0 0 0 5%;
+	}
+
+	.tf-06 .tf-06-capsule-text {
+		position: relative;
+		padding-top: 100px;
+		margin-bottom: 100px;
+		line-height: 2;
+		text-shadow: 3px 3px 3px #000;
+		letter-spacing: 1.5px;
+		font-size: 3rem;
+	}
+
+	.tf-06 .tf-06-img {
+		position: absolute;
+		right: -86px;
+		top: -210px;
+		width: 500px;
+	}
+
+	.tf-06 .tf-06-text {
+		position: relative;
+	}
+
+	.tf-06 .tf-06-fucoidan {
+		width: 600px;
+	}
+
+	.tf-06 .tf-06-fucoidan dl dd {
+		width: 280px;
+	}
+
+	.tf-07 .tf-07-copy .tf-blue {
+		font-size: 8rem;
+	}
+
+	.tf-08 .tf-08-copy dl {
+		font-size: 4rem;
+		max-width: 600px;
+		margin: 0 auto 20px;
+	}
+
+	.tf-08 .tf-08-icon {
+		margin-bottom: 100px;
+	}
+
+	.tf-08 .tf-08-content-list dl {
+		display: flex;
+	}
+
+	.tf-08 .tf-08-content-list dl:not(:last-child) {
+		margin-bottom: 100px;
+	}
+
+	.tf-08 dd.tf-08-content,
+	.tf-08 dd.tf-08-img {
+		width: 50%;
+		position: relative;
+	}
+
+	.tf-08 dd.tf-08-content .tf-08-ttl {
+		margin-bottom: 40px;
+	}
+
+	.tf-08 dd.tf-08-img::before {
+		display: none;
+	}
+
+	.tf-08 .jfrl-list p {
+		font-size: .8em;
+	}
+
+	.tf-09 {
+		padding-top: 0;
+	}
+
+	.tf-09 .spec-img-text {
+		flex-flow: inherit;
+		align-items: center;
+	}
+
+	.tf-09 .spec-img {
+		width: 40%;
+	}
+
+	.tf-09 .spec-text {
+		width: 60%;
+	}
+
+	.tf-09 .spec-text .name {
+		margin: 0 auto 40px;
+	}
+
+	.tf-09 .spec-text p.copy {
+		font-size: 1.2em;
+	}
+
+	.tf-09 .spec-text p.copy-1 {
+		margin-bottom: 40px;
+	}
+
+	.tf-09 .spec-icon {
+		margin-top: 100px;
+	}
+
+	.tf-09 .spec-icon dd {
+		width: calc(100% / 3);
+		flex-flow: column;
+		text-align: center;
+	}
+
+	.tf-09 .spec-icon .spec-icon-text {
+		font-size: .6em;
+	}
+
+	.tf-09 .spec-icon-text .copy span {
+		font-size: 1em;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.tf-fv-line span {
+		min-width: 250vw;
+		min-height: 250vw;
+	}
+
+	.tf-line-1 {
+		bottom: 34vh;
+	}
+
+	.tf-line-2 {
+		bottom: 32vh;
+	}
+
+	.tf-line-3 {
+		bottom: 42vh;
+	}
+
+	.tf-line-4 {
+		bottom: 41vh;
+	}
+
+	.tf-line-5 {
+		bottom: 30vh;
+	}
+
+	.tf-line-6 {
+		bottom: 41vh;
+	}
+
+	.tf-fv {
+		height: 100vh;
+	}
+
+	.tf-logo {
+		margin-bottom: 0;
+	}
+
+	.tf-fv .tf-catch span {
+		margin-left: .5em;
+	}
+
+	.tf-fv p:last-child {
+		font-size: .7em;
+		text-align: center;
+		letter-spacing: 1.5px;
+	}
+
+	.tf-01 .inner {
+		width: 1000px;
+	}
+
+	.tf-01 .tf-text p:first-child {
+		margin-bottom: 60px;
+	}
+
+	.tf-02 .tf-text {
+		text-align: center;
+		margin-bottom: 80px;
+	}
+
+	.tf-factor-img-efe.slash::before {
+		width: 50%;
+	}
+
+	.tf-04 .tf-04-inline {
+		max-width: 1253px;
+		margin: 0 auto;
+	}
+
+	.tf-04 .tf-04-inner {
+		margin-left: 35%;
+	}
+
+	.tf-05 .inner,
+	.tf-06 .inner,
+	.tf-07 .inner,
+	.tf-08 .inner {
+		padding: 150px 80px;
+		max-width: 1253px;
+	}
+
+	.tf-06 .tf-06-copy {
+		width: 655px;
+	}
+
+	.tf-06 .tf-06-img {
+		right: initial;
+		left: 44%;
+		top: -250px;
+	}
+
+	.tf-07 .tf-07-copy .tf-blue {
+		font-size: 7rem;
+	}
+
+	.tf-08 dd.tf-08-content {
+		width: calc(100% - 463px);
+		padding-right: 30px;
+	}
+
+	.tf-08 dd.tf-08-img {
+		width: 463px;
+	}
+
+	.tf-09 .inner {
+		max-width: 1000px;
+	}
+
+	.tf-09 .spec-icon dd {
+		width: calc(100% / 6);
+	}
+
+	.tf-09 .spec-icon .spec-icon-img {
+		width: 100%;
+	}
+
+	.tf-09 .spec-icon .spec-icon-text {
+		padding: 0;
+		font-size: .5em;
+	}
+
+	.tf-09 .spec-icon-text .copy span {
+		font-size: 1.2em;
+		margin-top: 7px;
+		line-height: 1.2;
+	}
+}
+
+.teiki-dx .bold {
+	font-weight: 700;
+}
+
+.teiki-dx .copy h2,
+.teiki-dx .concept .img,
+.teiki-dx .concept .text,
+.teiki-dx .content h2,
+.teiki-dx .content-in li:nth-of-type(2) .ex,
+.teiki-dx .teiki-skip2,
+.teiki-dx .teiki-in {
+	text-align: center;
+}
+
+.teiki-dx .copy h2,
+.teiki-dx .content h2,
+.teiki-dx .teiki-change h4 {
+	color: #13a498;
+}
+
+.teiki-dx .concept {
+	margin: 6em auto;
+}
+
+.teiki-dx .concept .img {
+	margin-bottom: 6em;
+}
+
+.teiki-dx .concept .text p.inview {
+	font-size: 7vw;
+	font-weight: 700;
+	margin-bottom: 3em;
+	transition: all 1s;
+	transform: scale(.8);
+}
+
+.teiki-dx .concept .text p.slash {
+	transform: scale(1);
+}
+
+.teiki-dx .concept .text p.bold {
+	line-height: 1.8;
+	font-size: 2rem;
+}
+
+.teiki-dx .content h2 {
+	margin-bottom: 3em;
+}
+
+.teiki-dx ul.content-in li {
+	margin-bottom: 6em;
+}
+
+.teiki-dx ul.content-in .ttl {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.teiki-dx ul.content-in .ttl dd:first-child {
+	width: 60px;
+	margin: 0 auto 10px;
+}
+
+.teiki-dx ul.content-in .ttl dd:last-child h3 {
+	color: #13a498;
+	font-weight: 700;
+	font-size: 2.4rem;
+}
+
+.teiki-dx ul.content-in li:nth-of-type(1) .teiki-in img {
+	margin-top: 2em;
+}
+
+.teiki-dx ul.content-in li:nth-of-type(2) .ex {
+	margin: 2em auto;
+	border: 1px solid;
+	padding: 20px 10px;
+	font-weight: 700;
+}
+
+.teiki-dx ul.content-in li:nth-of-type(2) .ex p:first-child {
+	font-size: 2.4rem;
+	margin-bottom: 20px;
+}
+
+.teiki-dx ul.content-in li:nth-of-type(2) .ex p:last-child {
+	color: #13a498;
+}
+
+.teiki-dx ul.content-in li:nth-of-type(2) .ex p:last-child span:nth-of-type(1) {
+	font-size: 2em;
+	vertical-align: middle;
+}
+
+.teiki-dx ul.content-in li:nth-of-type(2) .img-1 {
+	margin: 3em auto;
+}
+
+.teiki-dx ul.content-in li:nth-of-type(3) .teiki-skip {
+	margin: 3em auto;
+	border: 2px solid #13a498;
+	padding: 20px 10px;
+	color: #13a498;
+	text-align: center;
+}
+
+.teiki-dx ul.content-in li:nth-of-type(3) .teiki-skip h4 {
+	color: #13a498;
+	font-size: 2.4rem;
+	font-weight: 700;
+	margin-bottom: 2.4rem;
+	margin-top: 1rem;
+}
+
+.teiki-dx ul.content-in li:nth-of-type(3) .teiki-skip p:last-child {
+	color: #000;
+	font-weight: 700;
+	text-align: left;
+}
+
+.teiki-dx .ex-2 {
+	margin: 3em auto;
+	border: 2px solid #13a498;
+	padding: 20px 10px;
+	font-weight: 700;
+}
+
+.teiki-dx .ex-2 p {
+	margin-bottom: 2.4rem;
+}
+
+.teiki-dx .ex-list li:not(:last-child) {
+	margin-bottom: 1em;
+}
+
+.teiki-dx .ex-list li:last-child {
+	margin-bottom: 0;
+}
+
+.teiki-dx .teiki-how {
+	margin-top: 2em;
+}
+
+.teiki-dx .teiki-how li:not(:last-child) {
+	margin-bottom: 20px;
+}
+
+.teiki-dx .teiki-how .how-in a {
+	display: block;
+	border: 2px solid #13a498;
+	padding: 20px 10px;
+	color: #000;
+}
+
+.teiki-dx .teiki-how .how-in .ttl {
+	border: 2px solid #13a498;
+	background: #13a498;
+	padding: 20px 10px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0;
+}
+
+.teiki-dx .teiki-how .how-in .ttl p {
+	width: calc(100% - 20px);
+}
+
+.teiki-dx .teiki-how .how-in .in {
+	border: 2px solid #13a498;
+	padding: 20px 10px;
+	font-weight: 700;
+}
+
+.teiki-dx .teiki-how .how-in .in .tel {
+	display: block;
+	font-size: 8vw;
+	letter-spacing: 1vw;
+	margin-bottom: 10px;
+}
+
+.teiki-dx .teiki-how .how-in .in .time {
+	display: block;
+	font-size: 7vw;
+}
+
+@media screen and (min-width: 768px) {
+	.teiki-dx .concept {
+		margin: 100px auto;
+	}
+
+	.teiki-dx .concept .img {
+		margin-bottom: 100px;
+	}
+
+	.teiki-dx .concept .text p.inview {
+		font-size: 5.2rem;
+	}
+
+	.teiki-dx .concept .text p.bold {
+		font-size: 3.4rem;
+	}
+
+	.teiki-dx ul.content-in li:nth-of-type(3) .teiki-skip h4 {
+		font-size: 4.8rem;
+	}
+
+	.teiki-dx ul.content-in .ttl {
+		display: flex;
+		align-items: center;
+	}
+
+	.teiki-dx ul.content-in .ttl dd:first-child {
+		width: 75px;
+		margin: 0;
+	}
+
+	.teiki-dx ul.content-in .ttl dd:last-child {
+		width: calc(100% - 75px);
+	}
+
+	.teiki-dx ul.content-in .ttl dd:last-child h3 {
+		font-size: 3.4rem;
+		text-align: left;
+		padding-left: 40px;
+	}
+
+	.teiki-dx .teiki-how .how-in .ttl {
+		padding: 20px 80px;
+	}
+}
+
+@media screen and (min-width: 990px) {
+	.teiki-dx ul.content-in li:nth-of-type(2) .img-1 img {
+		margin: 0 auto;
+	}
+
+	.teiki-dx .teiki-how {
+		display: flex;
+		align-items: stretch;
+	}
+
+	.teiki-dx .teiki-how li {
+		width: 50%;
+		padding: 10px;
+		margin: 0 !important;
+	}
+
+	.teiki-dx .teiki-how li:first-child .how-in {
+		height: 100%;
+		border: 2px solid #13a498;
+	}
+
+	.teiki-dx .teiki-how li:first-child .how-in p {
+		height: 100%;
+	}
+
+	.teiki-dx .teiki-how .how-in a {
+		height: 100%;
+		border: none;
+		display: flex;
+		flex-flow: column;
+		justify-content: center;
+		transition: all .5s;
+	}
+
+	.teiki-dx .teiki-how .how-in .ttl {
+		padding: 20px 10px;
+	}
+
+	.teiki-dx .teiki-how .how-in .in {
+		font-size: 2rem;
+	}
+
+	.teiki-dx .teiki-how .how-in .in .tel,
+	.teiki-dx .teiki-how .how-in .in .time {
+		font-size: 1.2em;
+		display: inline-block;
+		letter-spacing: initial;
+		margin-left: 10px;
+		margin-bottom: 0;
+	}
+
+	.teiki-dx .teiki-how .how-in .in .holiday {
+		font-size: .7em;
+		margin-left: .5em;
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.teiki-dx .teiki-how .how-in a:hover {
+		background: #13a498;
+		color: #fff;
+	}
+}
+
+.sf-teiki-nk .content-in {
+	margin-top: 6em;
+}
+
+.sf-teiki-nk h2 {
+	font-weight: 700;
+	font-size: 2.4rem;
+	color: #939393 !important;
+	letter-spacing: 3px;
+	margin-bottom: 10px !important;
+}
+
+.sf-teiki-nk .content-in li:nth-of-type(1) h3,
+.sf-teiki-nk .content-in li:nth-of-type(2) h3 {
+	color: #13a498;
+	font-weight: 700;
+	font-size: 2.6rem;
+	text-align: center;
+	padding-bottom: 1em;
+	border-bottom: 1px solid #13a498;
+	margin-bottom: 3em;
+}
+
+.sf-teiki-nk .teiki-skip {
+	margin: 3em auto;
+	border: 2px solid #13a498;
+	padding: 20px 10px;
+	color: #13a498;
+	text-align: center;
+}
+
+.sf-teiki-nk .teiki-skip h4 {
+	color: #13a498;
+	font-size: 2.4rem;
+	font-weight: 700;
+	margin-bottom: 2.4rem;
+	margin-top: 1rem;
+}
+
+.sf-teiki-nk .teiki-skip p:last-child {
+	color: #000;
+	font-weight: 700;
+	text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+	.sf-teiki-nk .content-in li:nth-of-type(1) h3,
+	.sf-teiki-nk .content-in li:nth-of-type(2) h3 {
+		font-size: 3.4rem;
+	}
+
+	.sf-teiki-nk .teiki-skip h4 {
+		font-size: 4.8rem;
+	}
+}
+
+#sf-spec {
+	margin: 60px auto 100px;
+	border-bottom: 1px solid #dfdfdf;
+	padding-bottom: 60px;
+}
+
+.sf-spec-ttl {
+	background: #d3d3d3;
+	text-align: center;
+	font-weight: 700;
+	padding: 5px 0;
+	margin-bottom: 20px;
+	font-size: 20px;
+}
+
+.sf-spec .spec-in:not(:last-child) {
+	margin-bottom: 40px;
+}
+
+.spec-in .ttl {
+	background: #f1f1f1;
+	text-align: center;
+	padding: 5px 0;
+	margin-bottom: 10px;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+
+.spec-in .content,
+.spec-2type {
+	font-size: 14px;
+}
+
+.spec-2type dd:first-child {
+	margin-bottom: 20px;
+}
+
+.spec-2type span {
+	display: block;
+	font-weight: 700;
+	font-size: 1.2em;
+}
+/*# sourceMappingURL=/cdn/shop/t/1/assets/sj-products.css.map?v=36941053977506232721709366536%3Fv%3D36941053977506232721709366536 */
+.section-template--20903563362589__8afb212b-89f2-4ac9-9964-557c2ad0c57b-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__8afb212b-89f2-4ac9-9964-557c2ad0c57b-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.section-template--20903563362589__1ea15a48-f58b-441a-ba08-ef6b5162775d-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__1ea15a48-f58b-441a-ba08-ef6b5162775d-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.section-template--20903563362589__79696732-2a23-40ab-87de-0f220ff7eb84-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__79696732-2a23-40ab-87de-0f220ff7eb84-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.section-template--20903563362589__c0f0da61-b5f8-42e8-9b1d-bbddb6951245-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__c0f0da61-b5f8-42e8-9b1d-bbddb6951245-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.section-template--20903563362589__6378752b-218a-4cf4-a6ec-6f270a859d2d-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__6378752b-218a-4cf4-a6ec-6f270a859d2d-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.section-template--20903563362589__93a222b7-d386-41ba-b2db-7de74742e03c-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__93a222b7-d386-41ba-b2db-7de74742e03c-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.section-template--20903563362589__4f3f1dbb-81a8-49f4-818f-3e97e1373bd4-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__4f3f1dbb-81a8-49f4-818f-3e97e1373bd4-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.section-template--20903563362589__be8925d5-f147-4450-914e-b8c21bb879cd-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__be8925d5-f147-4450-914e-b8c21bb879cd-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.section-template--20903563362589__85c85418-a52b-4fbf-a70b-2426d564e91d-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__85c85418-a52b-4fbf-a70b-2426d564e91d-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.section-template--20903563362589__main-padding {
+	padding-top: 27px;
+	padding-bottom: 9px;
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__main-padding {
+		padding-top: 36px;
+		padding-bottom: 12px;
+	}
+}
+
+.section-template--20903563362589__related-products-padding {
+	padding-top: 27px;
+	padding-bottom: 21px;
+}
+
+@media screen and (min-width: 750px) {
+	.section-template--20903563362589__related-products-padding {
+		padding-top: 36px;
+		padding-bottom: 28px;
+	}
+}
+
+.section-sections--20903564116253__77729006-1656-45e2-9647-94f89c302172-padding {
+	padding-top: calc(0px * 0.75);
+	padding-bottom: calc(0px * 0.75);
+}
+
+@media screen and (min-width: 750px) {
+	.section-sections--20903564116253__77729006-1656-45e2-9647-94f89c302172-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+
+.footer {
+	margin-top: 0px;
+}
+
+.section-sections--20903564116253__footer-padding {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+@media screen and (min-width: 750px) {
+	.footer {
+		margin-top: 0px;
+	}
+
+	.section-sections--20903564116253__footer-padding {
+		padding-top: 0px;
+		padding-bottom: 0px;
+	}
+}
+/* Start Project Wallace extracted inline styles */
+div {
+	display: block;
+}
+
+div.product-media-container.media-type-image.media-fit-contain.global-media-settings.gradient.constrain-height {
+	--ratio: 1.0;
+	--preview-ratio: 1.0;
+}
+
+div.shopify-payment-button__button {
+	background-color: transparent;
+	border: none;
+}
+
+small.copyright__content {
+	display: none;
+}
+/** End Project Wallace extracted inline styles */
