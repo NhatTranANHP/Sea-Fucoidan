@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Layout from "@/components/Layout";
 
 export const metadata = {
@@ -22,10 +23,10 @@ export default function MemberOnlyPage() {
                                     <h1 className="big">お得な会員登録は<span className="nowrap">お済みですか？</span></h1>
                                     <ul>
                                         <li>
-                                            <a href="/account/register">新規会員登録</a>
+                                            <Link href="/account/register">新規会員登録</Link>
                                         </li>
                                         <li>
-                                            <a href="/account/login">ログイン</a>
+                                            <Link href="/account/login">ログイン</Link>
                                         </li>
                                     </ul>
                                 </div>
@@ -72,10 +73,10 @@ export default function MemberOnlyPage() {
                         <div className="section-3">
                             <ul className="link-to-create">
                                 <li>
-                                    <a href="/account/register">新規会員登録</a>
+                                    <Link href="/account/register">新規会員登録</Link>
                                 </li>
                                 <li>
-                                    <a href="/account/login">ログイン</a>
+                                    <Link href="/account/login">ログイン</Link>
                                 </li>
                             </ul>
                         </div>
