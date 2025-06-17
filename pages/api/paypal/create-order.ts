@@ -21,7 +21,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     purchase_units: [
       {
         amount: {
-          currency_code: 'USD',
+          currency_code: 'JPY',
           value: Number(amount).toFixed(2),
         },
       },

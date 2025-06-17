@@ -2,10 +2,18 @@ import { useTranslation } from "@/hook/useTranslation";
 import Layout from "@/components/Layout";
 import Image from "next/image";
 import Link from "next/link";
+import { useCart } from "@/context/CartContext";
+import { Product, products } from "@/data/products";
 
 
 export default function FucoidanNormal() {
     const { t } = useTranslation();
+    const { addToCart } = useCart();
+    const product: Product | undefined = products.find(p => p.id === 'fucoidannormal');
+    const handleAddToCart = (e: React.MouseEvent) => {
+        e.preventDefault(); // prevent the link from navigating
+        addToCart(product as Product);
+    };
   return (
     <Layout>
         <main id="MainContent" className="content-for-layout focus-none" role="main">
@@ -32,7 +40,7 @@ export default function FucoidanNormal() {
     <div className="product-nav-wrapper">
         <div className="product-nav-in">
             <div className="product-nav-name"><Link href="/products/fucoidannormal"><h1>{t("シーフコイダンノーマルタイプ")}</h1></Link></div>
-            <div className="product-nav-buy"><Link className="swing" href="/products/fucoidannormal#buy">{t("購入")}</Link></div>
+            <div className="product-nav-buy"><Link className="swing" href="/products/fucoidannormal#buy" onClick={handleAddToCart}>{t("購入")}</Link></div>
         </div>
     </div>
     

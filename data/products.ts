@@ -14,7 +14,7 @@ export const products: Product[] = [
   {
     id: 'seafucoidandx',
     title: 'シーフコイダンDX',
-    price: 13000,
+    price: 1,
     image: '/dx900x2.png',
     href: '/products/seafucoidandx',
     category: 'availability'
@@ -22,7 +22,7 @@ export const products: Product[] = [
   {
     id: 'nk-fucoidan',
     title: 'NK-FUCOIDAN',
-    price: 12960,
+    price: 2,
     image: '/nk-fucoidan.jpg',
     href: '/products/nk-fucoidan',
     category: 'availability'
@@ -30,7 +30,7 @@ export const products: Product[] = [
   {
     id: 'fucoxanthinex',
     title: 'フコキサンチンEX',
-    price: 59400,
+    price: 3,
     image: '/fucoxanthin.png',
     href: '/products/fucoxanthinex',
     category: 'availability'
@@ -38,7 +38,7 @@ export const products: Product[] = [
   {
     id: 'fucoidannormal',
     title: 'シーフコイダンノーマルタイプ',
-    price: 28300,
+    price: 4,
     image: '/normal900x2.png',
     href: '/products/fucoidannormal',
     category: 'availability'
@@ -46,7 +46,7 @@ export const products: Product[] = [
   {
     id: 'dxfucoidan',
     title: 'DXフコイダンカプセル',
-    price: 27648,
+    price: 5,
     image: '/capsule.png',
     href: '/products/dxfucoidan',
     category: 'availability'
@@ -54,7 +54,7 @@ export const products: Product[] = [
   {
     id: 'trial',
     title: 'シーフコイダンDX 30ml×2本お試しセット',
-    price: 1000,
+    price: 6,
     image: '/trial.png',
     href: '/products/trial',
     category: 'availability'
@@ -62,7 +62,7 @@ export const products: Product[] = [
   {
     id: 'lapita',
     title: 'LAPITA（ラピタ） 保湿ローション 50ml',
-    price: 7480,
+    price: 7,
     image: '/lapita.png',
     href: '/products/lapita',
     category: 'availability'
@@ -70,7 +70,7 @@ export const products: Product[] = [
   {
     id: 't-fucoidan100',
     title: 'T-Fucoidan100',
-    price: 60000,
+    price: 8,
     image: '/t-fucoidan.png',
     href: '/products/t-fucoidan100',
     category: 'availability'

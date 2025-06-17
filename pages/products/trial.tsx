@@ -2,10 +2,18 @@ import { useTranslation } from "@/hook/useTranslation";
 import Layout from "@/components/Layout";
 import Image from "next/image";
 import Link from "next/link";
+import { useCart } from "@/context/CartContext";
+import { products, Product } from "@/data/products";
 
 
 export default function TrialFucoidan() {
     const { t } = useTranslation();
+    const { addToCart } = useCart();
+    const product: Product | undefined = products.find(p => p.id === 'trial');
+    const handleAddToCart = (e: React.MouseEvent) => {
+        e.preventDefault(); // prevent the link from navigating
+        addToCart(product as Product);
+    };
   return (
     <Layout>
       <div className="color-background-1 gradient">
@@ -22,7 +30,7 @@ export default function TrialFucoidan() {
                   </Link>
                 </div>
                 <div className="product-nav-buy">
-                  <Link className="swing" href="/products/trial#buy">
+                  <Link className="swing" href="/products/trial#buy" onClick={handleAddToCart}>
                     {t("購入")}
                   </Link>
                 </div>

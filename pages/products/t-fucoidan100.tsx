@@ -3,6 +3,8 @@
 import { useEffect, useRef } from 'react';
 import { useTranslation } from "@/hook/useTranslation";
 import Layout from "@/components/Layout";
+import { useCart } from '@/context/CartContext';
+import { products, Product } from '@/data/products';
 import Image from "next/image";
 import Link from 'next/link';
 
@@ -11,6 +13,12 @@ export default function TFucoidan100() {
     const { t } = useTranslation();
     const inviewRefs = useRef<NodeListOf<Element>>(null);
     const counterRef = useRef<HTMLDivElement>(null);
+    const { addToCart } = useCart();
+    const product: Product | undefined = products.find(p => p.id === 't-fucoidan100');
+    const handleAddToCart = (e: React.MouseEvent) => {
+        e.preventDefault(); // prevent the link from navigating
+        addToCart(product as Product);
+    };
 
   useEffect(() => {
     // Animate slash
@@ -104,7 +112,7 @@ export default function TFucoidan100() {
     <div className="product-nav-wrapper">
         <div className="product-nav-in">
             <div className="product-nav-name"><Link href="/products/t-fucoidan100"><h1>T-Fucoidan100</h1></Link></div>
-            <div className="product-nav-buy"><Link className="swing" href="/products/t-fucoidan100#buy">{t("購入")}</Link></div>
+            <div className="product-nav-buy"><Link className="swing" href="/products/t-fucoidan100#buy" onClick={handleAddToCart}>{t("購入")}</Link></div>
         </div>
     </div>
 
