@@ -3,12 +3,14 @@ import { useState, useMemo } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import { products } from '@/data/products'
+import { useTranslation } from '@/hook/useTranslation';
 
 export default function ProductGrid() {
     const [category, setCategory] = useState('All');
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
   const [sort, setSort] = useState('default');
+  const { t } = useTranslation();
 
   const categories = ['All', ...new Set(products.map((p) => p.category))];
 
@@ -54,7 +56,7 @@ export default function ProductGrid() {
         }
       `}</style>
       
-      <div className="flex flex-wrap gap-4 mb-4">
+      {/* <div className="flex flex-wrap gap-4 mb-4">
         <select onChange={(e) => setCategory(e.target.value)} value={category}>
           {categories.map((cat) => (
             <option key={cat}>{cat}</option>
@@ -79,7 +81,7 @@ export default function ProductGrid() {
           <option value="price-asc">Price ↑</option>
           <option value="price-desc">Price ↓</option>
         </select>
-      </div>
+      </div> */}
       
       <div className="section-template--20903562871069__product-grid-padding">
         <div className="product-grid-container" id="ProductGridContainer">
@@ -109,7 +111,7 @@ export default function ProductGrid() {
                           <div className="card__information">
                             <h3 className="card__heading">
                               <Link href={product.href} className="full-unstyled-link">
-                                {product.title}
+                                {t(product.title)}
                               </Link>
                             </h3>
                           </div>
@@ -120,7 +122,6 @@ export default function ProductGrid() {
                         <div className="card__information">
                           <h3 className="card__heading h5">
                             <Link href={product.href} className="full-unstyled-link">
-                              {product.title}
                             </Link>
                           </h3>
                           <div className="card-information">
@@ -130,7 +131,7 @@ export default function ProductGrid() {
                                 <div className="price__regular">
                                   <span className="visually-hidden visually-hidden--inline">通常価格</span>
                                   <span className="price-item price-item--regular">
-                                    {product.price}
+                                    {product.price} {t(product.currency)}
                                   </span>
                                 </div>
                               </div>

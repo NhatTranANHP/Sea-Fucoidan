@@ -4532,9 +4532,15 @@ ul.video-nav {
   .product-price {
     font-size: 4rem;
     text-align: center;
+    position: absolute;
+    bottom: 90px;
   }
   .product-price span {
     font-size: 2.3rem;
+  }
+  .product-button {
+    position: absolute;
+    bottom: 10px
   }
   .product-button ul li a {
     width: 300px;
@@ -4558,7 +4564,7 @@ ul.video-nav {
   }
   .man-product-outline ul.top-2product li.top-product-900 {
     width: 50%;
-    min-height: 972px;
+    height: 1200px;
     background-size: 500px;
     padding: 0 10px;
   }

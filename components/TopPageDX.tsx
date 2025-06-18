@@ -35,6 +35,7 @@ const TopPageDX = () => {
                   alt="シーフコイダン Sea Fucoidan VIDEO"
                   width={400}
                   height={58}
+                  style={{justifySelf: 'center'}}
                 />
                 <p>
                   {t("原料から製造・出荷までの様子やHORIUCHI FUCOIDANの特徴などをわかりやすく解説。")}

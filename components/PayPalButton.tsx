@@ -3,12 +3,18 @@
 import { PayPalScriptProvider, PayPalButtons } from '@paypal/react-paypal-js';
 import { useCart } from '@/context/CartContext';
 import { useState } from 'react';
+import { useAuth } from '@/context/AuthContext';
+import { saveOrderToFirestore } from '@/lib/saveOrder';
 
 const PayPalCheckout = () => {
-  const { getCartTotal } = useCart();
+  const { getCartTotal, cart } = useCart();
+  const { user } = useAuth();
   const [error, setError] = useState<string | null>(null);
 
   const createOrder = async () => {
+    if(!user) {
+      throw new Error('user Requirement');
+    }
     try {
       const total = getCartTotal();
       const response = await fetch('/api/paypal/create-order', {
@@ -39,8 +45,18 @@ const PayPalCheckout = () => {
 
       const captureData = await response.json();
       if (captureData.status === 'COMPLETED') {
-        alert('Payment successful!');
-        // Optionally: clear cart, redirect, etc.
+        // alert('Payment successful!');
+        try {
+          if(!user) {
+            throw new Error("Cannot detect user")
+          }
+          await saveOrderToFirestore(user, cart, getCartTotal(), 'JPY', captureData);
+          // alert('Payment successful and cart saved!');
+          // Optionally: clearCart(), router.push('/history'), etc.
+        } catch (err) {
+          console.error('Saving to Firestore failed:', err);
+          alert('Payment successful, but saving cart failed.');
+        }
       } else {
         throw new Error(captureData.error || 'Payment failed');
       }
@@ -56,7 +72,7 @@ const PayPalCheckout = () => {
       <PayPalScriptProvider
         options={{
           clientId: process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID || '',
-          currency: 'USD',
+          currency: 'JPY',
           intent: 'capture',
         }}
       >
@@ -66,7 +82,10 @@ const PayPalCheckout = () => {
           onApprove={onApprove}
           onError={(err) => {
             console.error(err);
-            setError('An error occurred during payment.');
+            if(err.message === 'user Requirement') {
+              setError("Yêu cầu đăng nhập")
+            }
+            // setError('An error occurred during payment.');
           }}
         />
       </PayPalScriptProvider>

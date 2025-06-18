@@ -11,7 +11,7 @@ export default function FucoidanPage() {
 
   return (
     <Layout>
-            <SubscriptionProducts />
+            {/* <SubscriptionProducts /> */}
             <SubscriptionFAQ/>
     </Layout>
   );

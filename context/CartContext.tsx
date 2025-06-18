@@ -5,6 +5,22 @@ export interface CartItem extends Product {
   quantity: number;
 }
 
+export interface PaymentInfo {
+  status: string;
+  id: string;
+  amount: string;
+  currency: string;
+  payer: any; // You can type this better using PayPal's SDK types if needed
+}
+
+export interface OrderData {
+  userId: string;
+  email: string;
+  items: CartItem[];
+  payment: PaymentInfo;
+  createdAt?: any;
+}
+
 interface CartContextType {
   cart: CartItem[];
   addToCart: (product: Product) => void;
