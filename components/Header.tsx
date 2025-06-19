@@ -18,16 +18,16 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = () => {
   const { t } = useTranslation()
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  // const [isSearchOpen, setIsSearchOpen] = useState(false);
+  // const [searchQuery, setSearchQuery] = useState('');
   const [cartItemQuantity, setCartItemQuantity] = useState(0);
   const { user } = useAuth();
 
   const mainMenuItems: MenuItem[] = [
     { id: 'whats-fucoidan', label: t('フコイダンとは'), href: '/pages/whats-fucoidan' },
     { id: 'product-list', label: t('商品一覧'), href: '/collections/product-list' },
-    { id: 'subscription', label: t('定期購入'), href: '/pages/subscription' },
-    { id: 'members-only', label: t('会員様限定'), href: '/pages/membersonly' }
+    // { id: 'subscription', label: t('定期購入'), href: '/pages/subscription' },
+    (user?{id: 'account', label: t('購入履歴'), href: '/account' }: { id: 'members-only', label: t('会員様限定'), href: '/pages/membersonly' })
   ];
 
   const contentLinks = [
@@ -35,12 +35,12 @@ const Header: React.FC<HeaderProps> = () => {
     { label: t('シーフコイダンの歴史'), href: '/pages/history' },
     { label: t('健康レポート'), href: '/pages/report' },
     { label: t('シーフコイダンを比較'), href: '/pages/compare' },
-    { label: t('FAQ よくある質問'), href: '/pages/faq' }
+    // { label: t('FAQ よくある質問'), href: '/pages/faq' }
   ];
 
   const guideLinks = [
     { label: t('ログイン'), href: '/account/login' },
-    { label: t('ショッピングガイド'), href: '/pages/guide' },
+    // { label: t('ショッピングガイド'), href: '/pages/guide' },
     { label: t('お問い合わせ'), href: '/pages/contact' },
     { label: t('会社概要'), href: '/pages/about' }
   ];
@@ -54,12 +54,12 @@ const Header: React.FC<HeaderProps> = () => {
     { label: '한국어', href: 'https://sea-fucoidandx.com/ko', external: true }
   ];
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
-    }
-  };
+  // const handleSearch = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (searchQuery.trim()) {
+  //     window.location.href = `/search?q=${encodeURIComponent(searchQuery)}`;
+  //   }
+  // };
 
   // SVG Icons as components
   const MenuIcon = () => (
@@ -74,11 +74,11 @@ const Header: React.FC<HeaderProps> = () => {
     </svg>
   );
 
-  const SearchIcon = () => (
-    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none" viewBox="0 0 18 19">
-      <path style={{color: 'white'}} fillRule="evenodd" clipRule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
-    </svg>
-  );
+  // const SearchIcon = () => (
+  //   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none" viewBox="0 0 18 19">
+  //     <path style={{color: 'white'}} fillRule="evenodd" clipRule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
+  //   </svg>
+  // );
 
   const UserIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" fill="none" viewBox="0 0 18 19">
@@ -119,14 +119,11 @@ const Header: React.FC<HeaderProps> = () => {
 
   return (
     <>
-      <style jsx>{`
-        
-      `}</style>
 
       {/* Sticky Header */}
       <div className="section-header" style={{ position: 'sticky', top: 0, zIndex: 50, background: '#002e50d9', borderBottom: '1px solid #e9ecef' }}>
-        <header className="header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', maxWidth: '1200px', margin: '0 auto' }}>
-          <LanguageSwitcher />
+        <header className="header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', margin: '0 auto' }}>
+          
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -154,16 +151,16 @@ const Header: React.FC<HeaderProps> = () => {
           {/* Right Icons */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             {/* Search Button */}
-            <button
+            {/* <button
               onClick={() => setIsSearchOpen(true)}
               className="btn"
               aria-label="検索"
             >
               <SearchIcon />
-            </button>
+            </button> */}
 
             {/* Account Link */}
-            <Link href={!user?"/account/login":"/history"} className="btn" aria-label="ログイン">
+            <Link href={!user?"/account/login":"/account"} className="btn" aria-label="ログイン">
               <UserIcon />
               <span className="visually-hidden">{t("ログイン")}</span>
             </Link>
@@ -180,6 +177,8 @@ const Header: React.FC<HeaderProps> = () => {
               )}
               <span className="visually-hidden">{t("カート")}</span>
             </Link>
+
+            <LanguageSwitcher />
           </div>
         </header>
 
@@ -298,7 +297,7 @@ const Header: React.FC<HeaderProps> = () => {
       )}
 
       {/* Search Modal */}
-      {isSearchOpen && (
+      {/* {isSearchOpen && (
         <div className="search-modal" onClick={() => setIsSearchOpen(false)}>
           <div className="search-content" onClick={(e) => e.stopPropagation()}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '16px' }}>
@@ -345,7 +344,7 @@ const Header: React.FC<HeaderProps> = () => {
             </form>
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 };

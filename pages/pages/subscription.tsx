@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
 import SubscriptionFAQ from "@/components/SubcriptionFAQ";
-import SubscriptionProducts from "@/components/SubscriptionProducts";
+// import SubscriptionProducts from "@/components/SubscriptionProducts";
 
 export const metadata = {
   title: "Fucoidan là gì?",

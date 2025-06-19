@@ -7,7 +7,7 @@ import { User } from 'firebase/auth';
 interface CaptureData {
   status: string;
   id: string;
-  payer: any;
+  payer: string;
   purchase_units?: {
     amount?: {
       value?: string;

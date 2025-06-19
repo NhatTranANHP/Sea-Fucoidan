@@ -4,6 +4,8 @@ import Layout from "@/components/Layout";
 import { useTranslation } from '@/hook/useTranslation';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
+import { db } from '@/lib/firebase';
+import { doc, setDoc } from 'firebase/firestore';
 
 export default function SignupPage() {
   const [email, setEmail] = useState('');
@@ -31,7 +33,15 @@ export default function SignupPage() {
 
   const signup = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      await setDoc(doc(db, 'users', user.uid), {
+        name: user.displayName,
+        email: user.email,
+        phone: "",
+        address: "",
+        createdAt: new Date().toISOString()
+      });
       router.push('/account');
     } catch (err) {
       alert((err as Error).message);

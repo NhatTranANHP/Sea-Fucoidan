@@ -3262,20 +3262,7 @@ body {
     #dedede
   );
 }
-@font-face {
-  font-family: NotoSansJP;
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url(/fonts/NotoSansJP-Medium.ttf) format("woff2");
-}
-@font-face {
-  font-family: NotoSansJP;
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url(/fonts/NotoSansJP-Medium.ttf) format("ttf");
-}
+
 :root {
   --font-body-family: NotoSansJP, sans-serif;
   --font-heading-family: NotoSansJP, sans-serif;
@@ -21410,4 +21397,29 @@ small.copyright__content {
 
 .whats-05-content p {
     text-align:center
+}
+
+.locale-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.locale-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.locale-toggle .icon {
+  stroke: currentColor;
+}
+
+.locale-toggle span {
+  text-wrap-mode: nowrap; 
+  font-family:'Times New Roman', Times, serif
 }

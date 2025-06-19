@@ -5,11 +5,13 @@ import { useCart } from '@/context/CartContext';
 import { useState } from 'react';
 import { useAuth } from '@/context/AuthContext';
 import { saveOrderToFirestore } from '@/lib/saveOrder';
+import { useRouter } from 'next/router';
 
 const PayPalCheckout = () => {
   const { getCartTotal, cart } = useCart();
   const { user } = useAuth();
   const [error, setError] = useState<string | null>(null);
+  const router = useRouter();
 
   const createOrder = async () => {
     if(!user) {
@@ -53,6 +55,7 @@ const PayPalCheckout = () => {
           await saveOrderToFirestore(user, cart, getCartTotal(), 'JPY', captureData);
           // alert('Payment successful and cart saved!');
           // Optionally: clearCart(), router.push('/history'), etc.
+          router.push('/account')
         } catch (err) {
           console.error('Saving to Firestore failed:', err);
           alert('Payment successful, but saving cart failed.');
@@ -67,7 +70,7 @@ const PayPalCheckout = () => {
   };
 
   return (
-    <div>
+    <div style={{zIndex:5}}>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <PayPalScriptProvider
         options={{

@@ -14,8 +14,12 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <button onClick={toggleLocale}>
-      {router.locale === 'vi' ? '日本語' : 'Tiếng Việt'}
-    </button>
+    <button onClick={toggleLocale} className="locale-toggle">
+  <span className="label">
+    {router.locale === 'vi' ? '日本語' : 'Tiếng Việt'}
+  </span>
+</button>
+
+
   );
 }

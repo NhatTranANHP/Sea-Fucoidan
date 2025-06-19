@@ -1,45 +1,45 @@
 "use client";
-import { useState, useMemo } from 'react';
+// import { useState, useMemo } from 'react';
 import Link from "next/link";
 import Image from "next/image";
 import { products } from '@/data/products'
 import { useTranslation } from '@/hook/useTranslation';
 
 export default function ProductGrid() {
-    const [category, setCategory] = useState('All');
-  const [minPrice, setMinPrice] = useState('');
-  const [maxPrice, setMaxPrice] = useState('');
-  const [sort, setSort] = useState('default');
+  //   const [category, setCategory] = useState('All');
+  // const [minPrice, setMinPrice] = useState('');
+  // const [maxPrice, setMaxPrice] = useState('');
+  // const [sort, setSort] = useState('default');
   const { t } = useTranslation();
 
-  const categories = ['All', ...new Set(products.map((p) => p.category))];
+  // const categories = ['All', ...new Set(products.map((p) => p.category))];
 
-  const filteredProducts = useMemo(() => {
-    let filtered = [...products];
+  // const filteredProducts = useMemo(() => {
+    const filteredProducts = [...products];
 
-    if (category !== 'All') {
-      filtered = filtered.filter((p) => p.category === category);
-    }
+  //   if (category !== 'All') {
+  //     filtered = filtered.filter((p) => p.category === category);
+  //   }
 
-    if (minPrice) {
-      filtered = filtered.filter((p) => (p.price) >= parseFloat(minPrice));
-    }
+  //   if (minPrice) {
+  //     filtered = filtered.filter((p) => (p.price) >= parseFloat(minPrice));
+  //   }
 
-    if (maxPrice) {
-      filtered = filtered.filter((p) => (p.price) <= parseFloat(maxPrice));
-    }
+  //   if (maxPrice) {
+  //     filtered = filtered.filter((p) => (p.price) <= parseFloat(maxPrice));
+  //   }
 
-    switch (sort) {
-      case 'price-asc':
-        filtered.sort((a, b) => (a.price) - (b.price));
-        break;
-      case 'price-desc':
-        filtered.sort((a, b) => (b.price) - (a.price));
-        break;
-    }
+  //   switch (sort) {
+  //     case 'price-asc':
+  //       filtered.sort((a, b) => (a.price) - (b.price));
+  //       break;
+  //     case 'price-desc':
+  //       filtered.sort((a, b) => (b.price) - (a.price));
+  //       break;
+  //   }
 
-    return filtered;
-  }, [category, minPrice, maxPrice, sort]);
+  //   return filtered;
+  // }, [category, minPrice, maxPrice, sort]);
   return (
     <div className="section-template--20903562871069__product-grid shopify-section section">
       <style jsx>{`
@@ -103,6 +103,7 @@ export default function ProductGrid() {
                                 width={550}
                                 height={550}
                                 className="motion-reduce"
+                                style={{maxHeight: "269px", objectFit: "contain"}}
                               />
                             </Link>
                           </div>
