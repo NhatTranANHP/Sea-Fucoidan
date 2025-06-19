@@ -13,6 +13,8 @@ export default function HistoryPage() {
   const { t } = useTranslation();
   const { user, loading } = useAuth();
   const router = useRouter();
+   const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 5; // You can adjust this number
   const [data, setData] = useState<
     {
       id: string;
@@ -60,9 +62,6 @@ export default function HistoryPage() {
   };
 
   if (!user) return null;
-
-  const [currentPage, setCurrentPage] = useState(1);
-const itemsPerPage = 5; // You can adjust this number
 
   return (
     <Layout>
