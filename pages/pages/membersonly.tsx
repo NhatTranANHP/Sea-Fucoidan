@@ -40,7 +40,7 @@ export default function MemberOnlyPage() {
                                         <div className="b-img">
                                             <Image src="/join-us-2-1.png" alt="Sea Fucoidan 会員限定" width={100} height={100} style={{maxWidth: "90px"}}/>
                                         </div>
-                                        <div className="b-text">
+                                        <div className="b-text" style={{textAlign:'center'}}>
                                             <p>{t("ご注文時に毎回住所などを入力する手間を省くことができます。")}</p>
                                         </div>
                                     </li>
@@ -48,7 +48,7 @@ export default function MemberOnlyPage() {
                                         <div className="b-img">
                                             <Image src="/join-us-2-2.png" alt="Sea Fucoidan 会員限定" width={100} height={100} style={{maxWidth: "90px"}}/>
                                         </div>
-                                        <div className="b-text">
+                                        <div className="b-text" style={{textAlign:'center'}}>
                                             <p>{t("今までの購入履歴などの確認ができるマイページをご利用いただけます。")}</p>
                                         </div>
                                     </li>
@@ -56,7 +56,7 @@ export default function MemberOnlyPage() {
                                         <div className="b-img">
                                             <Image src="/join-us-2-3.png" alt="Sea Fucoidan 会員限定" width={100} height={100} style={{maxWidth: "90px"}}/>
                                         </div>
-                                        <div className="b-text">
+                                        <div className="b-text" style={{textAlign:'center'}}>
                                             <p>{t("会員様限定へお得なクーポンをプレゼントいたします。（不定期）")}</p>
                                         </div>
                                     </li>
@@ -64,7 +64,7 @@ export default function MemberOnlyPage() {
                                         <div className="b-img">
                                             <Image src="/join-us-2-4.png" alt="Sea Fucoidan 会員限定" width={100} height={100} style={{maxWidth: "90px"}}/>
                                         </div>
-                                        <div className="b-text">
+                                        <div className="b-text" style={{textAlign:'center'}}>
                                             <p>{t("会員様限定商品や定期購入をご利用いただけます。")}</p>
                                         </div>
                                     </li>
