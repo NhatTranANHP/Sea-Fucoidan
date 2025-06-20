@@ -25,7 +25,7 @@ const Footer = () => {
                 <div className="inquiry-howto">
                   <dl>
                     <dd className="tel">
-                      <p className="renner">0120-21-5959</p>
+                      <p className="renner">0904350-4537</p>
                     </dd>
                     <dd className="mail">
                       <Link href="/pages/contact">
@@ -45,9 +45,9 @@ const Footer = () => {
               </div>
               <div className="footer-aboutus">
                 <div className="company">
-                  <h3>{t("シーフコイダンコールセンター")}</h3>
+                  <h3>{t("株式会社RAKUEN")}</h3>
                   <p>
-                    {t("〒830-0032 福岡県久留米市東町31-8")}
+                    {t("福岡県福岡市東区名島4-8")}
                   </p>
                 </div>
                 <div className="guide">
@@ -90,7 +90,7 @@ const Footer = () => {
               <li><Link href="https://sea-fucoidandx.com/">English</Link></li>
               <li><Link href="http://sea-fucoidan.cn/">简体中文</Link></li>
               <li><Link href="https://sea-fucoidandx.com/zh">繁體中文</Link></li>
-              <li><Link href="https://sea-fucoidan.com/shop-vn/">Tiếng Việt</Link></li>
+              <li><Link href="/">Tiếng Việt</Link></li>
               <li><Link href="https://sea-fucoidandx.com/ko">한국어</Link></li>
             </ul>
           </div>

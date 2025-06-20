@@ -50,7 +50,7 @@ const Header: React.FC<HeaderProps> = () => {
     { label: 'English', href: 'https://sea-fucoidandx.com/', external: true },
     { label: '简体中文', href: 'http://sea-fucoidan.cn/', external: true },
     { label: '繁體中文', href: 'https://sea-fucoidandx.com/zh-tw', external: true },
-    { label: 'Tiếng Việt', href: 'https://sea-fucoidan.com/shop-vn/', external: true },
+    { label: 'Tiếng Việt', href: '/', external: true },
     { label: '한국어', href: 'https://sea-fucoidandx.com/ko', external: true }
   ];
 
