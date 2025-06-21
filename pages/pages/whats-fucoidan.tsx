@@ -139,7 +139,7 @@ export default function FucoidanPage() {
                         </div>
                         <div className="whats-05-content">
                             <Image className="pc-only" src="/history-1998.jpg" alt="Sea Fucoidan" width={100} height={100}/>
-                            <p>{t("1997年低分子フコイダン誕生")} </p>
+                            <p style={{textAlign: 'center'}}>{t("1997年低分子フコイダン誕生")} </p>
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@ export default function FucoidanPage() {
                 <div className="whats-06-in inner sphone-padding">
                     <div className="whats-06-copy">
                         <p className="point">{t("バージョンアップ")}</p>
-                        <h2 className="ttlbig">{t("フコイダンを飲んでいるすべての人に")}<span className="sub">{t("実感してもらうために。")}</span></h2>
+                        <h2 className="ttlbig" style={{textAlign:'center'}}>{t("フコイダンを飲んでいるすべての人に")}<span className="sub">{t("実感してもらうために。")}</span></h2>
                         <p>{t("1997年にフコイダン製品を販売・開発しておよそ「20年」。私たちは新たに、有用成分を多く含むチリ産のダービリアコンブに含まれた“ダービリアフコイダン”を新たに製品にプラスしました。これによりフコキサンチン・CCK等の有用成分がさらに充実し食物繊維･ミネラルが以前よりも大幅にアップしました。")}</p>
                     </div>
                     <div className="whats-06-outline">

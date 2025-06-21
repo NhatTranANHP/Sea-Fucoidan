@@ -2718,7 +2718,6 @@ iframe.earth {
   max-width: 80%;
   margin: 40px auto 0;
   text-align: center;
-  font-size: 1.6rem;
 }
 .event-small img {
   max-width: 120px;
@@ -4168,8 +4167,8 @@ main {
   text-align: center;
   padding: 40px 20px;
 }
-#seafucoidan-discription .inner {
-      text-align-last: justify;
+#seafucoidan-discription .inner p{
+  text-align: center;
 }
 .toppage_fv {
   width: 100%;
@@ -4534,7 +4533,7 @@ ul.video-nav {
     bottom: 90px;
   }
   .product-price span {
-    font-size: 2.3rem;
+    font-size: 2rem;
   }
   .product-button {
     position: absolute;
@@ -4573,6 +4572,7 @@ ul.video-nav {
   .product-capa {
     font-size: 4rem;
     height: 100px;
+    margin-bottom: 5rem;
   }
   .product-content h4 {
     font-size: 3rem;
@@ -4586,7 +4586,7 @@ ul.video-nav {
     margin: 0;
   }
   .top-product-wrapper img:last-child {
-    width: 150px;
+    width: 120px;
     right: 0;
     bottom: -80px;
   }
@@ -4633,7 +4633,6 @@ ul.video-nav {
     line-height: 2;
   }
   .product-content p {
-    margin-right: 100px;
     height: 400px;
   }
   .product-price {
@@ -4864,6 +4863,7 @@ ul.video-nav {
   line-height: 1;
   padding-right: 20px;
   width: 300px;
+  font-weight: bold;
 }
 .takamoku-name {
   text-align: right;
@@ -4952,6 +4952,7 @@ ul.content-2sec li:nth-of-type(1n + 2) {
 .content-history-in img {
   width: 80%;
   aspect-ratio: 252/67;
+  height: 100%;
 }
 .content-safety {
   text-align: center;
@@ -5119,18 +5120,20 @@ ul.content-2sec li:nth-of-type(1n + 2) {
     z-index: 2;
     width: 75%;
     right: 0;
-    top: 34px;
   }
   .content-history-in p {
-    padding: 0 40px;
+    padding: 20px;
+    padding-bottom: 0px
   }
   .content-history-in h4 {
-    font-size: 3.2rem;
+    font-size: 2rem;
     max-width: 260px;
     line-height: 1.3;
   }
   .content-history-in img {
     width: 252px;
+    position: absolute;
+    bottom: -150px;
   }
   .content-history img.min-990 {
     position: absolute;
@@ -5196,7 +5199,7 @@ ul.content-2sec li:nth-of-type(1n + 2) {
   .takamoku-outline h4,
   .whats-fucoidan-left h4,
   .why-choose-us-copy h4 {
-    font-size: 4rem;
+    font-size: 4.3rem;
   }
   .content-takamoku {
     background: #fbfbfb;
@@ -5209,25 +5212,22 @@ ul.content-2sec li:nth-of-type(1n + 2) {
     background: #f7f7f7;
   }
   .takamoku-inner {
-    padding: 50px 179px 20px 20px;
-    max-width: 620px;
+    padding: 10px 179px 20px 20px;
+    max-width: 620px;  
   }
   .takamoku-outline img {
     width: 100%;
     min-width: 310px;
-    max-width: 342px;
+    max-width: 242px;
   }
   .takamoku-outline h4 {
-    width: 100%;
-    top: -120px;
+    top: -150px;
     left: 60px;
+    font-weight: bold;
   }
   .takamoku-name {
     padding-right: 0;
     margin-bottom: 30px;
-  }
-  .takamoku-button a {
-    width: 200px;
   }
   .content-compare {
     background: #fff;
@@ -5288,9 +5288,6 @@ ul.content-2sec li:nth-of-type(1n + 2) {
   }
   .content-history .content-2sec-inner {
     max-width: 500px;
-  }
-  .content-history-in {
-    top: 20px;
   }
   .content-safety {
     padding: 100px 0;
@@ -8100,6 +8097,9 @@ h5 {
 }
 p {
   text-align: justify;
+}
+.sf-footer p{
+  text-align: center;
 }
 .hxl {
   font-size: calc(var(--font-heading-scale) * 5rem);
@@ -13709,7 +13709,6 @@ sticky-header {
 }
 .footer-01 .inquiry-howto dd.tel {
   font-size: 2.6rem;
-  margin-bottom: 20px;
   padding: 0 20px 0 60px;
   background: url(//sea-fucoidan.com/cdn/shop/t/1/assets/icon-phone.png?v=95741268288282116721694759169)
     no-repeat left 20px center/30px;
@@ -15107,6 +15106,7 @@ ul.dx-08 li img {
   position: relative;
   padding-left: 2rem;
   margin-bottom: 1rem;
+  text-align: justify
 }
 .dxlineup-in .caution li:before {
   content: "\25cf";
@@ -15315,9 +15315,6 @@ ul.dx-08 li img {
     font-size: 9rem;
     line-height: 1;
   }
-  .dx-section-03 dl dd:last-child .mol-number {
-    line-height: 0.5em;
-  }
   .mol-number span {
     display: block;
     margin: 20px 0 30px 11rem;
@@ -15390,7 +15387,7 @@ ul.dx-08 li img {
   }
   .dxlineup-in .name {
     font-size: 2.2rem;
-    height: 60px;
+    height: 110px;
   }
   .dxlineup-in .caution,
   .dxlineup-in .price {
@@ -15400,7 +15397,7 @@ ul.dx-08 li img {
     width: 100%;
   }
   #dxlineup .dxlineup-in {
-    height: 900px !important;
+    height: 1000px !important;
   }
   .dxlineup-in .link-btn a {
     width: 180px;
@@ -19802,6 +19799,9 @@ span.t-c-number {
   max-width: 760px;
   margin: 0 auto;
 }
+.sf-section-joinus .section-2 .sf-benefits li p{
+  text-align: center;
+}
 .sf-section-joinus .section-2 ul li:not(:last-child) {
   margin-bottom: 6em;
 }
@@ -21438,3 +21438,4 @@ small.copyright__content {
   text-wrap-mode: nowrap; 
   font-family:'Times New Roman', Times, serif
 }
+

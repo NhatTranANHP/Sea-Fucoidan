@@ -179,8 +179,7 @@ export default function SeaFucoidan() {
                     </p>
                     <div className="dx-mol-capa">
                       <p>{t("分子量")}</p>
-                      <p>{t("近似")}</p>
-                      <p className="mol-number renner">500</p>
+                      <p className="mol-number renner" style={{textAlign: 'left'}}>{t("近似")} 500</p>
                     </div>
                   </div>
                 </div>
@@ -196,7 +195,7 @@ export default function SeaFucoidan() {
                   <div className="dx-mol-capa">
                     <p>{t("分子量")}</p>
                     <p className="mol-number renner">
-                      6000<span>~</span>40000
+                      6000~40000
                     </p>
                   </div>
                 </div>
@@ -730,7 +729,7 @@ export default function SeaFucoidan() {
                 <div className="name">
                   <span className="renner">{t("30ml×2本セット")}</span>
                   <br />
-                  <span className="sub">{t("[お試しセット]")}</span>
+                  <span className="sub">{t("お試しセット")}</span>
                 </div>
                 <div className="price">
                   <span className="kakaku">{t("価格")}：</span>

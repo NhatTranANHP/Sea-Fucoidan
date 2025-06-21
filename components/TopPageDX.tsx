@@ -11,7 +11,7 @@ const TopPageDX = () => {
             {/* Concept Block */}
             <div className="top-concept">
               <div className="top-concept-outline inner sphone-padding">
-                <h2>
+                <h2 style={{paddingRight: '30%', textAlign: 'justify'}}>
                   {t("より生のフコイダンを実感して頂くために")}
                 </h2>
                 <p>
@@ -91,7 +91,7 @@ const TopPageDX = () => {
                         <span>SEA FUCOIDAN DX</span>
                       </div>
                       <div className="product-capa">
-                        <p>{t("900ml×2本セット")}</p>
+                        <p style={{textAlign: 'center'}}>{t("900ml×2本セット")}</p>
                       </div>
                       <div className="product-content">
                         <h4>
@@ -146,7 +146,7 @@ const TopPageDX = () => {
                         <span>SEA FUCOIDAN DX</span>
                       </div>
                       <div className="product-capa">
-                        <p>
+                        <p style={{textAlign: 'center'}}>
                           {t("30ml×2本セット(お試しセット)")}
                         </p>
                       </div>

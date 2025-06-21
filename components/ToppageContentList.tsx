@@ -58,7 +58,7 @@ export default function ToppageContentList() {
                           src="/top-takamoku.png"
                           alt="シーフコイダン"
                         />
-                        <h4>
+                        <h4 style={{textAlign: 'center'}}>
                           {t("新しい僕はここから始まった。")}
                         </h4>
                         <p style={{ position: 'relative' }}>
@@ -119,8 +119,8 @@ export default function ToppageContentList() {
                         <div className="content-history">
                           <div className="content-2sec-inner">
                             <div className="content-history-in">
-                              <p>The History of SEA FUCOIDAN</p>
-                              <h4>
+                              <p style={{ color: 'blue', textAlign:'center' }}>The History of SEA FUCOIDAN</p>
+                              <h4 style={{textAlign: 'center'}}>
                                 {t("シーフコイダンの歴史")}
                               </h4>
                               <Image width={0}

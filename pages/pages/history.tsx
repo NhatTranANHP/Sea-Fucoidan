@@ -236,9 +236,9 @@ export default function HistoryPage() {
         <div id="section-last" className="history-last inview">
             <div className="history-inner inner sphone-padding">
                 <div className="year">
-                    <p className="big thisyear renner">2025</p>
+                    <p className="big thisyear renner" style={{textAlign: 'center'}}>2025</p>
                 </div>
-                <p>{t("皆様の支えでシーフコイダンは2025年で28周年を迎えます。")}</p>
+                <p style={{textAlign: 'center'}}>{t("皆様の支えでシーフコイダンは2025年で28周年を迎えます。")}</p>
                 <div className="th">
                     <p className="blue renner"><span className="howyear">{t("28th")}</span></p>
                 </div>

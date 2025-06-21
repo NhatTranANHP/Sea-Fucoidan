@@ -43,7 +43,7 @@ export default function ComparePage() {
                   width={0}
                   height={0}
                   sizes="100vw"
-                  style={{ width: "auto", height: "100%" }}
+                  style={{ width: "auto", height: "100%", maxWidth: '100%' }}
                   src="/history-last.jpg"
                   alt="Sea Fucoidan"
                 />
@@ -52,7 +52,7 @@ export default function ComparePage() {
             <div className="compare-outline">
               <div className="inner sphone-padding">
                 <div className="compare-copy">
-                  <p className="big">
+                  <p className="big" style={{textAlign: 'center'}}>
                     {t("シーフコイダンは")}
                     <br className="min-990" />
                     {t("2タイプご用意しております。")}
