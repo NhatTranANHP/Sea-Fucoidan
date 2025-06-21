@@ -4436,6 +4436,9 @@ ul.video-nav {
 .product-price span {
   display: block;
   font-size: 1.6rem;
+  font-weight: normal;
+  font-style: italic;
+  padding-right: 60px
 }
 .product-button ul li:nth-of-type(1n + 2) {
   margin-top: 10px;
