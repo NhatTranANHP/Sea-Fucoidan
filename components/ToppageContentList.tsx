@@ -54,7 +54,7 @@ export default function ToppageContentList() {
                         <Image width={0}
   height={0}
   sizes="100vw"
-  style={{ width: '100%', height: 'auto' }}
+  style={{ height: 'auto' }}
                           src="/top-takamoku.png"
                           alt="シーフコイダン"
                         />

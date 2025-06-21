@@ -19,7 +19,7 @@ export const TopPageNewItems: React.FC = () => {
                 <li style={{ display: "hidden"}}>
                   <div className="new-product-outline nk-fucoidan-plus">
                     <div className="new-product-in sphone-padding">
-                      <p>{t("カタチも成分も「プラス」")}</p>
+                      <p style={{textAlign:'center'}}>{t("カタチも成分も「プラス」")}</p>
                       <h3>NK-FUCOIDAN Plus</h3>
                       <Image
                         src="/product-nk-plus.png"
@@ -38,7 +38,7 @@ export const TopPageNewItems: React.FC = () => {
                   <div className="new-product-outline nk-fucoidan">
                     <div className="new-product-in sphone-padding">
                       <div className="nk-section-1">
-                        <p>{t("高含有・高純度")}</p>
+                        <p style={{textAlign:'center'}}>{t("高含有・高純度")}</p>
                         <div className="nk-div">{t("新世代高分子フコイダン")}</div>
                       </div>
                       <div className="nk-section-2 clearfix">

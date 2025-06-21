@@ -73,8 +73,8 @@ const TopPageDX = () => {
             <div className="top-main-product">
               <div className="man-product-outline inner">
                 <div className="main-product-copy sphone-padding">
-                  <p>{t("PRODUCT TYPE")}</p>
-                  <p>{t("２つのタイプをご用意しております。")}</p>
+                  <p style={{textAlign: 'center'}}>{t("PRODUCT TYPE")}</p>
+                  <p style={{textAlign: 'center'}}>{t("２つのタイプをご用意しております。")}</p>
                 </div>
                 <ul className="top-2product">
                   {/* Product 1 */}
@@ -97,7 +97,7 @@ const TopPageDX = () => {
                         <h4>
                           {t("シーフコイダン史上最高有用成分 1.87倍")}
                         </h4>
-                        <p>
+                        <p style={{textAlign: 'justify'}}>
                           {t("シーフコイダン独自の低分子に、さらに昆布由来の高分子をプラス。")}
                           <br />
                           {t("フコイダンのエネルギーを瓶の中に温存するために独自のオリも配合。")}
@@ -154,7 +154,7 @@ const TopPageDX = () => {
                         <h4>
                           {t("初回限定お一人様一回限り")}
                         </h4>
-                        <p>
+                        <p style={{textAlign:'justify'}}>
                           {t("初めてシーフコイダンをお飲みになる方へ、味の違う無糖と加糖の2本セットを特別価格にてご提供しております。ぜひこの機会にお試しください。")}
                         </p>
                       </div>

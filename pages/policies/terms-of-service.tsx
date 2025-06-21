@@ -7,7 +7,7 @@ export const metadata = {
   description: "Giới thiệu về Fucoidan biển và lịch sử nghiên cứu."
 };
 
-export default function AboutCompanyPage() {
+export default function TermsOfServicePage() {
     const { t } = useTranslation();
   return (
     <Layout>

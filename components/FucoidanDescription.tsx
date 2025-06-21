@@ -10,7 +10,7 @@ const FucoidanDescription = () => {
           <div id="seafucoidan-discription">
             <div className="inner">
               <p>
-                {t("シーフコイダン日本公式は、シーフコイダンシリーズやNK-FUCOIDAN、フコキサンチンEXなどのフコイダン製品を専門に扱う公式販売店です。")}<br />
+                {t("シーフコイダン日本公式は、シーフコイダンシリーズやNK-FUCOIDAN、フコキサンチンEXなどのフコイダン製品を専門に扱う公式販売店です。")}
                 {t("人気のトンガ産低分子フコイダンをはじめ新商品の高分子フコイダンなどより専門性の高い商品を取り扱っております。")}
               </p>
             </div>
