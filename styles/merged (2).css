@@ -4535,9 +4535,9 @@ ul.video-nav {
     position: absolute;
     bottom: 90px;
   }
-  .product-price span {
+  /* .product-price span {
     font-size: 2rem;
-  }
+  } */
   .product-button {
     position: absolute;
     bottom: 10px
